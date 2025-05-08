@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header-back.html').default %>
+                <div id="title" class="d-none">
+                    <%= htmlWebpackPlugin.options.title %>
+                </div>
+                <div class="adminuiux-wrap">
+                    <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                        <!-- content -->
+                        <div class="container mt-3" id="main-content">
+                            <div class="row gx-3">
+                                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                    <div class="card adminuiux-card">
+                                        <div class="card-body pt-2">
+                                            <div class="row gx-3 align-items-center mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-truncated">Starter Breakfast</h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="fitness-diet-details.html" class="btn btn-sm btn-square btn-link bg-white-opacity"><i class="bi bi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col-3">
+                                                    <figure class="height-50 w-100 rounded coverimg mb-0">
+                                                        <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="row gx-3">
+                                                        <div class="col">
+                                                            <p class="small mb-0">15g</p>
+                                                            <p class="fs-12 opacity-75">Carbs</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p class="small mb-0">34g</p>
+                                                            <p class="fs-12 opacity-75">Protein</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p class="small mb-0">254kcal</p>
+                                                            <p class="fs-12 opacity-75">Energy</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                    <div class="card adminuiux-card">
+                                        <div class="card-body pt-2">
+                                            <div class="row gx-3 align-items-center mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-truncated">Soft Dinner</h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="fitness-diet-details.html" class="btn btn-sm btn-square btn-link bg-white-opacity"><i class="bi bi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col-3">
+                                                    <figure class="height-50 w-100 rounded coverimg mb-0">
+                                                        <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="row gx-3">
+                                                        <div class="col">
+                                                            <p class="small mb-0">19g</p>
+                                                            <p class="fs-12 opacity-75">Carbs</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p class="small mb-0">24g</p>
+                                                            <p class="fs-12 opacity-75">Protein</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p class="small mb-0">154kcal</p>
+                                                            <p class="fs-12 opacity-75">Energy</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                    <div class="card adminuiux-card">
+                                        <div class="card-body pt-2">
+                                            <div class="row gx-3 align-items-center mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-truncated">Complete Meal</h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="fitness-diet-details.html" class="btn btn-sm btn-square btn-link bg-white-opacity"><i class="bi bi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col-3">
+                                                    <figure class="height-50 w-100 rounded coverimg mb-0">
+                                                        <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="row gx-3">
+                                                        <div class="col">
+                                                            <p class="small mb-0">35g</p>
+                                                            <p class="fs-12 opacity-75">Carbs</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p class="small mb-0">40g</p>
+                                                            <p class="fs-12 opacity-75">Protein</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p class="small mb-0">654kcal</p>
+                                                            <p class="fs-12 opacity-75">Energy</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                    <div class="card adminuiux-card">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-4">
+                                                    <a href="fitness-diet-details.html" class="w-100 height-90 rounded coverimg d-inline-block align-top">
+                                                        <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="col-8">
+                                                    <p><span class="badge badge-sm badge-light text-bg-theme-1">Be Healthy</span></p>
+                                                    <a href="fitness-diet-details.html" class="style-none">
+                                                        <h6 class="text-theme-1 text-truncated">Full of Protein Diet</h6>
+                                                    </a>
+                                                    <p class="small">
+                                                        <span class="opacity-75">By:</span>
+                                                        <span>Chinsuk Wang</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                    <div class="card adminuiux-card">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-4">
+                                                    <a href="fitness-diet-details.html" class="w-100 height-90 rounded coverimg d-inline-block align-top">
+                                                        <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="col-8">
+                                                    <p><span class="badge badge-sm badge-light text-bg-theme-1">Sprouted</span></p>
+                                                    <a href="fitness-diet-details.html" class="style-none">
+                                                        <h6 class="text-theme-1 text-truncated">Runner Special Diet</h6>
+                                                    </a>
+                                                    <p class="small">
+                                                        <span class="opacity-75">By:</span>
+                                                        <span>Mark Gill</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                    <div class="card adminuiux-card">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-4">
+                                                    <a href="fitness-diet-details.html" class="w-100 height-90 rounded coverimg d-inline-block align-top">
+                                                        <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="col-8">
+                                                    <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-grey">Calories</span></p>
+                                                    <a href="fitness-diet-details.html" class="style-none">
+                                                        <h6 class="text-theme-1 text-truncated">Diet for die heart fan</h6>
+                                                    </a>
+                                                    <p class="small">
+                                                        <span class="opacity-75">By:</span>
+                                                        <span>Will Wing</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </main>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

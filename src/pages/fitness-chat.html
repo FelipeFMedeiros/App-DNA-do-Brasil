@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header.html').default %>
+                <div class="adminuiux-wrap">
+                    <!-- Standard sidebar -->
+                    <%= require('../partials/navigation/fitness-sidebar.html').default %>
+                        <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+
+                            <!-- content -->
+                            <div class="container mt-3" id="main-content">
+                                <div class="input-group mb-3">
+                                    <input class="form-control" placeholder="Search contact... " value="">
+                                    <div class="dropdown input-group-text border-start-0 p-0"><button class="btn btn-square btn-link caret-none" type="button" id="statuschat" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"><i class="bi bi-three-dots-vertical"></i></button>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="statuschat" style="">
+                                            <li><a class="dropdown-item" href="javascript:void(0)"><span class="align-middle me-1 bg-success rounded-circle d-inline-block p-1"></span> Online</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0)"><span class="align-middle me-1 bg-warning rounded-circle d-inline-block p-1"></span> Away</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0)"><span class="align-middle me-1 bg-danger rounded-circle d-inline-block p-1"></span> Offline</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0)"><span class="align-middle me-1 bg-secondary rounded-circle d-inline-block p-1"></span> Disabled</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="list-group adminuiux-list-group list-group-flush rounded-0">
+                                    <a href="fitness-chat-and-call.html" class="list-group-item list-group-item-action new">
+                                        <div class="row flex-nowrap">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 coverimg rounded-circle">
+                                                    <img src="assets/img/modern-ai-image/user-5.jpg" alt="" style="display: none;">
+                                                </figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Alice Johanson</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check"></i> 2:00 am</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="fitness-chat-and-call.html" class="list-group-item list-group-item-action new">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 rounded-circle bg-theme-1"><span class="h6 align-middle">JM</span></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Mr. Jack Mario</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all"></i> 2:00 am</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="fitness-chat-and-call.html" class="list-group-item list-group-item-action new">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 coverimg rounded-circle"><img src="assets/img/modern-ai-image/user-4.jpg" alt=""></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Roberto Carlos</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all text-info"></i> 2:00 am</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="fitness-chat-and-call.html" class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 coverimg rounded-circle"><img src="assets/img/modern-ai-image/user-1.jpg" alt=""></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">The Adminuiux</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all text-success"></i> 2 days</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="fitness-chat-and-call.html" class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 rounded-circle bg-warning text-white"><span class="h6 align-middle">JC</span></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Ms. Jully CTO</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all"></i> 4 days</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="fitness-chat-and-call.html" class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 rounded-circle bg-success text-white"><span class="h6 align-middle">JC</span></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Aswatthma D-Plan</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check"></i> 1 mo</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 coverimg rounded-circle bg-theme-1"><img src="assets/img/modern-ai-image/user-1.jpg" alt=""></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Adminuiux Support</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check"></i> 2:00 am</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Thank you for connecting</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 rounded-circle bg-theme-1"><span class="h6 align-middle">JM</span></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Mr. Jack Mario</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all"></i> 2:00 am</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 coverimg rounded-circle"><img src="assets/img/modern-ai-image/user-4.jpg" alt=""></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Roberto Carlos</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all text-info"></i> 2:00 am</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 coverimg rounded-circle"><img src="assets/img/modern-ai-image/user-1.jpg" alt="" style="display: none;"></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">The Adminuiux</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all text-success"></i> 2 days</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action">
+                                        <div class="row gx-3">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-40 rounded-circle bg-warning text-white"><span class="h6 align-middle">JC</span></figure>
+                                            </div>
+                                            <div class="col-9 align-self-center ps-0">
+                                                <div class="row g-0">
+                                                    <div class="col-8">
+                                                        <p class="text-truncate mb-0">Ms. Jully CTO</p>
+                                                    </div>
+                                                    <div class="col-4 text-end"><small class="opacity-50 fs-10 mb-1"><i class="bi bi-check-all"></i> 4 days</small></div>
+                                                </div>
+                                                <p class="opacity-75 small text-truncate">Spread love and spread this template</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </main>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

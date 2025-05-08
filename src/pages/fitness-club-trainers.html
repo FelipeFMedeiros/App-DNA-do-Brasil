@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <!-- back button header with title -->
+            <%= require('../partials/header/fitness-header-back.html').default %>
+                <div id="title" class="d-none">
+                    <%= htmlWebpackPlugin.options.title %>
+                </div>
+                <div class="adminuiux-wrap">
+                    <!-- Standard sidebar -->
+                    <main class="adminuiux-content" onclick="contentClick()">
+                        <!-- content -->
+                        <div class="container mt-3" id="main-content">
+
+                            <div class="row gx-3 align-items-center">
+                                <div class="col-12 col-lg-6 col-xl-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col-4">
+                                                    <a href="fitness-club-trainer-details.html">
+                                                        <figure class="w-100 height-140 rounded coverimg">
+                                                            <img src="assets/img/modern-ai-image/user-2.jpg" alt="">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="row gx-3 align-items-center mb-2">
+                                                        <div class="col">
+                                                            <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-cyan"><i class="bi bi-patch-check-fill"></i> Pro Trainer</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <button class="btn btn-sm btn-square btn-link theme-red"><i class="bi bi-heart"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"><a href="fitness-club-trainer-details.html" class="style-none">Julliet W.</a></p>
+                                                    <p class="small text-secondary mb-2">10 years experience, Gym Trainer</p>
+
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col">
+                                                            <p class="text-theme-1 theme-yellow mb-0">
+                                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                                                            </p>
+                                                            <p class="small text-secondary">25 Reviews</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="tel:#" class="btn btn-sm btn-square btn-theme theme-green"><i class="bi bi-telephone"></i></a>
+                                                            <button class="btn btn-sm btn-square btn-theme mx-1 theme-yellow" data-bs-toggle="modal" data-bs-target="#chatmodal"><i class="bi bi-chat-left-text"></i></button>
+                                                            <button class="btn btn-sm btn-square btn-theme " data-bs-toggle="modal" data-bs-target="#addappointment"><i class="bi bi-calendar-event"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col-4">
+                                                    <a href="fitness-club-trainer-details.html" class="style-none">
+                                                        <figure class="w-100 height-140 rounded coverimg">
+                                                            <img src="assets/img/fitness/image-4.jpg" alt="">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="row gx-3 align-items-center mb-2">
+                                                        <div class="col">
+                                                            <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-orange"><i class="bi bi-star"></i> Intermediate</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <button class="btn btn-sm btn-square btn-link theme-red"><i class="bi bi-heart"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"><a href="fitness-club-trainer-details.html" class="style-none">Mark X.</a></p>
+                                                    <p class="small text-secondary mb-2">2 years experience, Gym Trainer</p>
+
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col">
+                                                            <p class="text-theme-1 theme-yellow mb-0">
+                                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
+                                                            </p>
+                                                            <p class="small text-secondary">5 Reviews</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="tel:#" class="btn btn-sm btn-square btn-theme theme-green"><i class="bi bi-telephone"></i></a>
+                                                            <button class="btn btn-sm btn-square btn-theme mx-1 theme-yellow" data-bs-toggle="modal" data-bs-target="#chatmodal"><i class="bi bi-chat-left-text"></i></button>
+                                                            <button class="btn btn-sm btn-square btn-theme " data-bs-toggle="modal" data-bs-target="#addappointment"><i class="bi bi-calendar-event"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col-4">
+                                                    <a href="fitness-club-trainer-details.html">
+                                                        <figure class="w-100 height-140 rounded coverimg">
+                                                            <img src="assets/img/fitness/image-1.jpg" alt="">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="row gx-3 align-items-center mb-2">
+                                                        <div class="col">
+                                                            <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-cyan"><i class="bi bi-patch-check-fill"></i> Pro Trainer</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <button class="btn btn-sm btn-square btn-link theme-red"><i class="bi bi-heart"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"><a href="fitness-club-trainer-details.html" class="style-none">Alex G.</a></p>
+                                                    <p class="small text-secondary mb-2">12 years experience, Gym Trainer</p>
+
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col">
+                                                            <p class="text-theme-1 theme-yellow mb-0">
+                                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                                                            </p>
+                                                            <p class="small text-secondary">25 Reviews</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="tel:#" class="btn btn-sm btn-square btn-theme theme-green"><i class="bi bi-telephone"></i></a>
+                                                            <button class="btn btn-sm btn-square btn-theme mx-1 theme-yellow" data-bs-toggle="modal" data-bs-target="#chatmodal"><i class="bi bi-chat-left-text"></i></button>
+                                                            <button class="btn btn-sm btn-square btn-theme " data-bs-toggle="modal" data-bs-target="#addappointment"><i class="bi bi-calendar-event"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col-4">
+                                                    <a href="fitness-club-trainer-details.html" class="style-none">
+                                                        <figure class="w-100 height-140 rounded coverimg">
+                                                            <img src="assets/img/fitness/image-6.jpg" alt="">
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="row gx-3 align-items-center mb-2">
+                                                        <div class="col">
+                                                            <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-orange"><i class="bi bi-star"></i> Intermediate</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <button class="btn btn-sm btn-square btn-link theme-red"><i class="bi bi-heart"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"><a href="fitness-club-trainer-details.html" class="style-none">Sneha Mittal</a></p>
+                                                    <p class="small text-secondary mb-2">3 years experience, Gym Trainer</p>
+
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col">
+                                                            <p class="text-theme-1 theme-yellow mb-0">
+                                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                                            </p>
+                                                            <p class="small text-secondary">5 Reviews</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="tel:#" class="btn btn-sm btn-square btn-theme theme-green"><i class="bi bi-telephone"></i></a>
+                                                            <button class="btn btn-sm btn-square btn-theme mx-1 theme-yellow" data-bs-toggle="modal" data-bs-target="#chatmodal"><i class="bi bi-chat-left-text"></i></button>
+                                                            <button class="btn btn-sm btn-square btn-theme " data-bs-toggle="modal" data-bs-target="#addappointment"><i class="bi bi-calendar-event"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </main>
+                </div>
+
+                <!-- chat modal -->
+                <div class="modal adminuiux-modal fade" id="chatmodal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-lg-down">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="col-auto">
+                                    <figure class="avatar avatar-40 coverimg rounded-circle">
+                                        <img src="assets/img/modern-ai-image/user-1.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="col px-3 align-self-center">
+                                    <p class="h6 mb-0"><span class="position-relative">Kim San <span class="position-absolute top-50 start-100 translate-middle p-1 bg-success rounded-circle mx-2"><span class="visually-hidden">New alerts</span></span></span></p>
+                                    <p class="text-secondary small">Online</p>
+                                </div>
+                                <div class="col-auto"><button class="btn btn-link btn-square rounded-circle theme-red" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button></div>
+                            </div>
+                            <div class="modal-body overflow-y-auto chat-list">
+                                <div class="row no-margin left-chat">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="small mb-2"><a href="" class="style-none">Alex Smith</a></p>
+                                                    <p>Hi!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-secondary small time"><i class="bi bi-check"></i> 9:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="row no-margin right-chat">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">Hi!<br>Yes please tell us your query.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-end">
+                                        <p class="text-secondary small time"><i class="bi bi-check"></i> 9:10 pm</p>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-auto text-center">
+                                        <div class="alert alert-light mx-auto py-1 mb-3">26 November 2024</div>
+                                    </div>
+                                </div>
+                                <div class="row no-margin left-chat">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="small mb-2"><a href="" class="style-none">Mr. Jack Mario</a></p>Adminuiux is amazing and we thank you. How can we buy?
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-secondary small time"><i class="bi bi-check-all text-primary"></i> 8:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="row no-margin right-chat first">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="position-relative mb-2 figure">
+                                                        <div class="position-absolute end-0 top-0"><button class="btn btn-square btn-theme m-2"><i class="bi bi-download"></i></button></div>
+                                                        <img src="assets/img/modern-ai-image/bus-1.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-margin right-chat">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">Thank you too. You can buy it from preview page and click on buy now.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-end">
+                                        <p class="text-secondary small time"><i class="bi bi-check-all text-primary"></i> 8:00 pm</p>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-auto text-center">
+                                        <div class="alert alert-light mx-auto py-1 mb-3">27 November 2024</div>
+                                    </div>
+                                </div>
+                                <div class="row no-margin left-chat first">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="small mb-2"><a href="" class="style-none">Ms. Jully CTO</a></p>
+                                                    <div class="position-relative figure"><video src="https://adminuiux.com/website/adminuiux.mp4" controls="" preload="none"></video></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-margin left-chat">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">We also love this small presentation.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-secondary small time"><i class="bi bi-check-all text-primary"></i> 8:00 pm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-margin right-chat">
+                                    <div class="col-12">
+                                        <div class="chat-block">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p>Ohh... Thats great. Adminuiux is HTML template can be used in various business domains like SAAS, CRM, Content Management, Manufacturing, inventory, IT, administration etc.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-end">
+                                        <p class="text-secondary small time"><i class="bi bi-check-all text-primary"></i> 8:00 pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="input-group"><button class="btn btn-square btn-link"><i class="bi bi-emoji-smile"></i></button> <button class="btn btn-square btn-link"><i class="bi bi-paperclip"></i></button> <input class="form-control border-0" placeholder="Type your message... " value=""> <button class="btn btn-square btn-link" type="button"><i class="bi bi-send"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- add reminder Modal -->
+                <div class="modal adminuiux-modal fade" id="addappointment" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog maxwidth-320 mx-auto modal-dialog-centered">
+                        <div class="modal-content overflow-hidden">
+                            <div class="modal-header position-relative">
+                                <figure class="h-100 w-100 coverimg blur-overlay position-absolute start-0 top-0 z-index-0 opacity-75">
+                                    <img src="assets/img/fitness/image-1.jpg" alt="">
+                                </figure>
+                                <div class="row gx-3 align-items-center z-index-1 position-relative">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-50 coverimg rounded-circle">
+                                            <img src="assets/img/fitness/image-4.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="mb-0">Mark Smith</h5>
+                                        <p class="small text-secondary">Book appointment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body pt-0">
+                                <div class="inlinewrap1 inline-calendar mx-auto mb-3">
+                                    <input id="inlinewrap1" class="d-none" style="">
+                                </div>
+
+                                <h6 class="mb-3">Select Time</h6>
+                                <div class="mb-3">
+                                    <button class="btn btn-sm btn-outline-theme mb-2 me-1 active"><span>11:00 AM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>11:30 AM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>12:00 PM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>12:30 PM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>1:00 PM</span></button>
+                                    <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>1:30 PM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>2:00 PM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>2:30 PM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>3:00 PM</span></button> <button class="btn btn-sm btn-outline-theme mb-2 me-1"><span>3:30 PM</span></button>
+                                </div>
+
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+                                    <label for="description">Description</label>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-theme">Add</button>
+                                <button type="button" class="btn btn-link theme-red" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-auth-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+  <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+      <%= require('../partials/header/fitness-header-back.html').default %>
+        <div id="title" class="d-none">
+          <%= htmlWebpackPlugin.options.title %>
+        </div>
+        <div class="adminuiux-wrap">
+          <main class="adminuiux-content" onclick="contentClick()">
+            <!-- content -->
+            <div class="container mt-3" id="main-content">
+
+              <!-- plans -->
+              <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="card adminuiux-card overflow-hidden theme-green mb-3">
+                    <div class="card-body text-center z-index-1">
+                      <figure class="avatar avatar-80 bg-theme-1-subtle rounded-circle mb-3">
+                        <i class="bi bi-person-workspace text-theme-1 h1"></i>
+                      </figure>
+                      <h1 class="mb-0">$ 249.00</h1>
+                      <h5 class="fw-normal text-secondary">Personal Plan</h5>
+                    </div>
+                    <div class="card-body pb-0">
+                      <h6>Basic includes:</h6>
+                      <ul class="list-group adminuiux-list-group small mb-0">
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> All demo access</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> Unlimited Download</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> No Contact list</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 10 transactions per day</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 24/7 Customer Support</li>
+                      </ul>
+                    </div>
+                    <div class="card-footer text-center">
+                      <a href="fitness-subscription-pay.html" class="btn btn-theme">Upgrade</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="card adminuiux-card overflow-hidden theme-cyan mb-3">
+                    <div class="card-body text-center z-index-1">
+                      <figure class="avatar avatar-80 bg-theme-1-subtle rounded-circle mb-3">
+                        <i class="bi bi-people text-theme-1 h1"></i>
+                      </figure>
+                      <h1 class="mb-0">$ 449.00</h1>
+                      <h5 class="fw-normal text-secondary">Team Plan</h5>
+                    </div>
+                    <div class="card-body pb-0">
+                      <h6>Basic includes:</h6>
+                      <ul class="list-group adminuiux-list-group small mb-0">
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> All demo access</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> Unlimited Download</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> No Contact list</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 10 transactions per day</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 24/7 Customer Support</li>
+                      </ul>
+                    </div>
+                    <div class="card-footer text-center">
+                      <a href="fitness-subscription-pay.html" class="btn btn-theme">Upgrade</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="card adminuiux-card overflow-hidden theme-blue mb-3">
+                    <div class="card-body text-center z-index-1">
+                      <figure class="avatar avatar-80 bg-theme-1-subtle rounded-circle mb-3">
+                        <i class="bi bi-building text-theme-1 h1"></i>
+                      </figure>
+                      <h1 class="mb-0">$ 949.00</h1>
+                      <h5 class="fw-normal text-secondary">Business Plan</h5>
+                    </div>
+                    <div class="card-body pb-0">
+                      <h6>Basic includes:</h6>
+                      <ul class="list-group adminuiux-list-group small mb-0">
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> All demo access</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> Unlimited Download</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> No Contact list</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 10 transactions per day</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 24/7 Customer Support</li>
+                      </ul>
+                    </div>
+                    <div class="card-footer text-center">
+                      <a href="fitness-subscription-pay.html" class="btn btn-theme">Upgrade</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </main>
+        </div>
+
+        <!-- footer -->
+        <%= require('../partials/offcanvas/theming.html').default %>
+          <%= require('../partials/footer/fitness-footer.html').default %>
+
+            <!-- Page Level js -->
+  </body>
+
+</html>

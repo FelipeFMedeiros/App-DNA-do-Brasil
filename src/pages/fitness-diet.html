@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header.html').default %>
+                <div class="adminuiux-wrap">
+                    <!-- Standard sidebar -->
+                    <%= require('../partials/navigation/fitness-sidebar.html').default %>
+                        <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                            <!-- content -->
+                            <div class="container mt-3" id="main-content">
+                                <div class="row gx-2 align-items-center mb-3">
+                                    <div class="col">
+                                        <h6>Diet</h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="input-group input-group-sm maxwidth-140">
+                                            <input class="form-control text-center" id="datepicker">
+                                            <div class="input-group-text" onclick="$(this).prev().click();">
+                                                <i class="bi bi-calendar-event"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="fitness-diet-add-meal.html" class="btn btn-sm btn-theme"><i class="bi bi-plus"></i> Meal</a>
+                                    </div>
+                                </div>
+                                <!-- dates carousel  -->
+                                <div class="swiper swipernav dateselect mb-3">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide text-center pt-1">
+                                            <p class="small text-secondary text-uppercase text-truncated mb-0">Wed</p>
+                                            <div class="avatar avatar-30 rounded">4</div>
+                                        </div>
+                                        <div class="swiper-slide text-center pt-1">
+                                            <p class="small text-secondary text-uppercase text-truncated mb-0">Thu</p>
+                                            <div class="avatar avatar-30 rounded">5</div>
+                                        </div>
+                                        <div class="swiper-slide text-center pt-1 active">
+                                            <p class="small text-secondary text-uppercase text-truncated mb-0">Fri</p>
+                                            <div class="avatar avatar-30 rounded">6</div>
+                                        </div>
+                                        <div class="swiper-slide text-center pt-1">
+                                            <p class="small text-secondary text-uppercase text-truncated mb-0">Sat</p>
+                                            <div class="avatar avatar-30 rounded">7</div>
+                                        </div>
+                                        <div class="swiper-slide text-center pt-1">
+                                            <p class="small text-secondary text-uppercase text-truncated mb-0">Sun</p>
+                                            <div class="avatar avatar-30 rounded">8</div>
+                                        </div>
+                                        <div class="swiper-slide text-center pt-1">
+                                            <p class="small text-secondary text-uppercase text-truncated mb-0">Mon</p>
+                                            <div class="avatar avatar-30 rounded">9</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" row gx-3 align-items-center">
+                                    <!-- calories Consuption -->
+                                    <div class="col-12 col-lg-4">
+                                        <div class="card adminuiux-card bg-theme-1-subtle border-0 theme-yellow mb-3">
+                                            <div class="card-body">
+                                                <div class="row gx-3 align-items-center">
+                                                    <div class="col-auto">
+                                                        <figure class="avatar avatar-60 rounded coverimg">
+                                                            <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6>Calories Consuption</h6>
+                                                        <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 75%; --h-dynamic:4px"></div>
+                                                        </div>
+                                                        <p class="small opacity-75">75% Completed</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- carbs summary -->
+                                    <div class="col-6 col-md-6 col-lg-4">
+                                        <div class="card adminuiux-card bg-theme-1-subtle border-0 theme-green mb-3">
+                                            <div class="card-body">
+                                                <div class="row gx-2 align-items-center">
+                                                    <div class="col-auto">
+                                                        <div class="avatar avatar-50 mx-auto">
+                                                            <div id="circleprogressblue1"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6 class="mb-0">Carbs</h6>
+                                                        <p class="small text-secondary">Intake</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Protein summary -->
+                                    <div class="col-6 col-md-6 col-lg-4">
+                                        <div class="card adminuiux-card bg-theme-1-subtle border-0 theme-orange mb-3">
+                                            <div class="card-body">
+                                                <div class="row gx-2 align-items-center">
+                                                    <div class="col-auto">
+                                                        <div class="avatar avatar-50 mx-auto">
+                                                            <div id="circleprogressgreen1"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6 class="mb-0">Protein</h6>
+                                                        <p class="small text-secondary">Intake</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- fitness progress -->
+                                <div class="card adminuiux-card mb-3">
+                                    <div class="card-header">
+                                        <div class="row gx-2 align-items-center">
+                                            <div class="col">
+                                                <h6>Goal Stats</h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-sm btn-link" data-bs-toggle="modal" data-bs-target="#addweight"><i class="bi bi-plus"></i> Weight</button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <select class="form-select form-select-sm">
+                                                    <option>Day</option>
+                                                    <option>Week</option>
+                                                    <option>Month</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body px-0">
+                                        <div class="height-170">
+                                            <canvas id="summarychart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- water intake -->
+                                <div class="card adminuiux-card overflow-hidden mb-3">
+                                    <div class="card-header">
+                                        <div class="row gx-3 align-items-center">
+                                            <div class="col">
+                                                <h6>Water Intake</h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-sm btn-link" data-bs-toggle="modal" data-bs-target="#addwater"><i class="bi bi-plus"></i> Water</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pt-0 pb-2">
+                                        <div class="row gx-2 mb-3">
+                                            <div class="col text-center text-theme-1 theme-cyan">
+                                                <i class="bi bi-droplet-half h2"></i>
+                                                <p class="small opacity-75">0.5 ltr</p>
+                                            </div>
+                                            <div class="col text-center text-theme-1 theme-cyan">
+                                                <i class="bi bi-droplet-half  h2"></i>
+                                                <p class="small opacity-75">1.0 ltr</p>
+                                            </div>
+                                            <div class="col text-center text-theme-1 theme-cyan">
+                                                <i class="bi bi-droplet-half h2"></i>
+                                                <p class="small opacity-75">1.5 ltr</p>
+                                            </div>
+                                            <div class="col text-center text-secondary">
+                                                <i class="bi bi-droplet-half h2"></i>
+                                                <p class="small opacity-75">2.0 ltr</p>
+                                            </div>
+                                            <div class="col text-center text-secondary">
+                                                <i class="bi bi-droplet-half h2"></i>
+                                                <p class="small opacity-75">2.5 ltr</p>
+                                            </div>
+                                        </div>
+                                        <div class="row gx-2">
+                                            <div class="col">
+                                                <p class="small text-secondary">Drinking water is cool & healthy</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <p class="small text-secondary">70% <small class="opacity-75">/4 ltr</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress height-dynamic bg-theme-1-subtle theme-cyan" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--h-dynamic: 5px">
+                                        <div class="progress-bar rounded bg-theme-1" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Timely Diet Plans -->
+                                <div class="row gx-3 align-items-center mb-3">
+                                    <div class="col">
+                                        <h6>Daily Diet</h6>
+                                    </div>
+                                    <div class="col-auto">
+
+                                    </div>
+                                </div>
+                                <div class="row gx-3">
+                                    <div class="col-6 col-md-6">
+                                        <div class="row gx-3">
+                                            <div class="col-12 col-md-6">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <div class="row gx-2 align-items-center mb-2">
+                                                            <div class="col">
+                                                                <p class="small">Breakfast</p>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <p><span class="badge badge-sm text-bg-theme-1">New</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <h6 class="text-theme-1 text-truncated mb-1">7:30 AM</h6>
+                                                        <p class="small mb-2">Morning</p>
+                                                        <p class="text-secondary text-truncated small">Soup, Juice, Bread butter, Salad</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <div class="row gx-2 align-items-center mb-2">
+                                                            <div class="col">
+                                                                <p class="small">Meal</p>
+                                                            </div>
+                                                            <div class="col-auto">
+
+                                                            </div>
+                                                        </div>
+                                                        <h6 class="text-theme-1 text-truncated mb-1">12:00 PM</h6>
+                                                        <p class="small mb-2">Lunch</p>
+                                                        <p class="text-secondary text-truncated small">Chappati, Mix Veg., Butter Milk, Salad</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6 col-md-6 mb-3">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body pb-2">
+                                                <div class="row gx-3">
+                                                    <div class="col-12 col-md-8">
+                                                        <div class="row gx-2 align-items-center mb-2">
+                                                            <div class="col">
+                                                                <p class="small">Meal</p>
+                                                            </div>
+                                                            <div class="col-auto">
+
+                                                            </div>
+                                                        </div>
+                                                        <h6 class="text-theme-1 text-truncated mb-1">7:30 PM</h6>
+                                                        <p class="small mb-2">Dinner</p>
+                                                        <p class="text-secondary text-truncated small">Chappati, Alloo Mutter, Butter Milk, Salad</p>
+
+                                                    </div>
+                                                    <div class="col-12 col-md-4 d-none d-md-block">
+                                                        <a href="fitness-workout.html" class="rounded coverimg w-100 height-100 d-inline-block">
+                                                            <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 d-block d-md-none">
+                                                        <a href="fitness-workout.html" class="rounded coverimg w-100 height-140 d-inline-block mt-3">
+                                                            <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- popular diet plans -->
+                                <div class="row gx-3 align-items-center mb-3">
+                                    <div class="col">
+                                        <h6>High Protein</h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row gx-3">
+                                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                        <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-green">
+                                            <div class="card-body">
+                                                <div class="row gx-3">
+                                                    <div class="col-8">
+                                                        <p><span class="badge badge-sm badge-light text-bg-theme-1">Be Healthy</span></p>
+                                                        <a href="fitness-diet-details.html" class="style-none">
+                                                            <h6 class="text-theme-1 text-truncated">Full of Protein Diet</h6>
+                                                        </a>
+                                                        <p class="small">
+                                                            <span class="opacity-75">By:</span>
+                                                            <span>Chinsuk Wang</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <a href="fitness-diet-details.html" class="w-100 height-90 rounded coverimg d-inline-block align-top">
+                                                            <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                        <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-orange">
+                                            <div class="card-body">
+                                                <div class="row gx-3">
+                                                    <div class="col-8">
+                                                        <p><span class="badge badge-sm badge-light text-bg-theme-1">Sprouted</span></p>
+                                                        <a href="fitness-diet-details.html" class="style-none">
+                                                            <h6 class="text-theme-1 text-truncated">Runner Special Diet</h6>
+                                                        </a>
+                                                        <p class="small">
+                                                            <span class="opacity-75">By:</span>
+                                                            <span>Mark Gill</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <a href="fitness-diet-details.html" class="w-100 height-90 rounded coverimg d-inline-block align-top">
+                                                            <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <div class="row gx-3">
+                                                    <div class="col-8">
+                                                        <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-grey">Calories</span></p>
+                                                        <a href="fitness-diet-details.html" class="style-none">
+                                                            <h6 class="text-theme-1 text-truncated">Diet for die heart fan</h6>
+                                                        </a>
+                                                        <p class="small">
+                                                            <span class="opacity-75">By:</span>
+                                                            <span>Will Wing</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <a href="fitness-diet-details.html" class="w-100 height-90 rounded coverimg d-inline-block align-top">
+                                                            <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- popular diet -->
+                                <div class="row gx-3 align-items-center mb-3">
+                                    <div class="col">
+                                        <h6>Popular Diet</h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="swiper swipernav mb-3">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide width-300">
+                                            <div class="card adminuiux-card">
+                                                <div class="card-body">
+                                                    <h6 class="text-truncated">Starter Breakfast</h6>
+                                                    <div class="row gx-3">
+                                                        <div class="col-4">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                                <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="row gx-2 mb-2">
+                                                                <div class="col">
+                                                                    <p class="small mb-0">15g</p>
+                                                                    <p class="fs-12 opacity-75">Carbs</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p class="small mb-0">34g</p>
+                                                                    <p class="fs-12 opacity-75">Protein</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p class="small mb-0">254kcal</p>
+                                                                    <p class="fs-12 opacity-75">Energy</p>
+                                                                </div>
+                                                            </div>
+                                                            <a href="fitness-diet-details.html" class="btn btn-sm btn-link bg-white-opacity">View <i class="bi bi-arrow-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide width-300">
+                                            <div class="card adminuiux-card">
+                                                <div class="card-body">
+                                                    <h6 class="text-truncated">Soft Dinner</h6>
+                                                    <div class="row gx-3">
+                                                        <div class="col-4">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                                <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="row gx-2 mb-2">
+                                                                <div class="col">
+                                                                    <p class="small mb-0">19g</p>
+                                                                    <p class="fs-12 opacity-75">Carbs</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p class="small mb-0">24g</p>
+                                                                    <p class="fs-12 opacity-75">Protein</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p class="small mb-0">154kcal</p>
+                                                                    <p class="fs-12 opacity-75">Energy</p>
+                                                                </div>
+                                                            </div>
+                                                            <a href="fitness-diet-details.html" class="btn btn-sm btn-link bg-white-opacity">View <i class="bi bi-arrow-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide width-300">
+                                            <div class="card adminuiux-card">
+                                                <div class="card-body">
+                                                    <h6 class="text-truncated">Complete Meal</h6>
+                                                    <div class="row gx-3">
+                                                        <div class="col-4">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                                <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="row gx-2 mb-2">
+                                                                <div class="col">
+                                                                    <p class="small mb-0">35g</p>
+                                                                    <p class="fs-12 opacity-75">Carbs</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p class="small mb-0">40g</p>
+                                                                    <p class="fs-12 opacity-75">Protein</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p class="small mb-0">654kcal</p>
+                                                                    <p class="fs-12 opacity-75">Energy</p>
+                                                                </div>
+                                                            </div>
+                                                            <a href="fitness-diet-details.html" class="btn btn-sm btn-link bg-white-opacity">View <i class="bi bi-arrow-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </main>
+                </div>
+
+                <!-- add weight -->
+                <div class="modal adminuiux-modal fade" id="addweight" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <figure class="height-200 maxwidth-300 mx-auto coverimg rounded mb-3">
+                                    <img src="assets/img/fitness/weight.jpg" class="w-100">
+                                </figure>
+
+                                <h1 class="text-center mb-3">80.180 <small class="text-secondary">kg</small></h1>
+                                <!-- increamenter kilos -->
+                                <div class="row gx-3 justify-content-center mb-3 increamenter">
+                                    <div class="col-auto">
+                                        <button class="btn btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control text-center width-80 increamenter-value" placeholder="" value="80">
+                                            <div class="input-group-text">k</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-square btn-link rounded-circle increamenter-add">+</button>
+                                    </div>
+                                </div>
+
+                                <!-- increamenter grams  -->
+                                <div class="row gx-3 justify-content-center increamenter">
+                                    <div class="col-auto">
+                                        <button class="btn btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control text-center width-80 increamenter-value" placeholder="" value="180">
+                                            <div class="input-group-text">g</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-square btn-link rounded-circle increamenter-add">+</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-theme">Add Weight</button>
+                                <button type="button" class="btn btn-link theme-red" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- add water -->
+                <div class="modal adminuiux-modal fade" id="addwater" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content overflow-hidden">
+                            <figure class="h-100 w-100 mx-auto coverimg rounded position-absolute top-0 start-0 blur-overlay opacity-75 mb-3">
+                                <img src="assets/img/fitness/drop.jpg" class="w-100">
+                            </figure>
+                            <div class="modal-body position-relative z-index-1">
+                                <figure class="height-200 maxwidth-300 mx-auto coverimg rounded mb-3">
+                                    <img src="assets/img/fitness/water.jpg" class="w-100">
+                                </figure>
+                                <h1 class="text-center mb-0">1500 <small class="text-secondary">ml</small></h1>
+                                <p class="text-secondary text-center mb-3">Total Intake</p>
+                                <!-- increamenter kilos -->
+                                <div class="row gx-2 justify-content-center mb-1 increamenter theme-cyan">
+                                    <div class="col-auto">
+                                        <button class="btn btn-square btn-outline-theme rounded-circle increamenter-remove">-</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control text-center width-80 increamenter-value" placeholder="" value="1">
+                                            <div class="input-group-text"><i class="bi bi-cup-straw h5 text-theme-1 theme-cyan"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-square btn-outline-theme rounded-circle increamenter-add">+</button>
+                                    </div>
+                                </div>
+                                <p class="small text-secondary text-center opacity-75">250ml = 1 glass</p>
+                            </div>
+                            <div class="modal-footer justify-content-between z-index-1">
+                                <button type="button" class="btn btn-theme">Add</button>
+                                <button type="button" class="btn btn-link theme-red" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- mobile footer -->
+                <%= require('../partials/footer/mobile-footer.html').default %>
+
+                    <!-- footer -->
+                    <%= require('../partials/offcanvas/theming.html').default %>
+                        <%= require('../partials/footer/fitness-footer.html').default %>
+
+
+                            <!-- Page Level js -->
+                            <script src="assets/js/fitness/fitness-diet.js"></script>
+
+    </body>
+
+</html>

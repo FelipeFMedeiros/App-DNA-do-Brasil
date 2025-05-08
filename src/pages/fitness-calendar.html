@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header.html').default %>
+                <div class="adminuiux-wrap">
+                    <!-- Standard sidebar -->
+                    <%= require('../partials/navigation/fitness-sidebar.html').default %>
+                        <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                            <!-- content -->
+                            <div class="container mt-3" id="main-content">
+                                <p class="h6 mb-3">My Calendar</p>
+                                <div class="card adminuiux-card mb-2">
+                                    <div class="card-body px-2 pt-1">
+                                        <div class="inlinewrap1 inline-calendar mx-auto"></div><input id="inlinewrap1" class="d-none" style="">
+                                    </div>
+                                </div>
+                                <div class="row gx-3 align-items-center mb-2">
+                                    <div class="col">
+                                        <hr class="">
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="small text-secondary">My Events</p>
+                                    </div>
+                                    <div class="col">
+                                        <hr class="">
+                                    </div>
+                                </div>
+                                <div class="card adminuiux-card style-none mb-3">
+                                    <div class="card-body">
+                                        <p class="mb-3 small fw-medium text-secondary">10:00 am - 11:30 am <span class="text-warning bi bi-tag"></span></p>
+                                        <div class="row align-items-center gx-2 mb-0">
+                                            <div class="col-auto"><img src="assets/img/fitness/image-11.jpg" class="avatar avatar-40 rounded" alt=""></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Diet Management Event</h6>
+                                                <p class="text-secondary small text-truncated">Sweden, Europe.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card adminuiux-card style-none mb-3">
+                                    <div class="card-body">
+                                        <p class="mb-3 small fw-medium text-secondary">10:00 am - 11:30 am <span class="text-warning bi bi-tag"></span></p>
+                                        <div class="row gx-2 mb-0">
+                                            <div class="col-auto">
+                                                <img src="assets/img/modern-ai-image/user-4.jpg" class="avatar avatar-40 rounded" alt="">
+                                                <img src="assets/img/fitness/image-10.jpg" class="avatar avatar-40 rounded" alt="">
+                                            </div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Lunch out</h6>
+                                                <p class="text-secondary small text-truncated">Chapter 2 starting.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card adminuiux-card style-none mb-3">
+                                    <div class="card-body">
+                                        <p class="mb-3 small fw-medium text-secondary">10:00 am - 11:30 am <span class="text-warning bi bi-tag"></span></p>
+                                        <div class="row gx-2 mb-0">
+                                            <div class="col-auto">
+                                                <img src="assets/img/modern-ai-image/user-5.jpg" class="avatar avatar-40 rounded" alt="">
+                                                <img src="assets/img/modern-ai-image/user-6.jpg" class="avatar avatar-40 rounded" alt="">
+                                            </div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Noon Yoga Session</h6>
+                                                <p class="text-secondary small text-truncated">By Jyotika Vaishnav.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card adminuiux-card bg-orange-subtle style-none mb-3">
+                                    <div class="card-body">
+                                        <p class="mb-3 small fw-medium text-secondary">10:00 am - 11:30 am <span class="text-warning bi bi-tag"></span></p>
+                                        <div class="row align-items-center gx-2 mb-0">
+                                            <div class="col-auto"><img src="assets/img/fitness/image-11.jpg" class="avatar avatar-40 rounded" alt=""></div>
+                                            <div class="col">
+                                                <h6 class="mb-0">Diet Management Event</h6>
+                                                <p class="text-secondary small text-truncated">Sweden, Europe.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mb-3"><button class="btn btn-sm btn-link"><span class="spinner-border spinner-border-sm me-2" role="status"><span class="visually-hidden">Loading...</span> </span>Load more...</button></div>
+
+                                <div class="row gx-3">
+                                    <div class="col-6 col-md-4 col-lg-3">
+                                        <div class="card adminuiux-card border-0 height-150 bg-theme-l-gradient mb-3 hover-action">
+                                            <div class="card-body position-relative">
+                                                <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                                    <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                                </div>
+                                                <h4 class="mb-0">26</h4>
+                                                <p class="opacity-75 mb-4">Monday</p>
+                                                <p class="text-truncated mb-0">Excercise Events</p>
+                                                <p class="text-truncated opacity-75 fs-12 mb-0">125 Bookmarked</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-3">
+                                        <div class="card adminuiux-card border-0 height-150 mb-3 overflow-hidden hover-action">
+                                            <figure class="position-absolute start-0 top-0 w-100 h-100 coverimg z-index-0">
+                                                <img src="assets/img/fitness/image-10.jpg" alt="">
+                                            </figure>
+                                            <div class="card-body position-relative z-index-1">
+                                                <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                                    <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer text-white z-index-1 position-relative">
+                                                <h4 class="mb-0">27</h4>
+                                                <p class="opacity-75">Today's Recipe</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-3">
+                                        <div class="card adminuiux-card border-0 height-150 mb-3 overflow-hidden hover-action">
+                                            <figure class="position-absolute start-0 top-0 w-100 h-100 coverimg blur-overlay z-index-0">
+                                                <img src="assets/img/fitness/image-9.jpg" alt="">
+                                            </figure>
+                                            <div class="card-body position-relative z-index-1">
+                                                <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                                    <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                                </div>
+                                                <h4 class="mb-0">28</h4>
+                                                <p class="opacity-75 mb-3">Wednesday</p>
+
+                                                <figure class="avatar avatar-50 rounded overflow-hidden coverimg">
+                                                    <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                </figure>
+                                                <figure class="avatar avatar-50 rounded overflow-hidden coverimg mx-1">
+                                                    <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-3">
+                                        <div class="card adminuiux-card border-0 height-150 bg-theme-accent-1 mb-3 hover-action">
+                                            <div class="card-body position-relative">
+                                                <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                                    <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                                </div>
+                                                <h4 class="mb-0">29</h4>
+                                                <p class="opacity-75 mb-4">Thursday</p>
+                                                <p class="text-truncated small mb-0">Diet Plan 2</p>
+                                                <p class="text-truncated opacity-75 fs-12 mb-0">Session 3</p>
+                                                <div class="avatar avatar-20 position-absolute bottom-0 end-0 rounded-circle bg-white-opacity text-white text-center m-2" data-bs-toggle="tooltip" title="Diet Plan 2: Session 4">
+                                                    <span class="fs-12">+1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                </div>
+
+                <!-- add reminder Modal -->
+                <div class="modal adminuiux-modal fade" id="addreminder" tabindex="-1" aria-labelledby="addremindermodalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title h5" id="addremindermodalLabel">Add Reminder</p>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="subject" placeholder="Enter Subject">
+                                    <label for="subject">Subject</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+                                    <label for="description">Description</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-theme">Add</button>
+                                <button type="button" class="btn btn-link theme-red" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

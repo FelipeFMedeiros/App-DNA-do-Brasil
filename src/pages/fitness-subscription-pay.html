@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+  <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+      <%= require('../partials/header/fitness-header-back.html').default %>
+        <div id="title" class="d-none">
+          <%= htmlWebpackPlugin.options.title %>
+        </div>
+        <div class="adminuiux-wrap">
+          <main class="adminuiux-content" onclick="contentClick()">
+            <!-- content -->
+            <div class="container mt-3" id="main-content">
+
+              <!-- plans -->
+              <div class="text-center mb-3">
+                <h1 class="mb-0">$ 449.00</h1>
+                <h5 class="fw-normal text-secondary">Team Plan</h5>
+              </div>
+
+              <!-- card details -->
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <div class="form-floating">
+                      <input placeholder="Card Holder Name" value="Max Johnson" required="" class="form-control">
+                      <label>Card Holder Name</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
+                    <div class="form-floating">
+                      <input placeholder="Card Number" value="" required="" class="form-control">
+                      <label>Card Number</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option>01</option>
+                        <option selected="selected">02</option>
+                        <option>03</option>
+                        <option>04</option>
+                      </select>
+                      <label>Expiry Month</label>
+                    </div>
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option selected="selected">26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                      </select>
+                      <label>Expiry Year</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-asterisk"></i></span>
+                    <div class="form-floating">
+                      <input type="number" placeholder="CVV" value="" required="" class="form-control">
+                      <label>CVV</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <a href="fitness-dashboard.html" class="btn btn-theme">Pay Now</a>
+              </div>
+            </div>
+          </main>
+        </div>
+
+        <!-- footer -->
+        <%= require('../partials/offcanvas/theming.html').default %>
+          <%= require('../partials/footer/fitness-footer.html').default %>
+
+            <!-- Page Level js -->
+  </body>
+
+</html>

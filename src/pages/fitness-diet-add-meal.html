@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header-back.html').default %>
+                <div id="title" class="d-none">
+                    <%= htmlWebpackPlugin.options.title %>
+                </div>
+                <div class="adminuiux-wrap">
+                    <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                        <!-- content -->
+                        <div class="container mt-3" id="main-content">
+
+                            <!-- today's stats -->
+                            <div class="row gx-3 align-items-center mb-3">
+                                <div class="col">
+                                    <h6>Today's Goal</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <p class="badge badge-light text-bg-theme-1 theme-cyan">
+                                        <i class="bi bi-droplet-half text-theme-1 theme-cyan"></i> 1.5 <small class="opacity-75">liter</small>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col">
+                                    <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-yellow mb-3">
+                                        <div class="card-body">
+                                            <h6>Calories</h6>
+                                            <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 75%; --h-dynamic:4px"></div>
+                                            </div>
+                                            <p class="small opacity-75">65%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-green mb-3">
+                                        <div class="card-body">
+                                            <h6>Carbs</h6>
+                                            <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 65%; --h-dynamic:4px"></div>
+                                            </div>
+                                            <p class="small opacity-75">65%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-orange mb-3">
+                                        <div class="card-body">
+                                            <h6>Protien</h6>
+                                            <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 50%; --h-dynamic:4px"></div>
+                                            </div>
+                                            <p class="small opacity-75">50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- popular diet -->
+                            <div class="row gx-3 align-items-center mb-3">
+                                <div class="col">
+                                    <h6>Frequently used</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="swiper swipernav mb-3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide width-280">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <div class="row gx-3 align-items-center mb-2">
+                                                    <div class="col">
+                                                        <h6 class="text-truncated">Starter Breakfast</h6>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <a href="fitness-diet-details.html" class="btn btn-sm btn-square btn-link bg-white-opacity"><i class="bi bi-chevron-right"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                            <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="row gx-2 mb-2">
+                                                            <div class="col">
+                                                                <p class="small mb-0">15g</p>
+                                                                <p class="fs-12 opacity-75">Carbs</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">34g</p>
+                                                                <p class="fs-12 opacity-75">Protein</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">254kcal</p>
+                                                                <p class="fs-12 opacity-75">Energy</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row gx-3">
+                                                            <div class="col-auto">
+                                                                <div class="row gx-2 justify-content-center">
+                                                                    <div class="col-auto">
+                                                                        <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-280">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <div class="row gx-3 align-items-center mb-2">
+                                                    <div class="col">
+                                                        <h6 class="text-truncated">Soft Dinner</h6>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <a href="fitness-diet-details.html" class="btn btn-sm btn-square btn-link bg-white-opacity"><i class="bi bi-chevron-right"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                            <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="row gx-2 mb-2">
+                                                            <div class="col">
+                                                                <p class="small mb-0">19g</p>
+                                                                <p class="fs-12 opacity-75">Carbs</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">24g</p>
+                                                                <p class="fs-12 opacity-75">Protein</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">154kcal</p>
+                                                                <p class="fs-12 opacity-75">Energy</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row gx-3">
+                                                            <div class="col-auto">
+                                                                <div class="row gx-2 justify-content-center">
+                                                                    <div class="col-auto">
+                                                                        <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-280">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <div class="row gx-3 align-items-center mb-2">
+                                                    <div class="col">
+                                                        <h6 class="text-truncated">Complete Meal</h6>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <a href="fitness-diet-details.html" class="btn btn-sm btn-square btn-link bg-white-opacity"><i class="bi bi-chevron-right"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                            <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="row gx-2 mb-2">
+                                                            <div class="col">
+                                                                <p class="small mb-0">35g</p>
+                                                                <p class="fs-12 opacity-75">Carbs</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">40g</p>
+                                                                <p class="fs-12 opacity-75">Protein</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">654kcal</p>
+                                                                <p class="fs-12 opacity-75">Energy</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row gx-3">
+                                                            <div class="col-auto">
+                                                                <div class="row gx-2 justify-content-center">
+                                                                    <div class="col-auto">
+                                                                        <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- categories -->
+                            <div class="swiper swiperthumbnav mb-3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">All</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Breakfast</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Lunch</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Super</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Dinner</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Fast Food</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Juice</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Dairy</span>
+                                    </div>
+                                    <div class="swiper-slide w-auto">
+                                        <span class="btn btn-sm btn-outline-theme theme-grey">Biscuits</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gallery  main photo-->
+                            <div class="swiper swiperthumb mb-3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="row gx-3">
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Starter Breakfast</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Soup, Juice, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="1">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Chicken Greavy Chilly</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Chiken, Red Chilly Souce, Onion, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-12.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Heavy Frozen Desert</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Green Vegies, Strawberry, Milk Cream, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-13.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Complete Meal</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Mix Veg, Chappati, Butter Milk, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-center"><a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a></p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="row gx-3">
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Starter Breakfast</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Soup, Juice, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Chicken Greavy Chilly</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Chiken, Red Chilly Souce, Onion, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-12.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Heavy Frozen Desert</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Green Vegies, Strawberry, Milk Cream, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-13.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Complete Meal</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Mix Veg, Chappati, Butter Milk, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-center"><a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a></p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="row gx-3">
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Starter Breakfast</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Soup, Juice, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Chicken Greavy Chilly</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Chiken, Red Chilly Souce, Onion, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-12.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Heavy Frozen Desert</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Green Vegies, Strawberry, Milk Cream, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-13.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Complete Meal</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Mix Veg, Chappati, Butter Milk, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-center"><a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a></p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="row gx-3">
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Starter Breakfast</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Soup, Juice, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Chicken Greavy Chilly</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Chiken, Red Chilly Souce, Onion, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-12.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Heavy Frozen Desert</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Green Vegies, Strawberry, Milk Cream, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-13.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Complete Meal</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Mix Veg, Chappati, Butter Milk, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-center"><a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a></p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="row gx-3">
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Starter Breakfast</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Soup, Juice, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Chicken Greavy Chilly</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Chiken, Red Chilly Souce, Onion, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-12.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Heavy Frozen Desert</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Green Vegies, Strawberry, Milk Cream, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="card adminuiux-card mb-3">
+                                                    <div class="card-body">
+                                                        <a href="fitness-diet-details.html" class="style-none d-block mb-0">
+                                                            <figure class="height-80 w-100 rounded coverimg mb-2">
+                                                                <img src="assets/img/fitness/image-13.jpg" alt="">
+                                                            </figure>
+                                                            <h6 class="text-truncated">Complete Meal</h6>
+                                                        </a>
+                                                        <p class="small text-truncated text-secondary mb-2">Mix Veg, Chappati, Butter Milk, Bread butter, Salad</p>
+
+                                                        <div class="row gx-2 justify-content-center">
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <input type="text" class="form-control form-control-sm text-center maxwidth-40 increamenter-value px-1" placeholder="" value="0">
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <button class="btn btn-sm btn-square btn-link rounded-circle increamenter-add">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-center"><a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </main>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

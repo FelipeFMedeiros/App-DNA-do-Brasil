@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-blue adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-blue" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <!-- page loader -->
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %> <!-- main content -->
+            <main class="flex-shrink-0 pt-0 position-relative h-100">
+                <div class="container-fluid z-index-1 position-relative">
+                    <div class="auth-wrapper d-flex flex-column minvheight-100">
+                        <!--Page body-->
+                        <!-- login wrap -->
+                        <div class="row gx-3 align-items-center justify-content-center py-3 mt-auto">
+                            <div class="col-11 col-sm-8 col-md-11 col-xl-11 col-xxl-10 login-box">
+                                <div class="mb-4">
+                                    <img src="assets/img/logo_med.webp" class="width-120 mx-auto mb-3" alt=""><br>
+                                    <h2 class="text-theme-accent-1 mb-0">Bem Vindo ao</h2>
+                                    <h1 class="fw-bold text-theme-1">Aplicativo<b> DNA</b></h1>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="emailadd" placeholder="Enter email address" value="info@adminuiux" autofocus="">
+                                    <label for="emailadd">Email</label>
+                                </div>
+                                <div class="position-relative">
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="passwd" placeholder="Enter your password">
+                                        <label for="passwd">Senha</label>
+                                    </div>
+                                    <button class="btn btn-square btn-link text-theme-1 position-absolute end-0 top-0 mt-2 me-2 ">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="row gx-3 align-items-center mb-3">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="rememberme" id="rememberme">
+                                            <label class="form-check-label" for="rememberme">Lembrar-me</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="fitness-forgot-password.html" class=" ">Esqueceu a senha?</a>
+                                    </div>
+                                </div>
+                                <a href="fitness-dashboard.html" class="btn btn-lg btn-theme w-100 mb-4">Entrar</a>
+                                <!-- <button class="btn btn-lg btn-theme w-100 mb-3">Login</button> -->
+                                <div class="small text-secondary text-center mb-4"> Não tem uma conta? <a href="fitness-signup.html" class=" ">Criar Conta</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- theming -->
+                        <%= require('../partials/offcanvas/theming.html').default %> <!-- standard footer -->
+                            <%= require('../partials/footer/fitness-auth-footer.html').default %>
+                    </div>
+                </div>
+            </main>
+            <!-- Page Level js -->
+            <script src="assets/js/fitness/fitness-auth.js"></script>
+    </body>
+
+</html>

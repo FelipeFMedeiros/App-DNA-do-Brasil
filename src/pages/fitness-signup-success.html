@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <!-- page loader -->
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %> <!-- main content -->
+            <main class="container-fluid">
+                <div class="auth-wrapper d-flex flex-column minvheight-100">
+                    <!--Page body-->
+                    <%= require('../partials/header/fitness-auth-header-back.html').default %> <!-- login wrap -->
+                        <div class="row align-items-center justify-content-center py-4 mt-auto">
+                            <div class="col-11 col-sm-8 col-md-11 col-xl-11 col-xxl-10 login-box">
+                                <div class="text-center mb-4">
+                                    <h1 class="display-2 fw-bold mb-0">&#129395;<br>Congratulations</h1>
+                                    <p class="text-secondary">You come so far and ready!</p>
+                                </div>
+                                <a href="fitness-onboarding.html" class="btn btn-lg btn-outline-theme h-auto w-100 mb-3 text-start">
+                                    <div class="row gx-3 align-items-center p-2">
+                                        <div class="col-auto">
+                                            <i class="bi bi-journal-medical fs-2 h-auto w-auto"></i>
+                                        </div>
+                                        <div class="col">
+                                            <p class="h6 mb-0">Are you self learner?</p>
+                                            <p class="opacity-75 fs-14">Exercise by yourself</p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="fitness-onboarding.html" class="btn btn-lg btn-outline-theme h-auto w-100 mb-3 text-start">
+                                    <div class="row gx-3 align-items-center p-2">
+                                        <div class="col-auto">
+                                            <i class="bi bi-person-walking fs-2 h-auto w-auto"></i>
+                                        </div>
+                                        <div class="col">
+                                            <p class="h6 mb-0">You need trainer?</p>
+                                            <p class="opacity-75 fs-14">For heavy exercise</p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- theming -->
+                        <%= require('../partials/offcanvas/theming.html').default %>
+
+                            <!-- standard footer -->
+                            <%= require('../partials/footer/fitness-auth-footer.html').default %>
+                </div>
+            </main>
+            <!-- Page Level js -->
+            <script src="assets/js/fitness/fitness-auth.js"></script>
+    </body>
+
+</html>

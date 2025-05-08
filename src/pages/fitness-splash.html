@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <!-- page loader -->
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <!-- main -->
+            <main class="d-flex flex-column pt-ios pb-ios vh-100 dvh-100">
+                <div class="container-fluid mb-auto z-index-9">
+                    <div class="position-relative height-10 mt-3">
+                        <div class="swiper-pagination inline line"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                        </div>
+                        <div class="col-auto">
+                            <a href="fitness-dashboard.html" class="btn btn-link w-100">Skip <i class="bi bi-chevron-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- swiper -->
+                <div class="swiper swipernavsplash my-auto w-100">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="row justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3 text-center">
+                                    <h1 class="display-3 fw-bold text-theme-1 mb-1">FitnessUIUX</h1>
+                                    <h2 class="text-theme-accent-1 mb-3">The only bad workout is one that didn't happen</h2>
+                                    <div class="position-relative rounded w-100 height-220 coverimg mb-3">
+                                        <img src="assets/img/fitness/image-1.jpg" alt="">
+                                    </div>
+                                    <p class="small opacity-75"><i class="bi bi-lightbulb"></i> <b>Fullscreen tips iPhone:</b><br>Share preview and add to home screen. Open from home screen</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3 text-center">
+                                    <h1 class="display-3 fw-bold text-theme-1 mb-1">Unique</h1>
+                                    <h2 class="text-theme-accent-1 mb-4">Your body achieves what your mind believes</h2>
+                                    <div class="position-relative rounded w-100 height-220 coverimg mb-3">
+                                        <img src="assets/img/fitness/image-2.jpg" alt="">
+                                    </div>
+                                    <p class="opacity-75">I'm not addicted to fitness, I'm just in a committed relationship with it.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3 text-center">
+                                    <h1 class="display-3 fw-bold text-theme-1 mb-1">Creative</h1>
+                                    <h2 class="text-theme-accent-1 mb-4">The real workout starts when you want to stop</h2>
+                                    <div class="position-relative rounded w-100 height-220 coverimg mb-3">
+                                        <img src="assets/img/fitness/image-6.jpg" alt="">
+                                    </div>
+                                    <p class="opacity-75">The only person you are destined to become is the person you decide to be.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- action buttons  -->
+                <div class="container-fluid mt-auto z-index-9">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-sm-auto mb-4">
+                            <a href="fitness-login.html" class="btn btn-lg btn-theme w-100">Login</a>
+                        </div>
+                        <div class="col-6 col-sm-auto mb-4">
+                            <a href="fitness-signup.html" class="btn btn-lg btn-link text-theme-accent-1 w-100">Signup</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- page level script -->
+            <script src="assets/js/fitness/fitness-splash.js"></script>
+    </body>
+
+</html>

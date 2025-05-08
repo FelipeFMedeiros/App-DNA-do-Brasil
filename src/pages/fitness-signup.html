@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+  <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <!-- page loader -->
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %> <!-- main content -->
+      <main class="adminuiux-content container-fluid vh-100">
+        <div class="auth-wrapper d-flex flex-column h-100">
+          <!--Page body-->
+          <!-- standard header -->
+          <%= require('../partials/header/fitness-auth-header-back.html').default %> <!-- login wrap -->
+            <div id="title" class="d-none">
+              <!-- <%= htmlWebpackPlugin.options.title %> -->
+            </div>
+            <div class="row gx-3 align-items-center justify-content-center py-4 mt-auto">
+              <div class="col-11 col-sm-8 col-md-11 col-xl-11 col-xxl-10 login-box">
+                <div class="mb-4">
+                  <h2 class="text-theme-accent-1 mb-0">Welcome to FitnessUIUX</h2>
+                  <h1 class="fw-bold text-theme-1">Sign up now!</h1>
+                </div>
+                <div class="row gx-3">
+                  <div class="col">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="namef" placeholder="Enter first name" value="Max" autofocus="">
+                      <label for="namef">First Name</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="namel" placeholder="Enter last name" value="Doe">
+                      <label for="namel">Last Name</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="emailadd" placeholder="Enter email address" value="info@adminuiux">
+                  <label for="emailadd">Email Address</label>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="form-floating maxwidth-100">
+                    <select class="form-select" id="code" aria-label="Country code">
+                      <option value="1">+1</option>
+                      <option selected>+44</option>
+                      <option value="3">+66</option>
+                      <option value="2">+91</option>
+                    </select>
+                    <label for="code">Code</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="phonen" placeholder="Enter your phone number">
+                    <label for="phonen">Phone Number</label>
+                  </div>
+                </div>
+                <div class="position-relative">
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="checkstrength" placeholder="Enter your password">
+                    <label for="checkstrength">Password</label>
+                  </div>
+                  <button class="btn btn-square btn-link text-theme-1 position-absolute end-0 top-0 mt-2 me-2 ">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div class="feedback mb-3">
+                  <div class="row">
+                    <div class="col">
+                      <div class="check-strength" id="checksterngthdisplay">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <span class="small" id="textpassword"></span>
+                      <i class="bi bi-info-circle text-theme ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Password should contain atleast 1 capital, 1 alphanumeric & min. 8 characters"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="position-relative">
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="passwd" placeholder="Confirm your password">
+                    <label for="passwd">Confirm Password</label>
+                  </div>
+                  <button class="btn btn-square btn-link text-theme-1 position-absolute end-0 top-0 mt-2 me-2 ">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <a href="fitness-signup-success.html" class="btn btn-lg btn-theme w-100 mb-4">Sign up</a>
+                <!-- <button class="btn btn-lg btn-theme w-100 mb-4">Login</button> -->
+              </div>
+            </div>
+            <!-- standard footer -->
+            <%= require('../partials/footer/fitness-auth-footer.html').default %> <!-- theming -->
+              <%= require('../partials/offcanvas/theming.html').default %>
+        </div>
+      </main>
+      <!-- Page Level js -->
+      <script src="assets/js/fitness/fitness-auth.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <!-- back button header with title -->
+            <%= require('../partials/header/fitness-header-back.html').default %>
+                <div id="title" class="d-none">
+                    <%= htmlWebpackPlugin.options.title %>
+                </div>
+                <div class="adminuiux-wrap">
+                    <main class="adminuiux-content" onclick="contentClick()">
+                        <!-- content -->
+                        <div class="container mt-3" id="main-content">
+                            <!-- gym/fitness clubs -->
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-4 mb-3">
+                                                    <figure class="w-100 height-110 rounded coverimg">
+                                                        <img src="assets/img/fitness/image-5.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-8 mb-3">
+                                                    <div class="row gx-3 align-items-center mb-2">
+                                                        <div class="col">
+                                                            <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-orange"><i class="bi bi-star"></i> Intermediate</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <button class="btn btn-sm btn-square btn-link theme-red"><i class="bi bi-heart"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="text-truncated">Barcalona Fitness Center</h6>
+                                                    <p class="small text-secondary">A625, 3 The Rushes, Indiana LE11 1UQ, UK</p>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col">
+                                                    <p class="text-theme-1 theme-yellow">
+                                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                                        <br><small class="text-secondary">5 (1531 Ratings)</small>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="fitness-club.html" class="btn btn-sm btn-link">View <i class="bi bi-chevron-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-4 mb-3">
+                                                    <figure class="w-100 height-110 rounded coverimg">
+                                                        <img src="assets/img/fitness/image-4.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-8 mb-3">
+                                                    <div class="row gx-3 align-items-center mb-2">
+                                                        <div class="col">
+                                                            <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-cyan"><i class="bi bi-patch-check-fill"></i> Pro Trainer</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <button class="btn btn-sm btn-square btn-link theme-red"><i class="bi bi-heart-fill"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="text-truncated">BYDW Gym</h6>
+                                                    <p class="small text-secondary">A625, 3 The Rushes, Lough borough LE11 1UQ, UK</p>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col">
+                                                    <p class="text-theme-1 theme-yellow">
+                                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                                        <br><small class="text-secondary">4.5 (288 Ratings)</small>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="fitness-club.html" class="btn btn-sm btn-link">View <i class="bi bi-chevron-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-4 mb-3">
+                                                    <figure class="w-100 height-110 rounded coverimg">
+                                                        <img src="assets/img/fitness/image-8.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-8 mb-3">
+                                                    <div class="row gx-3 align-items-center mb-2">
+                                                        <div class="col">
+                                                            <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-cyan"><i class="bi bi-patch-check-fill"></i> Pro Trainer</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <button class="btn btn-sm btn-square btn-link theme-red"><i class="bi bi-heart-fill"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="text-truncated">Tridents Fitness Center</h6>
+                                                    <p class="small text-secondary">B5569, 3 The Rushes, Lough borough LE11 1UQ, US</p>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 align-items-center">
+                                                <div class="col">
+                                                    <p class="text-theme-1 theme-yellow">
+                                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                                        <br><small class="text-secondary">4.5 (288 Ratings)</small>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="fitness-club.html" class="btn btn-sm btn-link">View <i class="bi bi-chevron-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </main>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-auth-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

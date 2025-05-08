@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header-back.html').default %>
+                <div id="title" class="d-none">
+                    <%= htmlWebpackPlugin.options.title %>
+                </div>
+                <div class="adminuiux-wrap">
+                    <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                        <!-- content -->
+                        <div class="container mt-3" id="main-content">
+
+                            <div class="card adminuiux-card overflow-hidden mb-3">
+                                <!-- gallery  main photo-->
+                                <div class="card-body z-index-1 p-0">
+                                    <div class="swiper swiperthumb">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <figure class="height-200 coverimg rounded">
+                                                    <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <figure class="height-200 coverimg rounded">
+                                                    <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <figure class="height-200 coverimg rounded">
+                                                    <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <figure class="height-200 coverimg rounded">
+                                                    <img src="assets/img/fitness/image-12.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <figure class="height-200 coverimg rounded">
+                                                    <img src="assets/img/fitness/image-13.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <!-- gallery -->
+                                    <div class="swiper swiperthumbnav mb-3">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide w-auto mb-4">
+                                                <figure class="avatar avatar-60 rounded coverimg">
+                                                    <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide w-auto mb-4">
+                                                <figure class="avatar avatar-60 rounded coverimg">
+                                                    <img src="assets/img/fitness/image-10.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide w-auto mb-4">
+                                                <figure class="avatar avatar-60 rounded coverimg">
+                                                    <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide w-auto mb-4">
+                                                <figure class="avatar avatar-60 rounded coverimg">
+                                                    <img src="assets/img/fitness/image-12.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="swiper-slide w-auto mb-4">
+                                                <figure class="avatar avatar-60 rounded coverimg">
+                                                    <img src="assets/img/fitness/image-13.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination line bottom-0"></div>
+                                    </div>
+                                    <!-- details -->
+                                    <div class="row gx-3 mb-3">
+                                        <div class="col">
+                                            <h5 class="mb-0">Soft Dinner</h5>
+                                            <p class="opacity-75 small">Chappati, Mix Veg., Tadka, Salad, Butter Milk, Aachar, Chilli paste. </p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <p><button class="btn btn-sm btn-square btn-link theme-green"><i class="bi bi-bookmark"></i></button></p>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col">
+                                            <h5 class="mb-0">19g</h5>
+                                            <p class="small opacity-75">Carbs</p>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="mb-0">24g</h5>
+                                            <p class="small opacity-75">Protein</p>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="mb-0">154kcal</h5>
+                                            <p class="small opacity-75">Energy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- number matters -->
+                            <div class="row gx-3 justify-content-center text-center">
+                                <div class="col mb-3">
+                                    <i class="bi bi-heart avatar avatar-40 rounded-circle bg-theme-1-subtle text-theme-1 border border-theme-1 theme-red mb-2"></i>
+                                    <h5 class="mb-0">65+</h5>
+                                    <p class="small text-secondary">Likes</p>
+                                </div>
+                                <div class="col mb-3">
+                                    <i class="bi bi-chat-left-text avatar avatar-40 rounded-circle bg-theme-1-subtle text-theme-1 border border-theme-1 theme-orange mb-2"></i>
+                                    <h5 class="mb-0">11+</h5>
+                                    <p class="small text-secondary">Comments</p>
+                                </div>
+                                <div class="col mb-3">
+                                    <i class="bi bi-star avatar avatar-40 rounded-circle bg-theme-1-subtle text-theme-1 border border-theme-1 theme-yellow mb-2"></i>
+                                    <h5 class="mb-0">4.5</h5>
+                                    <p class="small text-secondary">Rating</p>
+                                </div>
+                                <div class="col mb-3">
+                                    <i class="bi bi-briefcase avatar avatar-40 rounded-circle bg-theme-1-subtle text-theme-1 border border-theme-1 theme-grey mb-2"></i>
+                                    <h5 class="mb-0">26+</h5>
+                                    <p class="small text-secondary">Reviews</p>
+                                </div>
+                            </div>
+
+                            <!-- brief bio -->
+                            <div class="row gx-3 align-items-center mb-3">
+                                <div class="col">
+                                    <h6>About Diet Plan</h6>
+                                </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<a class="" data-bs-toggle="collapse" href="#readmore" role="button" aria-expanded="false" aria-controls="collapseExample">Read more</a></p>
+                            <div class="collapse" id="readmore">
+                                <p class="mb-3">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                            </div>
+
+                            <!-- comment -->
+                            <div class="row gx-3 align-items-center mb-3">
+                                <div class="col">
+                                    <h6>Comments</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <p class="text-secondary small">4.5 (30 Reviews)</p>
+                                </div>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-12 col-lg-6 col-xl-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-auto">
+                                                    <figure class="avatar avatar-80 rounded coverimg">
+                                                        <img src="assets/img/modern-ai-image/user-5.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="mb-2">Best diet plans as always wanted</p>
+                                                    <p class="text-theme-1 theme-yellow mb-2">
+                                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                                                    </p>
+                                                    <p class="small text-secondary">Julliet W.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-4">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3">
+                                                <div class="col-auto">
+                                                    <figure class="avatar avatar-80 rounded coverimg">
+                                                        <img src="assets/img/modern-ai-image/user-4.jpg" alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="mb-2">Perfect fit for my need, Great support</p>
+                                                    <p class="text-theme-1 theme-yellow mb-2">
+                                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                                    </p>
+                                                    <p class="small text-secondary">Mark X.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card adminuiux-card mb-3">
+                                        <div class="card-body">
+                                            <div class="row gx-3 align-items-center mb-3">
+                                                <div class="col">
+                                                    <h6>Comment</h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <p class="">
+                                                        <span class="text-secondary">Rate: </span>
+                                                        <i class="bi bi-star-fill text-warning"></i>
+                                                        <i class="bi bi-star-fill text-warning"></i>
+                                                        <i class="bi bi-star-fill text-warning"></i>
+                                                        <i class="bi bi-star-fill text-warning"></i>
+                                                        <i class="bi bi-star text-secondary"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <textarea class="form-control mb-3"></textarea>
+                                            <button class="btn btn-sm btn-theme">Comment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- find diet plans -->
+                            <div class="row gx-3 align-items-center mb-3">
+                                <div class="col text-center py-3">
+                                    <h4>Find diet plans with <br><span class="text-theme-1">Similar</span> to soft dinner for you</h4>
+                                </div>
+                            </div>
+
+                            <!-- related diet plans -->
+                            <div class="row gx-3 align-items-center mb-3">
+                                <div class="col">
+                                    <h6>Related Diet Plans</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="fitness-diet-all.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="swiper swipernav mb-3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <h6 class="text-truncated">Starter Breakfast</h6>
+                                                <div class="row gx-3">
+                                                    <div class="col-4">
+                                                        <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                            <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="row gx-2 mb-2">
+                                                            <div class="col">
+                                                                <p class="small mb-0">15g</p>
+                                                                <p class="fs-12 opacity-75">Carbs</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">34g</p>
+                                                                <p class="fs-12 opacity-75">Protein</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">254kcal</p>
+                                                                <p class="fs-12 opacity-75">Energy</p>
+                                                            </div>
+                                                        </div>
+                                                        <a href="fitness-diet-details.html" class="btn btn-sm btn-link bg-white-opacity">View <i class="bi bi-arrow-right"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <h6 class="text-truncated">Soft Dinner</h6>
+                                                <div class="row gx-3">
+                                                    <div class="col-4">
+                                                        <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                            <img src="assets/img/fitness/image-9.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="row gx-2 mb-2">
+                                                            <div class="col">
+                                                                <p class="small mb-0">19g</p>
+                                                                <p class="fs-12 opacity-75">Carbs</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">24g</p>
+                                                                <p class="fs-12 opacity-75">Protein</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">154kcal</p>
+                                                                <p class="fs-12 opacity-75">Energy</p>
+                                                            </div>
+                                                        </div>
+                                                        <a href="fitness-diet-details.html" class="btn btn-sm btn-link bg-white-opacity">View <i class="bi bi-arrow-right"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <h6 class="text-truncated">Complete Meal</h6>
+                                                <div class="row gx-3">
+                                                    <div class="col-4">
+                                                        <figure class="height-80 w-100 rounded coverimg mb-0">
+                                                            <img src="assets/img/fitness/image-11.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="row gx-2 mb-2">
+                                                            <div class="col">
+                                                                <p class="small mb-0">35g</p>
+                                                                <p class="fs-12 opacity-75">Carbs</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">40g</p>
+                                                                <p class="fs-12 opacity-75">Protein</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="small mb-0">654kcal</p>
+                                                                <p class="fs-12 opacity-75">Energy</p>
+                                                            </div>
+                                                        </div>
+                                                        <a href="fitness-diet-details.html" class="btn btn-sm btn-link bg-white-opacity">View <i class="bi bi-arrow-right"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </main>
+
+                    <div class="adminuiux-mobile-footer p-3">
+                        <!-- increamenter kilos -->
+                        <div class="row gx-2 justify-content-center increamenter pb-ios">
+                            <div class="col-auto">
+                                <select class="form-select form-select-sm">
+                                    <option>Breakfast</option>
+                                    <option>Lunch</option>
+                                    <option selected>Super</option>
+                                    <option>Dinner</option>
+                                </select>
+                            </div>
+                            <div class="col-auto ms-auto">
+                                <button class="btn btn-sm btn-square btn-theme rounded-circle increamenter-remove">-</button>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" class="form-control form-control-sm text-center width-80 increamenter-value" placeholder="" value="0">
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-sm btn-square btn-theme rounded-circle increamenter-add">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

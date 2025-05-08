@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header.html').default %>
+                <div class="adminuiux-wrap">
+                    <!-- Standard sidebar -->
+                    <%= require('../partials/navigation/fitness-sidebar.html').default %>
+                        <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                            <!-- body content of pages -->
+                            <div class="container mt-3" id="main-content">
+                                <div class="row gx-3 align-items-center">
+                                    <!-- Welcome box -->
+                                    <div class="col-12 col-md-10 col-lg-8">
+                                        <h1 class="text-theme-accent-1 mb-0">Refer and Earn</h1>
+                                        <h2 class="fw-normal mb-3 text-theme-1">Get up to <b>$1000.00</b> per day</h2>
+                                    </div>
+                                    <div class="col-12 py-1"></div>
+                                    <!-- copy code-->
+                                    <div class="col-12 col-md-8 col-lg-6 col-xxl-5 mb-3">
+                                        <p class="mb-0">Just by refer your friends.</p>
+                                        <p class="small text-secondary">Copy & Share referral link with your network</p>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control border-theme-1" placeholder="Referral Code" aria-describedby="button-addon2" value="https://adminuiux.com/adminuiux50off" disabled>
+                                            <button class="btn btn-outline-theme" type="button" id="button-addon2" data-bs-toggle="tooltip" title="Copy"><i class="bi bi-copy"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 py-1"></div>
+                                    <!-- registration -->
+                                    <div class="col-6 col-sm-6 col-lg-3 mb-3">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <h2 class="mb-1">250</h2>
+                                                <p class="text-secondary small">Total Registration</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- trial completed -->
+                                    <div class="col-6 col-sm-6 col-lg-3 mb-3">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <h2 class="mb-1">156</h2>
+                                                <p class="text-secondary small">Trial Completed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- purchased -->
+                                    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                                        <div class="card adminuiux-card">
+                                            <div class="card-body">
+                                                <h2 class="mb-1">75</h2>
+                                                <p class="text-secondary small">Purchase Completed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- referral earnings -->
+                                    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                                        <div class="card adminuiux-card position-relative overflow-hidden bg-theme-1 shadow-sm h-100">
+                                            <div class="position-absolute top-0 start-0 h-100 w-100 z-index-0 coverimg opacity-50">
+                                                <img src="assets/img/fitness/bg-overlay-1.png" alt="">
+                                            </div>
+                                            <div class="card-body z-index-1">
+                                                <div class="row gx-3 align-items-center">
+                                                    <div class="col-auto">
+                                                        <span class="avatar avatar-60 bg-white-opacity rounded">
+                                                            <i class="bi bi-cash-coin h4"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h2 class="mb-1">$152.00</h2>
+                                                        <p>Referral earning</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 align-items-center mb-2">
+                                    <div class="col">
+                                        <hr class="">
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="small text-secondary">Learn how it works!</p>
+                                    </div>
+                                    <div class="col">
+                                        <hr class="">
+                                    </div>
+                                </div>
+                                <div class="row align-items-center jsutify-content-center">
+                                    <!-- step 1 -->
+                                    <div class="col-6 col-sm-6 col-lg-3 mb-3">
+                                        <i class="bi bi-link avatar avatar-40 bg-theme-1-subtle text-theme-1 rounded h4 mb-3"></i>
+                                        <br>
+                                        <h6>1. Invite</h6>
+                                        <p class="small text-secondary">Invite unlimited network members by sharing referral link</p>
+                                    </div>
+                                    <!-- step 2 -->
+                                    <div class="col-6 col-sm-6 col-lg-3 mb-3">
+                                        <i class="bi bi-person avatar avatar-40 bg-theme-1-subtle text-theme-1 rounded h4 mb-3"></i>
+                                        <br>
+                                        <h6>2. Registration</h6>
+                                        <p class="small text-secondary">Let your network member join our platform and track earning</p>
+                                    </div>
+                                    <!-- step 3 -->
+                                    <div class="col-6 col-sm-6 col-lg-3 mb-3">
+                                        <i class="bi bi-coin avatar avatar-40 bg-theme-1-subtle text-theme-1 rounded h4 mb-3"></i>
+                                        <br>
+                                        <h6>3. Trial Earning</h6>
+                                        <p class="small text-secondary">Earn $ 1.50 on successful completion of trial period by your referring</p>
+                                    </div>
+                                    <!-- step 4 -->
+                                    <div class="col-6 col-sm-6 col-lg-3 mb-3">
+                                        <i class="bi bi-cash-stack avatar avatar-40 bg-theme-1-subtle text-theme-1 rounded h4 mb-3"></i>
+                                        <br>
+                                        <h6>4. Purchase Membership</h6>
+                                        <p class="small text-secondary">Earn 10% on each purchase made by your referral members in lifetime</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                </div>
+                <!-- page theming -->
+                <%= require('../partials/offcanvas/theming.html').default %> <!-- page footer -->
+                    <%= require('../partials/footer/fitness-footer.html').default %> <!-- Page Level js -->
+    </body>
+
+</html>

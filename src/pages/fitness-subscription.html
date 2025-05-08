@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+  <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+      <%= require('../partials/header/fitness-header-back.html').default %>
+        <div id="title" class="d-none">
+          <%= htmlWebpackPlugin.options.title %>
+        </div>
+        <div class="adminuiux-wrap">
+          <main class="adminuiux-content" onclick="contentClick()">
+            <!-- content -->
+            <div class="container mt-3" id="main-content">
+
+              <!-- active plan -->
+              <div class="card adminuiux-card border-0 overflow-hidden theme-green mb-3">
+                <figure class="h-100 w-100 coverimg blur-overlay position-absolute start-0 top-0 z-index-0 opacity-50">
+                  <img src="assets/img/background-image/backgorund-image-2.jpg" alt="">
+                </figure>
+                <div class="card-body text-center z-index-1">
+                  <figure class="avatar avatar-100 bg-theme-1-subtle rounded-circle mb-3">
+                    <i class="bi bi-person-workspace text-theme-1 display-2"></i>
+                  </figure>
+                  <h5>Personal Plan</h5>
+                  <p class="mb-2"><span class="badge badge-light text-bg-theme-1 theme-green"> Active </span></p>
+                </div>
+              </div>
+
+              <!-- plan validity -->
+              <div class="card adminuiux-card bg-theme-1-subtle mb-3">
+                <div class="card-body">
+                  <h6>Your plan will be end on 26 October 2026 at 12:00 AM </h6>
+                  <p class="small text-secondary">After that, you will be billed $249.00 and amount will be deducted automatically.</p>
+                </div>
+              </div>
+
+              <!-- payment methods -->
+              <div class="row gx-3 align-items-center mb-3">
+                <div class="col">
+                  <p class="text-secondary">Next Due Date</p>
+                </div>
+                <div class="col-auto">
+                  <p>26/10/2026</p>
+                </div>
+              </div>
+              <div class="row gx-3 align-items-center mb-3">
+                <div class="col">
+                  <p class="text-secondary">Payment Type</p>
+                </div>
+                <div class="col-auto">
+                  <p>Visa - Credit Card</p>
+                </div>
+              </div>
+              <div class="row gx-3 align-items-center mb-4">
+                <div class="col">
+                  <p class="text-secondary">Amount Due</p>
+                </div>
+                <div class="col-auto">
+                  <p>$249.00</p>
+                </div>
+              </div>
+
+              <!-- actions -->
+              <div class="row gx-3 align-items-center mb-3">
+                <div class="col">
+                  <a href="fitness-subscription-upgrade.html" class="btn btn-theme">Upgrade</a>
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-link theme-red">Cancel Plan</button>
+                </div>
+              </div>
+
+            </div>
+          </main>
+        </div>
+
+        <!-- footer -->
+        <%= require('../partials/offcanvas/theming.html').default %>
+          <%= require('../partials/footer/fitness-footer.html').default %>
+
+            <!-- Page Level js -->
+  </body>
+
+</html>

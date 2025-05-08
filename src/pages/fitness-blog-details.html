@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <!-- back button header with title -->
+            <%= require('../partials/header/fitness-header-back.html').default %>
+                <div id="title" class="d-none">
+                    <%= htmlWebpackPlugin.options.title %>
+                </div>
+                <div class="adminuiux-wrap">
+                    <main class="adminuiux-content" onclick="contentClick()">
+
+                        <!-- content -->
+                        <div class="container mt-3" id="main-content">
+
+                            <h2 class="fw-bold text-theme-accent-1 mb-2">Learning UI UX Design with HTML ready to use template is most delighted themes</h2>
+                            <h5 class="text-theme-1 mb-3">Connects and integrates all your investment sources - Website, Leads, Mobile, and reception desk.</h5>
+                            <p class="mb-4"><span class="badge badge-light rounded-pill bg-pink text-white">Investment Revolution</span> <span class="badge badge-light rounded-pill bg-yellow-subtle text-orange">Featured</span></p>
+                            <div class="row gx-3 align-items-center mb-3">
+                                <div class="col-auto ">
+                                    <figure class="avatar avatar-40 coverimg rounded-circle">
+                                        <img src="assets/img/fitness/image-1.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="col">
+                                    <p class="small text-secondary mb-0">Author</p>
+                                    <p>Adminuiux</p>
+                                </div>
+                                <div class="col-auto text-end">
+                                    <p class="small text-secondary mb-0">Published on</p>
+                                    <p>December 25, 2024</p>
+                                </div>
+                            </div>
+                            <!-- blog list -->
+                            <div class="row gx-3">
+                                <div class="col-12 col-md-8">
+                                    <div class="card adminuiux-card shadow-sm mb-3">
+                                        <div class="card-body">
+                                            <div class="height-200 w-100 rounded coverimg mb-3">
+                                                <img src="assets/img/modern-ai-image/tree-7.jpg" alt="">
+                                            </div>
+                                            <article class="blog-post">
+                                                <h5>Fitness UI UX Design with HTML ready to use template is most delighted themes</h5>
+                                                <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+                                                <hr>
+                                                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                                                <h5>Blockquotes</h5>
+                                                <p>This is an example blockquote in action:</p>
+                                                <blockquote class="blockquote">
+                                                    <p>"Quoted text goes here."</p>
+                                                </blockquote>
+                                                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                                                <h6>Example lists</h6>
+                                                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
+                                                <ul>
+                                                    <li>First list item</li>
+                                                    <li>Second list item with a longer description</li>
+                                                    <li>Third list item to close it out</li>
+                                                </ul>
+                                                <p>And this is an ordered list:</p>
+                                                <ol>
+                                                    <li>First list item</li>
+                                                    <li>Second list item with a longer description</li>
+                                                    <li>Third list item to close it out</li>
+                                                </ol>
+                                                <p>And this is a definition list:</p>
+                                                <dl>
+                                                    <dt>HyperText Markup Language (HTML)</dt>
+                                                    <dd>The language used to describe and define the content of a Web page</dd>
+                                                    <dt>Cascading Style Sheets (CSS)</dt>
+                                                    <dd>Used to describe the appearance of Web content</dd>
+                                                    <dt>JavaScript (JS)</dt>
+                                                    <dd>The programming language used to build advanced Web sites and applications</dd>
+                                                </dl>
+                                                <h5>Inline HTML elements</h5>
+                                                <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+                                                <ul>
+                                                    <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+                                                    <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                                                    <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
+                                                    <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                                                    <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                                                    <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+                                                </ul>
+                                                <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+                                                <h5>Heading</h5>
+                                                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                                                <h6>Sub-heading</h6>
+                                                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                                                <pre class="bg-theme-subtle rounded"><code>Example code block</code></pre>
+                                                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-12 col-md-6 py-3">
+                                            <a class="style-none" href="#">
+                                                <div class="row gx-3 align-items-center">
+                                                    <div class="col-auto"><i class="bi bi-chevron-left"></i></div>
+                                                    <div class="col-auto">
+                                                        <div class="avatar avatar-60 rounded coverimg"><img src="assets/img/modern-ai-image/taxi-1.jpg" alt=""></div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <h6 class="text-truncated mb-1">Awesome UI design to fall in love</h6>
+                                                        <p class="text-truncated mb-2">Just feeling like another world exploring at</p>
+                                                        <p class="text-secondary small">Previous</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 py-3 text-end">
+                                            <a class="style-none" href="#">
+                                                <div class="row align-items-center justify-content-end">
+                                                    <div class="col-7">
+                                                        <h6 class="text-truncated mb-1">More you see more you will get amazed with template interface design</h6>
+                                                        <p class="text-truncated mb-2">Just feeling like another world exploring at</p>
+                                                        <p class="text-secondary small">Next</p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="avatar avatar-60 rounded coverimg"><img src="assets/img/modern-ai-image/bus-7.jpg" alt=""></div>
+                                                    </div>
+                                                    <div class="col-auto"><i class="bi bi-chevron-right"></i></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="position-sticky" style="top: 5.5rem;">
+                                        <div class="card adminuiux-card bg-theme-1-subtle mb-3">
+                                            <div class="card-body">
+                                                <h5 class="mb-3">About</h5>
+                                                <p class="small">AdminUIUX is way better than any other template design in terms of user experience design and modern touch of experience design sense. More flexibility and customization available at with easy to develope</p>
+                                            </div>
+                                        </div>
+                                        <h6 class="mb-3">Recent posts</h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="pb-3">
+                                                <a class="style-none" href="#">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="avatar avatar-80 rounded coverimg">
+                                                                <img src="assets/img/modern-ai-image/modern-bg-1.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="max-width: calc(100% - 110px);">
+                                                            <h6 class="text-dark text-truncated mb-1">Amazing UI UX design for industries standard to improve accessibility</h6>
+                                                            <p class="text-secondary text-truncated mb-2">Just feeling like another world exploring at</p>
+                                                            <p class="text-secondary small">December 15, 2024</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="pb-3">
+                                                <a class="style-none" href="#">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="avatar avatar-80 rounded coverimg">
+                                                                <img src="assets/img/modern-ai-image/tree-18.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="max-width: calc(100% - 110px);">
+                                                            <h6 class="text-dark text-truncated mb-1">I love the UI design and content flexibility provided by template</h6>
+                                                            <p class="text-secondary text-truncated mb-2">Just feeling like another world exploring at </p>
+                                                            <p class="text-secondary small">August 27, 2024</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="pb-3">
+                                                <a class="style-none" href="#">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="avatar avatar-80 rounded coverimg">
+                                                                <img src="assets/img/modern-ai-image/bus-7.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="max-width: calc(100% - 110px);">
+                                                            <h6 class="text-dark text-truncated mb-1">More you see more you will get amazed with template interface design</h6>
+                                                            <p class="text-secondary text-truncated mb-2">Just feeling like another world exploring at </p>
+                                                            <p class="text-secondary small">July 20, 2024</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <h6 class="mb-3">Archives</h6>
+                                        <ol class="list-group adminuiux-list-group list-group-flush mb-4">
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">March 2025</a></li>
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">February 2025</a></li>
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">January 2025</a></li>
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">December 2024</a></li>
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">November 2024</a></li>
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">October 2024</a></li>
+                                        </ol>
+                                        <h6 class="mb-3">Elsewhere</h6>
+                                        <ol class="list-group adminuiux-list-group list-group-flush mb-4">
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">GitHub</a></li>
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">Twitter</a></li>
+                                            <li class="list-group-item bg-none"><a href="#" class="style-none">Facebook</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center my-3 my-xl-4">
+                                <h1 class="fw-bold text-theme-accent-1 mb-0">More trending stories</h1>
+                                <h4 class="text-theme-1 mb-3">Stay up to date with latest trending topics</h4>
+                            </div>
+                            <!-- Top trending carousel -->
+                            <div class="swiper swipernav">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card  position-relative overflow-hidden theme-red mb-3">
+                                            <div class="card-body z-index-1 p-xl-4 position-relative">
+                                                <p><span class="badge badge-sm badge-light rounded-pill text-bg-theme-1">Creative UI UX</span>
+                                                </p>
+                                                <p class="text-truncated h5">Fitness UI UX Design with HTML ready to use template is most delighted themes</p>
+                                                <p class="text-secondary mb-4">Connects and integrates all your appointment sources - Website, Leads, Mobile, </p>
+                                                <div class="row gx-3 align-items-center">
+                                                    <div class="col">
+                                                        <p class="small text-secondary mb-0">Author</p>
+                                                        <p>Adminuiux</p>
+                                                    </div>
+                                                    <div class="col-auto text-end">
+                                                        <p>
+                                                            <a href="fitness-blog-details.html" class="btn btn-sm btn-link">More <i class="bi bi-arrow-right"></i>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card  position-relative overflow-hidden theme-pink mb-3">
+                                            <div class="card-body z-index-1 p-xl-4 position-relative">
+                                                <p><span class="badge badge-sm badge-light rounded-pill text-bg-theme-1">New to world</span>
+                                                </p>
+                                                <p class="text-truncated h5">Fitness UI UX Design with HTML ready to use template is most delighted themes</p>
+                                                <p class="text-secondary mb-4">Connects and integrates all your appointment sources - Website, Leads, Mobile, </p>
+                                                <div class="row gx-3 align-items-center">
+                                                    <div class="col">
+                                                        <p class="small text-secondary mb-0">Author</p>
+                                                        <p>Adminuiux</p>
+                                                    </div>
+                                                    <div class="col-auto text-end">
+                                                        <p>
+                                                            <a href="fitness-blog-details.html" class="btn btn-sm btn-link">More <i class="bi bi-arrow-right"></i>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card  position-relative overflow-hidden theme-purple mb-3">
+                                            <div class="card-body z-index-1 p-xl-4 position-relative">
+                                                <p><span class="badge badge-sm badge-light rounded-pill text-bg-theme-1">New to world</span>
+                                                </p>
+                                                <p class="text-truncated h5">Fitness UI UX Design with HTML ready to use template is most delighted themes</p>
+                                                <p class="text-secondary mb-4">Connects and integrates all your appointment sources - Website, Leads, Mobile, </p>
+                                                <div class="row gx-3 align-items-center">
+                                                    <div class="col">
+                                                        <p class="small text-secondary mb-0">Author</p>
+                                                        <p>Adminuiux</p>
+                                                    </div>
+                                                    <div class="col-auto text-end">
+                                                        <p>
+                                                            <a href="fitness-blog-details.html" class="btn btn-sm btn-link">More <i class="bi bi-arrow-right"></i>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card  bg-success text-white position-relative overflow-hidden mb-3">
+                                            <div class="coverimg h-100 w-100 start-0 top-0 position-absolute z-index-0 opacity-25">
+                                                <img src="assets/img/modern-ai-image/tree-5.jpg" alt="">
+                                            </div>
+                                            <div class=" card-body z-index-1 p-xl-4 position-relative">
+                                                <p><span class="badge badge-sm badge-light rounded-pill bg-green text-white">Appointment</span>
+                                                </p>
+                                                <p class="text-truncated h5">Fitness UI UX Design with HTML ready to use template is most delighted themes</p>
+                                                <p class="mb-4">Connects and integrates all your appointment sources - Website, Leads, Mobile, </p>
+                                                <p><a href="fitness-blog-details.html" class="btn btn-sm btn-theme theme-green">Read More <i class="bi bi-arrow-right"></i></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide width-300">
+                                        <div class="card adminuiux-card  bg-theme-1 text-white position-relative overflow-hidden theme-orange mb-3">
+                                            <div class="coverimg h-100 w-100 start-0 top-0 position-absolute z-index-0 opacity-50">
+                                                <img src="assets/img/modern-ai-image/tree-4.jpg" alt="">
+                                            </div>
+                                            <div class="card-body z-index-1 p-xl-4 position-relative">
+                                                <p><span class="badge badge-sm badge-light rounded-pill bg-orange text-white">Medical Champ</span>
+                                                </p>
+                                                <p class="text-truncated h5">Fitness UI UX Design with HTML ready to use template is most delighted themes</p>
+                                                <p class="mb-4">Connects and integrates all your appointment sources - Website, Leads, Mobile, </p>
+                                                <p><a href="fitness-blog-details.html" class="btn btn-sm btn-theme theme-orange">Read More <i class="bi bi-arrow-right"></i></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </main>
+                </div>
+
+                <!-- footer -->
+                <%= require('../partials/offcanvas/theming.html').default %>
+                    <%= require('../partials/footer/fitness-auth-footer.html').default %>
+
+                        <!-- Page Level js -->
+
+    </body>
+
+</html>

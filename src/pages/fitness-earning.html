@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+  <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+      <%= require('../partials/header/fitness-header-back.html').default %>
+        <div id="title" class="d-none">
+          <%= htmlWebpackPlugin.options.title %>
+        </div>
+        <div class="adminuiux-wrap">
+          <main class="adminuiux-content" onclick="contentClick()">
+            <!-- content -->
+            <div class="container mt-3" id="main-content">
+
+              <div class="alert alert-success py-2 mb-3">
+                <p class="small">Withdrawal of $1500.00 is in-process</p>
+              </div>
+
+              <!-- earning summary -->
+              <div class="row gx-3">
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-green mb-3">
+                    <div class="card-body">
+                      <h5 class="mb-0">$115.00</h5>
+                      <p class="small text-theme-1">Today's</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-blue mb-3">
+                    <div class="card-body">
+                      <div class="row gx-2 align-items-center">
+                        <div class="col">
+                          <h5 class="mb-0">$2.35k</h5>
+                          <p class="small text-theme-1">Last 30 d</p>
+                        </div>
+                        <div class="col-auto">
+                          <button class="btn btn-sm btn-square btn-theme rounded-circle" data-bs-toggle="modal" data-bs-target="#withdraw"><i class="bi bi-bank"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-orange mb-3">
+                    <div class="card-body">
+                      <h5 class="mb-0">$715.55</h5>
+                      <p class="small text-theme-1">Upcoming</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-red mb-3">
+                    <div class="card-body">
+                      <h5 class="mb-0">$3560.00</h5>
+                      <p class="small text-theme-1">Last Payout</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- earning stats-->
+              <div class="card adminuiux-card mb-3">
+                <div class="card-header">
+                  <div class="row gx-3 align-items-center">
+                    <div class="col">
+                      <h6>Stats</h6>
+                    </div>
+                    <div class="col-auto">
+                      <div class="input-group input-group-sm">
+                        <input class="form-control text-center" id="daterangepicker">
+                        <div class="input-group-text" onclick="$(this).prev().click();">
+                          <i class="bi bi-calendar-event"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="height-180 w-100">
+                    <canvas id="earningbyday"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <!-- recent transactions -->
+              <div class="row gx-3 align-items-center mb-3">
+                <div class="col">
+                  <h6>Recent Transactions</h6>
+                </div>
+                <div class="col-auto">
+                  <input type="text" class="form-control form-control-sm maxwidth-140" placeholder="Search...">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card adminuiux-card mb-3">
+                    <div class="card-body">
+                      <div class="row mb-2">
+                        <div class="col">
+                          <h6 class="text-success mb-0">$190.00</h6>
+                          <p class="small text-secondary">Net Banking</p>
+                        </div>
+                        <div class="col-auto text-end">
+                          <h6 class="mb-0">3:30 PM</h6>
+                          <p class="small text-secondary">9 June 2024</p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                          <figure class="avatar avatar-30 mb-0 coverimg rounded-circle">
+                            <img src="assets/img/modern-ai-image/user-2.jpg" alt="" />
+                          </figure>
+                        </div>
+                        <div class="col ps-0">
+                          <p class="small mb-0">Jr. Chen Li</p>
+                          <p class="text-secondary fs-12">United Kingdom</p>
+                        </div>
+                        <div class="col-auto">
+                          <a href="tel:" class="btn btn-sm btn-square btn-theme theme-green rounded-circle me-1"><i class="bi bi-telephone"></i></a>
+                          <a href="mailto:" class="btn btn-sm btn-square rounded-circle btn-theme theme-blue me-1"><i class="bi bi-envelope"></i></a>
+                        </div>
+                      </div>
+                      <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-green">Approved</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card adminuiux-card mb-3">
+                    <div class="card-body">
+                      <div class="row mb-2">
+                        <div class="col">
+                          <h6 class="text-danger mb-0">-$190.00</h6>
+                          <p class="small text-secondary">Refund: Net Banking</p>
+                        </div>
+                        <div class="col-auto text-end">
+                          <h6 class="mb-0">10:45 AM</h6>
+                          <p class="small text-secondary">9 June 2024</p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                          <figure class="avatar avatar-30 mb-0 coverimg rounded-circle">
+                            <img src="assets/img/modern-ai-image/user-6.jpg" alt="" />
+                          </figure>
+                        </div>
+                        <div class="col ps-0">
+                          <p class="small mb-0">Trisha Dutta</p>
+                          <p class="text-secondary fs-12">Paris</p>
+                        </div>
+                        <div class="col-auto">
+                          <a href="tel:" class="btn btn-sm btn-square btn-theme theme-green rounded-circle me-1"><i class="bi bi-telephone"></i></a>
+                        </div>
+                      </div>
+                      <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-red">Refunded</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card adminuiux-card mb-3">
+                    <div class="card-body">
+                      <div class="row mb-2">
+                        <div class="col">
+                          <h6 class="text-success mb-0">$80.00</h6>
+                          <p class="small text-secondary">Cash</p>
+                        </div>
+                        <div class="col-auto text-end">
+                          <h6 class="mb-0">5:15 PM</h6>
+                          <p class="small text-secondary">8 June 2024</p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                          <figure class="avatar avatar-30 mb-0 coverimg rounded-circle">
+                            <img src="assets/img/modern-ai-image/user-4.jpg" alt="" />
+                          </figure>
+                        </div>
+                        <div class="col ps-0">
+                          <p class="small mb-0">Sunny Boy</p>
+                          <p class="text-secondary fs-12">London</p>
+                        </div>
+                        <div class="col-auto">
+                          <a href="tel:" class="btn btn-sm btn-square btn-theme theme-green rounded-circle me-1"><i class="bi bi-telephone"></i></a>
+                          <a href="mailto:" class="btn btn-sm btn-square rounded-circle btn-theme theme-blue me-1"><i class="bi bi-envelope"></i></a>
+                        </div>
+                      </div>
+                      <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-green">Approved</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card adminuiux-card mb-3">
+                    <div class="card-body">
+                      <div class="row mb-2">
+                        <div class="col">
+                          <h6 class="text-success mb-0">$110.00</h6>
+                          <p class="small text-secondary">Credit Card</p>
+                        </div>
+                        <div class="col-auto text-end">
+                          <h6 class="mb-0">9:00 AM</h6>
+                          <p class="small text-secondary">8 June 2024</p>
+                        </div>
+                      </div>
+                      <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                          <figure class="avatar avatar-30 mb-0 bg-theme-1 rounded-circle">
+                            JR
+                          </figure>
+                        </div>
+                        <div class="col ps-0">
+                          <p class="small mb-0">James Rock</p>
+                          <p class="text-secondary fs-12">United Kingdom</p>
+                        </div>
+                        <div class="col-auto">
+                          <a href="mailto:" class="btn btn-sm btn-square rounded-circle btn-theme theme-blue me-1"><i class="bi bi-envelope"></i></a>
+                        </div>
+                      </div>
+                      <p><span class="badge badge-sm badge-light text-bg-theme-1 theme-green">Approved</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </main>
+        </div>
+
+        <!-- add reminder Modal -->
+        <div class="modal adminuiux-modal fade" id="withdraw" tabindex="-1" aria-labelledby="withdrawmodalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <p class="modal-title h5" id="withdrawmodalLabel">Withdraw</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-floating mb-2">
+                  <select class="form-select" id="bank">
+                    <option>Bank-1-000XXX-XXXX-264</option>
+                    <option>Bank-2-000XXX-XXXX-140</option>
+                  </select>
+                  <label for="contact">Withdraw money to</label>
+                </div>
+                <p class="small text-center mb-3"><a href="javascript:void(0)">+ Add Bank</a></p>
+                <input type="number" class="form-control form-control-lg text-center mb-3" id="ihavei" placeholder="Convert Amount..." value="3200.00">
+
+                <div class="text-center">
+                  <h5 class="fw-normal"><b class="fw-bold">Great!</b> You are withdrawing</h5>
+                  <h1 class="mb-0 text-theme-1">3200.00</h1>
+                  <p class="text-secondary small">in United States Dollar</p>
+                </div>
+                <div class="alert alert-danger alert-dismissible fade show mt-3 mb-0" role="alert">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <strong><i class="bi bi-exclamation-triangle me-1"></i> Low balance!</strong><br>
+                  <p class="small lh-20 ">Your don't have enough balance in earning try upto $2351.50.</p>
+                </div>
+              </div>
+              <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-theme">Withdraw</button>
+                <button type="button" class="btn btn-link theme-red" data-bs-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <%= require('../partials/offcanvas/theming.html').default %>
+          <%= require('../partials/footer/fitness-footer.html').default %>
+
+            <!-- Page Level js -->
+            <script src="assets/js/fitness/fitness-earning.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"--> <%= require('../partials/head/head.html').default %>
+
+<body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %> <%= require('../partials/header/fitness-header.html').default %>
+    <div class="adminuiux-wrap">
+        <!-- Standard sidebar -->
+        <%= require('../partials/navigation/fitness-sidebar.html').default %>
+        <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+            <!-- content -->
+            <div class="container mt-3" id="main-content">
+
+                <div class=" row gx-3 align-items-center">
+                    <!-- activity summary -->
+                    <div class="col-6 col-md-6 col-lg-4">
+                        <div class="card adminuiux-card mb-3">
+                            <div class="card-body">
+                                <div class="row gx-3 align-items-center">
+                                    <div class="col-auto">
+                                        <div class="avatar avatar-50 mx-auto">
+                                            <div id="circleprogressblue1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mb-0">Daily</h6>
+                                        <p class="small text-secondary">Progress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- training progress -->
+                    <div class="col-6 col-md-6 col-lg-4">
+                        <div class="card adminuiux-card mb-3">
+                            <div class="card-body">
+                                <div class="row gx-3 align-items-center">
+                                    <div class="col-auto">
+                                        <div class="avatar avatar-50 mx-auto">
+                                            <div id="circleprogressgreen1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mb-0">Weekly</h6>
+                                        <p class="small text-secondary">Progress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- workout progress-->
+                    <div class="col-12 col-lg-4">
+                        <div class="card adminuiux-card border-0 bg-theme-r-gradient mb-3">
+                            <div class="card-body">
+                                <div class="row gx-3 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-60 rounded coverimg">
+                                            <img src="assets/img/fitness/image-6.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Hand moving rounded</h6>
+                                        <div class="progress bg-white-opacity height-dynamic mb-1" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--h-dynamic:5px">
+                                            <div class="progress-bar bg-white" style="width: 75%"></div>
+                                        </div>
+                                        <p class="small opacity-75">75% Completed</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-accent btn-square"><i class="bi bi-play"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- popular workouts -->
+                <div class="row gx-3 align-items-center mb-3">
+                    <div class="col">
+                        <h6>Popular Workout</h6>
+                    </div>
+                    <div class="col-auto">
+                        <a href="fitness-workout.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="row gx-3">
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-1.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Total Fitness of body</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-2.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Chinsuk Wang</p>
+                                        <p class="fs-12 text-secondary">Beginner
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-7.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Freeup Legs</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-5.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Meena T.</p>
+                                        <p class="fs-12 text-secondary theme-green">Expert
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-2.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Shiny Day Exercise</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-6.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Tanya K.</p>
+                                        <p class="fs-12 text-secondary">Beginner
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-8.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Weist moves in house excercise</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-7.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Selena G.</p>
+                                        <p class="fs-12 text-secondary theme-yellow">Average
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Streched workouts -->
+                <div class="row gx-3 align-items-center mb-3">
+                    <div class="col">
+                        <h6>Streched Workout</h6>
+                    </div>
+                    <div class="col-auto">
+                        <a href="fitness-workout.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-3.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Total Fitness of body</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-2.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Chinsuk Wang</p>
+                                        <p class="fs-12 text-secondary">Beginner
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-4.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Freeup Legs</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-5.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Meena T.</p>
+                                        <p class="fs-12 text-secondary theme-green">Expert
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-5.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Shiny Day Exercise</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-6.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Tanya K.</p>
+                                        <p class="fs-12 text-secondary">Beginner
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card adminuiux-card">
+                            <a href="fitness-workout-details.html" class="rounded coverimg height-150 mb-2 m-1">
+                                <img src="assets/img/fitness/image-6.jpg" alt="">
+                            </a>
+                            <div class="card-body pt-1">
+                                <a href="fitness-workout-details.html" class="style-none">
+                                    <h6 class="text-theme-1 text-truncated mb-2">Imporve hearth and stay focused</h6>
+                                </a>
+                                <div class="row gx-2 align-items-center">
+                                    <div class="col-auto">
+                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-7.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col">
+                                        <p class="small mb-0">Selena G.</p>
+                                        <p class="fs-12 text-secondary theme-yellow">Average
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
+                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- track your progress -->
+                <div class="row gx-3 align-items-center mb-3">
+                    <div class="col text-center py-3">
+                        <h4>Track your progress<br>with <span class="text-theme-1">DigiTracker</span> feature</h4>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <!-- fitness progress -->
+                    <div class="col-12 col-md-6 col-xl-8 col-xxl-9">
+                        <div class="card adminuiux-card mb-3">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6>Fitness progress</h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <select class="form-select form-select-sm">
+                                            <option>Day</option>
+                                            <option>Week</option>
+                                            <option>Month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="height-170">
+                                    <canvas id="summarychart"></canvas>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <h5 class="mb-0">2 hrs</h5>
+                                        <p class="text-secondary small">Workout</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h5 class="mb-0">389 kcal</h5>
+                                        <p class="text-secondary small">Burned</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h5 class="mb-0">3.2 km</h5>
+                                        <p class="text-secondary small">Running</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- highlights -->
+                    <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                        <div class="row gx-3">
+                            <div class="col-6">
+                                <div class="card adminuiux-card border-0 height-150 bg-theme-l-gradient mb-3 hover-action">
+                                    <div class="card-body position-relative">
+                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                        </div>
+                                        <h4 class="mb-0">26</h4>
+                                        <p class="opacity-75 mb-4">Monday</p>
+                                        <p class="text-truncated mb-0">Excercise Events</p>
+                                        <p class="text-truncated opacity-75 fs-12 mb-0">125 Bookmarked</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card adminuiux-card border-0 height-150 mb-3 overflow-hidden hover-action">
+                                    <figure class="position-absolute start-0 top-0 w-100 h-100 coverimg z-index-0">
+                                        <img src="assets/img/fitness/image-10.jpg" alt="">
+                                    </figure>
+                                    <div class="card-body position-relative z-index-1">
+                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-white z-index-1 position-relative">
+                                        <h4 class="mb-0">27</h4>
+                                        <p class="opacity-75">Today's Recipe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card adminuiux-card border-0 height-150 mb-3 overflow-hidden hover-action">
+                                    <figure class="position-absolute start-0 top-0 w-100 h-100 coverimg blur-overlay z-index-0">
+                                        <img src="assets/img/fitness/image-9.jpg" alt="">
+                                    </figure>
+                                    <div class="card-body position-relative z-index-1">
+                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                        </div>
+                                        <h4 class="mb-0">28</h4>
+                                        <p class="opacity-75 mb-3">Wednesday</p>
+
+                                        <figure class="avatar avatar-40 rounded overflow-hidden coverimg">
+                                            <img src="assets/img/fitness/image-11.jpg" alt="">
+                                        </figure>
+                                        <figure class="avatar avatar-40 rounded overflow-hidden coverimg mx-1">
+                                            <img src="assets/img/fitness/image-10.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card adminuiux-card border-0 height-150 bg-theme-accent-1 mb-3 hover-action">
+                                    <div class="card-body position-relative">
+                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
+                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
+                                        </div>
+                                        <h4 class="mb-0">29</h4>
+                                        <p class="opacity-75 mb-4">Thursday</p>
+                                        <p class="text-truncated small mb-0">Diet Plan 2</p>
+                                        <p class="text-truncated opacity-75 fs-12 mb-0">Session 3</p>
+                                        <div class="avatar avatar-20 position-absolute bottom-0 end-0 rounded-circle bg-white-opacity text-white text-center m-2" data-bs-toggle="tooltip" title="Diet Plan 2: Session 4">
+                                            <span class="fs-12">+1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- popular exercise -->
+                <div class="row gx-3 align-items-center mb-3">
+                    <div class="col">
+                        <h6>Popular Exercise</h6>
+                    </div>
+                    <div class="col-auto">
+                        <a href="fitness-workout.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
+                    </div>
+                </div>
+                <div class="swiper swipernav mb-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide width-300">
+                            <div class="card adminuiux-card border-0 bg-gradient-7">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6 class="text-truncated">Complete Morning Yoga Session</h6>
+                                            <p class="text-secondary fs-14 mb-2">
+                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 20 min</span>
+                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 250 kcal</span>
+                                            </p>
+                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <figure class="height-90 w-100 rounded coverimg mb-0">
+                                                <img src="assets/img/fitness/image-7.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide width-300">
+                            <div class="card adminuiux-card border-0 bg-gradient-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6 class="text-truncated">Workout for belly fat reduce</h6>
+                                            <p class="text-secondary fs-14 mb-2">
+                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 22 min</span>
+                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 185 kcal</span>
+                                            </p>
+                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <figure class="height-90 w-100 rounded coverimg mb-0">
+                                                <img src="assets/img/fitness/image-8.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide width-300">
+                            <div class="card adminuiux-card border-0 bg-r-gradient">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6 class="text-truncated">The great evening Yoga Session</h6>
+                                            <p class="text-secondary fs-14 mb-2">
+                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 18 min</span>
+                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 120 kcal</span>
+                                            </p>
+                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <figure class="height-90 w-100 rounded coverimg mb-0">
+                                                <img src="assets/img/fitness/image-3.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide width-300">
+                            <div class="card adminuiux-card border-0 bg-gradient-10">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6 class="text-truncated">Routine Exercise for Legs</h6>
+                                            <p class="text-secondary fs-14 mb-2">
+                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 30 min</span>
+                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 300 kcal</span>
+                                            </p>
+                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <figure class="height-90 w-100 rounded coverimg mb-0">
+                                                <img src="assets/img/fitness/image-4.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide width-300">
+                            <div class="card adminuiux-card border-0 bg-gradient-6">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6 class="text-truncated">Complete Morning Yoga Session</h6>
+                                            <p class="text-secondary fs-14 mb-2">
+                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 35 min</span>
+                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 220 kcal</span>
+                                            </p>
+                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <figure class="height-90 w-100 rounded coverimg mb-0">
+                                                <img src="assets/img/fitness/image-5.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- mobile footer -->
+    <%= require('../partials/footer/mobile-footer.html').default %>
+
+    <!-- footer -->
+    <%= require('../partials/offcanvas/theming.html').default %>
+    <%= require('../partials/footer/fitness-footer.html').default %>
+
+    <!-- add reminder Modal -->
+    <div class="modal adminuiux-modal fade" id="addreminder" tabindex="-1" aria-labelledby="addremindermodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title h5" id="addremindermodalLabel">Add Reminder</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="subject" placeholder="Enter Subject">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+                        <label for="description">Description</label>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-theme">Add</button>
+                    <button type="button" class="btn btn-link theme-red" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Level js -->
+    <script src="assets/js/fitness/fitness-workout.js"></script>
+
+</body>
+
+</html>

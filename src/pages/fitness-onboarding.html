@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <!-- page loader -->
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <!-- main -->
+            <main class="d-flex flex-column vh-100 dvh-100">
+                <div class="container-fluid pt-ios mb-auto z-index-9">
+                    <div class="position-relative height-10 mt-3">
+                        <div class="swiper-pagination inline line"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                        </div>
+                        <div class="col-auto">
+                            <a href="fitness-dashboard.html" class="btn btn-link w-100">Skip <i class="bi bi-chevron-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- swiper -->
+                <div class="swiper swipernavonboarding my-auto w-100">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="row h-100 justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3 text-center">
+                                    <h1 class="fw-bold text-theme-1 mb-1">Welcome Onboard,</h1>
+                                    <h5 class="text-theme-accent-1 mb-4">Just follow few steps to setup your profile</h5>
+
+                                    <div class="position-relative rounded w-100 height-250 coverimg mb-4">
+                                        <img src="assets/img/fitness/image-5.jpg" alt="">
+                                    </div>
+
+                                    <p class="text-secondary">Success isn't always about greatness. It's about consistency. Consistent hard work gains success.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="row h-100 justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3">
+                                    <h1 class="fw-bold text-theme-1 text-center mb-1">You are identified as?</h1>
+                                    <h5 class="text-theme-accent-1 text-center mb-4">Reveal your gender</h5>
+
+                                    <!-- gender -->
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                            <div class="card h-100 selectable anyone">
+                                                <div class="card-body">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="avatar avatar-30 rounded bg-theme-1-subtle text-theme-1"><i class="bi bi-gender-male"></i></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <h5 class="text-theme-1">Male</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <p class="text-secondary"><i class="bi bi-check-circle"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                            <div class="card h-100 selectable anyone">
+                                                <div class="card-body">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="avatar avatar-30 rounded bg-theme-1-subtle text-theme-1"><i class="bi bi-gender-female"></i></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <h5 class="text-theme-1">Female</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <p class="text-secondary"><i class="bi bi-check-circle"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                            <div class="card h-100 selectable anyone">
+                                                <div class="card-body">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="avatar avatar-30 rounded bg-theme-1-subtle text-theme-1"><i class="bi bi-gender-neuter"></i></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <h5 class="text-theme-1">Do not reveal</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <p class="text-secondary"><i class="bi bi-check-circle"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="row h-100 justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3 text-center">
+                                    <h1 class="fw-bold text-theme-1 mb-1">Type of food you love?</h1>
+                                    <h5 class="text-theme-accent-1 mb-4">Provide food category idea for your food intake</h5>
+
+                                    <!-- food -->
+                                    <div class="row gx-3">
+                                        <div class="col-4 col-md-3 col-lg-3 mb-3">
+                                            <div class="card h-100 selectable">
+                                                <div class="card-body text-center">
+                                                    <?xml version="1.0" ?>
+                                                    <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="height-30 mx-auto mb-2">
+                                                        <rect fill="none" height="256" width="256" />
+                                                        <circle cx="156" cy="76" r="10" fill="var(--adminuiux-theme-1)" />
+                                                        <path d="M16,184C247.8,234.7,223.8,75.5,217.2,45a8.2,8.2,0,0,0-6.2-6.2C180.5,32.2,21.3,8.2,72,240" fill="none" stroke="var(--adminuiux-theme-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
+                                                        <path d="M201.3,152A96,96,0,0,1,104,54.6" fill="none" stroke="var(--adminuiux-theme-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
+                                                    </svg>
+                                                    <p class="small text-truncated text-theme-1">Fish</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-3 col-lg-3 mb-3">
+                                            <div class="card h-100 selectable">
+                                                <div class="card-body">
+                                                    <?xml version="1.0" ?>
+                                                    <svg id="Layer_1" class="height-30 mx-auto mb-2" style="enable-background:new 0 0 100 100;" version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <style type="text/css">
+                                                            .st0 {
+                                                                fill: var(--adminuiux-theme-1);
+                                                            }
+                                                        </style>
+                                                        <g>
+                                                            <g>
+                                                                <path class="st0" d="M36,45.5c-0.5-1.7-0.7-3.6-0.7-5.7l3.7,0.1c0,1.7,0.2,3.3,0.5,4.7L36,45.5z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M39.2,36.9l-3.7-0.5c1.1-8.5,3.1-12.5,6.4-16.9l3,2.2C41.9,25.7,40.2,29.2,39.2,36.9z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M85.9,61.5H14.1c-3.6,0-6.6-3-6.6-6.6c0-3.6,3-6.6,6.6-6.6h71.8c3.6,0,6.6,3,6.6,6.6    C92.5,58.5,89.5,61.5,85.9,61.5z M14.1,52c-1.6,0-2.9,1.3-2.9,2.9c0,1.6,1.3,2.9,2.9,2.9h71.8c1.6,0,2.9-1.3,2.9-2.9    c0-1.6-1.3-2.9-2.9-2.9H14.1z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M76.1,92.5H23.9c-0.8,0-1.5-0.5-1.8-1.3l-9.8-31c-0.2-0.6-0.1-1.2,0.3-1.6c0.3-0.5,0.9-0.8,1.5-0.8h71.8    c0.6,0,1.1,0.3,1.5,0.8c0.3,0.5,0.4,1.1,0.3,1.6l-9.8,31C77.6,92,76.9,92.5,76.1,92.5z M25.3,88.8h49.5l8.7-27.3H16.6L25.3,88.8z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M68.8,52H31.2c-0.8,0-1.6-0.6-1.8-1.4c-2.6-9.6-0.2-20.8,2.9-28.1c6.3-14.8,17.2-15,17.6-15s11.4,0.2,17.6,15    c3.1,7.3,5.5,18.5,2.9,28.1C70.4,51.4,69.6,52,68.8,52z M32.7,48.3h34.7c1.4-7,0.3-16.4-3.1-24.4C59,11.5,50.3,11.2,50,11.2    c-0.3,0-8.9,0.3-14.2,12.7C32.4,31.9,31.2,41.2,32.7,48.3z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M31.2,52H16.6c-0.7,0-1.4-0.4-1.7-1.1c-3.5-8.2-1.4-18.9,1.4-25.6C21.4,13.1,30.4,13,30.8,13    c0.1,0,3.7,0,7.6,2.9c0.8,0.6,1,1.7,0.4,2.6c-1.1,1.6-2.2,3.4-3,5.5l0,0c-3.6,8.5-4.7,18.6-2.8,25.7c0.1,0.6,0,1.1-0.3,1.6    C32.3,51.7,31.8,52,31.2,52z M17.8,48.3h11.1c-1.6-9,0.6-19.1,3.5-25.8c0.7-1.6,1.5-3.2,2.3-4.6c-2.2-1.2-3.8-1.2-3.9-1.2    c-0.2,0-7,0.2-11.1,10C17.1,32.8,15.6,41.7,17.8,48.3z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M83.4,52H68.8c-0.6,0-1.1-0.3-1.5-0.7c-0.3-0.5-0.5-1-0.3-1.6c1.9-7.2,0.8-17.3-2.8-25.7l0,0    c-0.9-2-1.9-3.9-3-5.5c-0.6-0.8-0.4-2,0.4-2.6C65.5,13,69,13,69.2,13c0.4,0,9.4,0.1,14.5,12.3c2.8,6.7,4.9,17.4,1.4,25.6    C84.9,51.5,84.2,52,83.4,52z M71.1,48.3h11.1c2.2-6.6,0.7-15.4-1.9-21.6c-4.1-9.8-10.9-10-11.1-10c-0.1,0-1.7,0.1-3.9,1.2    c0.9,1.4,1.7,2.9,2.3,4.6l0,0C70.5,29.2,72.7,39.2,71.1,48.3z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M30.2,81.6c-2.9,0-5.2-2.3-5.2-5.2V72c0-2.9,2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2v4.5    C35.4,79.3,33.1,81.6,30.2,81.6z M30.2,70.5c-0.8,0-1.5,0.7-1.5,1.5v4.5c0,0.8,0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5V72    C31.7,71.2,31,70.5,30.2,70.5z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M50,84.4c-2.9,0-5.2-2.3-5.2-5.2v-10c0-2.9,2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2v10C55.2,82.1,52.9,84.4,50,84.4z     M50,67.7c-0.8,0-1.5,0.7-1.5,1.5v10c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5v-10C51.5,68.4,50.8,67.7,50,67.7z" />
+                                                            </g>
+                                                            <g>
+                                                                <path class="st0" d="M69.8,81.6c-2.9,0-5.2-2.3-5.2-5.2V72c0-2.9,2.3-5.2,5.2-5.2S75,69.1,75,72v4.5C75,79.3,72.6,81.6,69.8,81.6z     M69.8,70.5c-0.8,0-1.5,0.7-1.5,1.5v4.5c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V72C71.3,71.2,70.6,70.5,69.8,70.5z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <p class="small text-truncated text-theme-1">Protein</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-3 col-lg-3 mb-3">
+                                            <div class="card h-100 selectable">
+                                                <div class="card-body">
+                                                    <?xml version="1.0" ?>
+                                                    <svg class="height-30 mx-auto mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                                        <title />
+                                                        <g data-name="Layer 3" id="Layer_3">
+                                                            <path fill="var(--adminuiux-theme-1)"
+                                                                d="M50,0a5.939,5.939,0,0,0-4.05,1.58A6.8,6.8,0,0,0,41.55,0a18.745,18.745,0,0,0-5.38,1.69,5.99,5.99,0,0,0-8.34,0A18.745,18.745,0,0,0,22.45,0a6.8,6.8,0,0,0-4.4,1.58A5.939,5.939,0,0,0,14,0,6,6,0,0,0,8,6V58a6,6,0,0,0,6,6,5.939,5.939,0,0,0,4.05-1.58A6.8,6.8,0,0,0,22.45,64a18.745,18.745,0,0,0,5.38-1.69,5.99,5.99,0,0,0,8.34,0A18.745,18.745,0,0,0,41.55,64a6.8,6.8,0,0,0,4.4-1.58A5.939,5.939,0,0,0,50,64a6,6,0,0,0,6-6V6A6,6,0,0,0,50,0ZM14,62a4,4,0,0,1-4-4V6a4,4,0,0,1,6.76-2.9A5.3,5.3,0,0,0,16,5.84a5.556,5.556,0,0,0,2,4.2v.32a5.588,5.588,0,0,0-2,4.2,5.572,5.572,0,0,0,2,4.2v.32a5.41,5.41,0,0,0,0,8.4v.32a5.41,5.41,0,0,0,0,8.4v.32a5.41,5.41,0,0,0,0,8.4v.32a5.41,5.41,0,0,0,0,8.4v.32a5.556,5.556,0,0,0-2,4.2,5.3,5.3,0,0,0,.76,2.74A4.007,4.007,0,0,1,14,62Zm8.45,0a4.829,4.829,0,0,1-3.17-1.14v-.01A3.571,3.571,0,0,1,18,58.16a3.7,3.7,0,0,1,2-3.19,4.023,4.023,0,0,1,.51-.25,1,1,0,0,0,.61-.92.993.993,0,0,0-.61-.92,4.065,4.065,0,0,1-.51-.26,3.536,3.536,0,0,1,0-6.37,4.023,4.023,0,0,1,.51-.25,1,1,0,0,0,.61-.92.993.993,0,0,0-.61-.92A4.065,4.065,0,0,1,20,43.9a3.528,3.528,0,0,1,0-6.36,4.065,4.065,0,0,1,.51-.26,1,1,0,0,0,0-1.84,4.065,4.065,0,0,1-.51-.26,3.528,3.528,0,0,1,0-6.36,4.065,4.065,0,0,1,.51-.26,1,1,0,0,0,0-1.84,4.065,4.065,0,0,1-.51-.26,3.528,3.528,0,0,1,0-6.36,4.065,4.065,0,0,1,.51-.26.993.993,0,0,0,.61-.92,1,1,0,0,0-.61-.92,4.023,4.023,0,0,1-.51-.25,3.7,3.7,0,0,1-2-3.19,3.694,3.694,0,0,1,2-3.18,4.065,4.065,0,0,1,.51-.26.993.993,0,0,0,.61-.92,1,1,0,0,0-.61-.92A4.023,4.023,0,0,1,20,9.03a3.7,3.7,0,0,1-2-3.19,3.571,3.571,0,0,1,1.28-2.69V3.14A4.829,4.829,0,0,1,22.45,2a16.157,16.157,0,0,1,4.18,1.33A5.837,5.837,0,0,0,26,6V58a5.837,5.837,0,0,0,.63,2.67A16.157,16.157,0,0,1,22.45,62ZM32,62a4.016,4.016,0,0,1-4-4V6a4,4,0,0,1,8,0V58a4.016,4.016,0,0,1-4,4Zm12.72-1.15v.01A4.829,4.829,0,0,1,41.55,62a16.157,16.157,0,0,1-4.18-1.33A5.837,5.837,0,0,0,38,58V6a5.837,5.837,0,0,0-.63-2.67A16.157,16.157,0,0,1,41.55,2a4.829,4.829,0,0,1,3.17,1.14v.01A3.571,3.571,0,0,1,46,5.84a3.7,3.7,0,0,1-2,3.19,4.023,4.023,0,0,1-.51.25,1,1,0,0,0-.61.92.993.993,0,0,0,.61.92,4.065,4.065,0,0,1,.51.26,3.694,3.694,0,0,1,2,3.18,3.7,3.7,0,0,1-2,3.19,4.023,4.023,0,0,1-.51.25,1,1,0,0,0-.61.92.993.993,0,0,0,.61.92,4.065,4.065,0,0,1,.51.26,3.528,3.528,0,0,1,0,6.36,4.065,4.065,0,0,1-.51.26,1,1,0,0,0,0,1.84,4.065,4.065,0,0,1,.51.26,3.528,3.528,0,0,1,0,6.36,4.065,4.065,0,0,1-.51.26,1,1,0,0,0,0,1.84,4.065,4.065,0,0,1,.51.26,3.528,3.528,0,0,1,0,6.36,4.065,4.065,0,0,1-.51.26.993.993,0,0,0-.61.92,1,1,0,0,0,.61.92,4.023,4.023,0,0,1,.51.25,3.536,3.536,0,0,1,0,6.37,4.065,4.065,0,0,1-.51.26.993.993,0,0,0-.61.92,1,1,0,0,0,.61.92,4.023,4.023,0,0,1,.51.25,3.7,3.7,0,0,1,2,3.19A3.571,3.571,0,0,1,44.72,60.85ZM54,58a4,4,0,0,1-6.76,2.9A5.3,5.3,0,0,0,48,58.16a5.556,5.556,0,0,0-2-4.2v-.32a5.41,5.41,0,0,0,0-8.4v-.32a5.41,5.41,0,0,0,0-8.4V36.2a5.41,5.41,0,0,0,0-8.4v-.32a5.41,5.41,0,0,0,0-8.4v-.32a5.572,5.572,0,0,0,2-4.2,5.588,5.588,0,0,0-2-4.2v-.32a5.556,5.556,0,0,0,2-4.2,5.3,5.3,0,0,0-.76-2.74A4,4,0,0,1,54,6Z" />
+                                                            <path fill="var(--adminuiux-theme-1)"
+                                                                d="M34,56.58l-1.88-1.87a1.008,1.008,0,0,1,0-1.42l1.17-1.17a3.008,3.008,0,0,0,0-4.24l-1.17-1.17a1.008,1.008,0,0,1,0-1.42l1.17-1.17a3.008,3.008,0,0,0,0-4.24l-1.17-1.17a1.014,1.014,0,0,1,0-1.42l1.17-1.17a3.008,3.008,0,0,0,0-4.24l-1.17-1.17a1.008,1.008,0,0,1,0-1.42l1.17-1.17a3.008,3.008,0,0,0,0-4.24l-1.17-1.17a1.008,1.008,0,0,1,0-1.42l1.17-1.17a3.008,3.008,0,0,0,0-4.24l-1.17-1.17a1.008,1.008,0,0,1,0-1.42l1.17-1.17a3.008,3.008,0,0,0,0-4.24L30.71,5.29a1,1,0,0,0-1.42,1.42l.71.71,1.88,1.87a1.014,1.014,0,0,1,0,1.42l-1.17,1.17A2.955,2.955,0,0,0,30,13.01,3.083,3.083,0,0,0,30,15a2.848,2.848,0,0,0,.71,1.12l1.17,1.17a1.014,1.014,0,0,1,0,1.42l-1.17,1.17A2.955,2.955,0,0,0,30,21.01,3.083,3.083,0,0,0,30,23a2.848,2.848,0,0,0,.71,1.12l1.17,1.17a1.014,1.014,0,0,1,0,1.42l-1.17,1.17a3.008,3.008,0,0,0,0,4.24l1.17,1.17a1.014,1.014,0,0,1,0,1.42l-1.17,1.17A2.955,2.955,0,0,0,30,37.01,3.083,3.083,0,0,0,30,39a2.848,2.848,0,0,0,.71,1.12l1.17,1.17a1.014,1.014,0,0,1,0,1.42l-1.17,1.17a3.008,3.008,0,0,0,0,4.24l1.17,1.17a1.014,1.014,0,0,1,0,1.42l-1.17,1.17a3.008,3.008,0,0,0,0,4.24l2.58,2.59a1.014,1.014,0,0,0,1.42,0,1.008,1.008,0,0,0,0-1.42Z" />
+                                                        </g>
+                                                    </svg>
+                                                    <p class="small text-truncated text-theme-1">Snacks</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-3 col-lg-3 mb-3">
+                                            <div class="card h-100 selectable">
+                                                <div class="card-body">
+                                                    <?xml version="1.0" ?>
+                                                    <svg class="height-30 mx-auto mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: var(--adminuiux-theme-1);
+                                                                    stroke-linejoin: round;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <title />
+                                                        <g data-name="Layer 13" id="Layer_13">
+                                                            <polyline class="cls-1" points="32 32 32 14 10 14 10 62 28 62" />
+                                                            <polyline class="cls-1" points="32 14 26 8 6 8 10 14" />
+                                                            <polyline class="cls-1" points="6 8 2 14 2 62 10 62" />
+                                                            <polyline class="cls-1" points="26 8 26 2 6 2 6 8" />
+                                                            <polyline class="cls-1" points="28 50 14 50 14 26 28 26 28 29" />
+                                                            <line class="cls-1" x1="32" x2="10" y1="22" y2="22" />
+                                                            <line class="cls-1" x1="28" x2="10" y1="54" y2="54" />
+                                                            <rect class="cls-1" height="30" width="18" x="28" y="32" />
+                                                            <line class="cls-1" x1="28" x2="46" y1="58" y2="58" />
+                                                            <line class="cls-1" x1="28" x2="46" y1="38" y2="38" />
+                                                            <polyline class="cls-1" points="40 32 40 22 44 22 44 32" />
+                                                            <path class="cls-1" d="M46,62H60a2,2,0,0,0,2-2h0a2,2,0,0,0-2-2H54a2,2,0,0,1-2-2h0a2,2,0,0,1,2-2h2a2,2,0,0,0,2-2h0a2,2,0,0,0-2-2H46" />
+                                                        </g>
+                                                    </svg>
+                                                    <p class="small text-truncated text-theme-1">Dairy</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-3 col-lg-3 mb-3">
+                                            <div class="card h-100 selectable">
+                                                <div class="card-body">
+                                                    <?xml version="1.0" ?>
+                                                    <svg class="height-30 mx-auto mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: var(--adminuiux-theme-1);
+                                                                    stroke-linejoin: round;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <title />
+                                                        <g data-name="Layer 9" id="Layer_9">
+                                                            <path class="cls-1" d="M49,10h0a5,5,0,0,1,5,5v7a0,0,0,0,1,0,0H44a0,0,0,0,1,0,0V15A5,5,0,0,1,49,10Z" />
+                                                            <path class="cls-1" d="M46,2h0a10.25,10.25,0,0,1,3,7.24v0A10.25,10.25,0,0,1,52,2h0" />
+                                                            <line class="cls-1" x1="44" x2="49" y1="14" y2="14" />
+                                                            <line class="cls-1" x1="54" x2="49" y1="18" y2="18" />
+                                                            <polyline class="cls-1" points="8 36.22 8 22 56 22 56 36.17" />
+                                                            <path class="cls-1" d="M10,22a9,9,0,0,1,18,0" />
+                                                            <path class="cls-1" d="M44,19.54a4.13,4.13,0,0,0-1.11-.43A4,4,0,0,0,39,16a4.75,4.75,0,0,0-.53.05,4,4,0,0,0-6.94,0A4.75,4.75,0,0,0,31,16a4,4,0,0,0-3.46,2" />
+                                                            <rect class="cls-1" height="4" width="16" x="24" y="26" />
+                                                            <rect class="cls-1" height="4" width="60" x="2" y="58" />
+                                                            <path class="cls-1" d="M18,39.14s0-.09,0-.14a3,3,0,0,0-4.12-2.78,3,3,0,0,0-5.76,0A3,3,0,0,0,4,39s0,.09,0,.14A4,4,0,0,0,5,47a3.93,3.93,0,0,0,2.24-.69,4,4,0,0,0,7.52,0A3.93,3.93,0,0,0,17,47a4,4,0,0,0,1-7.86Z" />
+                                                            <path class="cls-1" d="M7,46l1,3.65a24.66,24.66,0,0,1,1,6.83V58h4V56.48a24.66,24.66,0,0,1,1-6.83L15,46" />
+                                                            <path class="cls-1" d="M38,39.14s0-.09,0-.14a3,3,0,0,0-4.12-2.78,3,3,0,0,0-5.76,0A3,3,0,0,0,24,39s0,.09,0,.14A4,4,0,0,0,25,47a3.93,3.93,0,0,0,2.24-.69,4,4,0,0,0,7.52,0A3.93,3.93,0,0,0,37,47a4,4,0,0,0,1-7.86Z" />
+                                                            <path class="cls-1" d="M27,46l.63,2.19A35.75,35.75,0,0,1,29,58h4a35.75,35.75,0,0,1,1.37-9.81L35,46" />
+                                                            <path class="cls-1" d="M58,39.14s0-.09,0-.14a3,3,0,0,0-4.12-2.78,3,3,0,0,0-5.76,0A3,3,0,0,0,44,39s0,.09,0,.14A4,4,0,0,0,45,47a3.93,3.93,0,0,0,2.24-.69,4,4,0,0,0,7.52,0A3.93,3.93,0,0,0,57,47a4,4,0,0,0,1-7.86Z" />
+                                                            <path class="cls-1" d="M47,46l.63,2.19A35.75,35.75,0,0,1,49,58h4a35.75,35.75,0,0,1,1.37-9.81L55,46" />
+                                                            <line class="cls-1" x1="19" x2="19" y1="13" y2="22" />
+                                                            <line class="cls-1" x1="15" x2="15" y1="14" y2="22" />
+                                                            <polyline class="cls-1" points="17 13 17 5 21 5 21 13" />
+                                                            <line class="cls-1" x1="23" x2="23" y1="14" y2="22" />
+                                                            <polyline class="cls-1" points="21 10 24 7 27 10 23 14" />
+                                                            <polyline class="cls-1" points="17 10 14 7 11 10 15 14" />
+                                                        </g>
+                                                    </svg>
+                                                    <p class="small text-truncated text-theme-1">Vegetable</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-3 col-lg-3 mb-3">
+                                            <div class="card h-100 selectable">
+                                                <div class="card-body">
+                                                    <?xml version="1.0" ?>
+                                                    <svg class="height-30 mx-auto mb-2" data-name="Layer 2" id="Layer_2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-2 {
+                                                                    fill: var(--adminuiux-theme-1);
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <title />
+                                                        <path class="cls-2" d="M32,28a1,1,0,0,0,1-1V25a1,1,0,0,0-2,0v2A1,1,0,0,0,32,28Z" />
+                                                        <path class="cls-2" d="M31,34a1,1,0,0,0,2,0V32a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M31,40a1,1,0,0,0,2,0V38a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M31,46a1,1,0,0,0,2,0V44a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M31,52a1,1,0,0,0,2,0V50a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M31,58a1,1,0,0,0,2,0V56a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M39,32a1,1,0,0,0,1-1V29a1,1,0,0,0-2,0v2A1,1,0,0,0,39,32Z" />
+                                                        <path class="cls-2" d="M38,37a1,1,0,0,0,2,0V35a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M38,43a1,1,0,0,0,2,0V41a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M38,49a1,1,0,0,0,2,0V47a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M45,38a1,1,0,0,0,1-1V35a1,1,0,0,0-2,0v2A1,1,0,0,0,45,38Z" />
+                                                        <path class="cls-2" d="M44,43a1,1,0,0,0,2,0V41a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M44,49a1,1,0,0,0,2,0V47a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M19,38a1,1,0,0,0,1-1V35a1,1,0,0,0-2,0v2A1,1,0,0,0,19,38Z" />
+                                                        <path class="cls-2" d="M18,43a1,1,0,0,0,2,0V41a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M18,49a1,1,0,0,0,2,0V47a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M38,55a1,1,0,0,0,2,0V53a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M25,32a1,1,0,0,0,1-1V29a1,1,0,0,0-2,0v2A1,1,0,0,0,25,32Z" />
+                                                        <path class="cls-2" d="M24,37a1,1,0,0,0,2,0V35a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M24,43a1,1,0,0,0,2,0V41a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M24,49a1,1,0,0,0,2,0V47a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2" d="M24,55a1,1,0,0,0,2,0V53a1,1,0,0,0-2,0Z" />
+                                                        <path class="cls-2"
+                                                            d="M53.943,8.669A1,1,0,0,0,53,8H44a1,1,0,0,0-.774.367l-6.962,8.508.727-5.6a1,1,0,0,0-.061-.5l-4-10.145a1,1,0,0,0-1.861,0l-1.577,4a1,1,0,1,0,1.861.734L32,3.727l2.976,7.545L33.96,19.1A18.012,18.012,0,0,0,32.11,19H31.89a18.22,18.22,0,0,0-1.849.1l-1.016-7.825.752-1.9a1,1,0,0,0-1.861-.734l-.846,2.145a1,1,0,0,0-.061.5l.727,5.6L20.774,8.367A1,1,0,0,0,20,8H11a1,1,0,0,0-.65,1.759A49.986,49.986,0,0,1,20.8,22.869,18.158,18.158,0,0,0,19.185,24.3,1,1,0,0,0,20.6,25.7a15.752,15.752,0,0,1,8.921-4.511L32,21l2.439.187A15.9,15.9,0,0,1,48,36.89V46.11A15.907,15.907,0,0,1,32.11,62H31.89A15.907,15.907,0,0,1,16,46.11V36.89a15.921,15.921,0,0,1,1.836-7.422,1,1,0,1,0-1.768-.936A17.923,17.923,0,0,0,14,36.89V46.11A17.91,17.91,0,0,0,31.89,64h.221A17.91,17.91,0,0,0,50,46.11V36.89A17.854,17.854,0,0,0,43.234,22.9c1.375-2.206,6.283-9.836,10.391-13.122A1,1,0,0,0,53.943,8.669ZM13.572,10h5.954l7.849,9.593a17.625,17.625,0,0,0-4.929,2.118A52.661,52.661,0,0,0,13.572,10ZM41.6,21.749A17.771,17.771,0,0,0,36.62,19.6L44.474,10h5.953A76.133,76.133,0,0,0,41.6,21.749Z" />
+                                                    </svg>
+                                                    <p class="small text-truncated text-theme-1">Fruit</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="row h-100 justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3 text-center">
+                                    <h1 class="fw-bold text-theme-1 mb-1">Your current weight?</h1>
+                                    <h5 class="text-theme-accent-1 mb-4">Set observing start weight to compare later</h5>
+
+                                    <h1 class="text-center mb-3">80.180 <small class="text-secondary">kg</small></h1>
+                                    <!-- increamenter kilos -->
+                                    <div class="row gx-3 justify-content-center mb-3 increamenter">
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control text-center width-80 increamenter-value" placeholder="" value="80">
+                                                <div class="input-group-text">k</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-add">+</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- increamenter grams  -->
+                                    <div class="row gx-3 justify-content-center increamenter">
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control text-center width-80 increamenter-value" placeholder="" value="180">
+                                                <div class="input-group-text">g</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-add">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="row h-100 justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3 text-center">
+                                    <h1 class="fw-bold text-theme-1 mb-1">How tall you are?</h1>
+                                    <h5 class="text-theme-accent-1 mb-4">Provide details about your current height</h5>
+
+                                    <h1 class="text-center mb-3">5.25 <small class="text-secondary">ft</small></h1>
+                                    <!-- increamenter kilos -->
+                                    <div class="row gx-3 justify-content-center mb-3 increamenter">
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control text-center width-80 increamenter-value" placeholder="" value="5">
+                                                <div class="input-group-text">ft</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-add">+</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- increamenter grams  -->
+                                    <div class="row gx-3 justify-content-center increamenter">
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-remove">-</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control text-center width-80 increamenter-value" placeholder="" value="4">
+                                                <div class="input-group-text">in</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-square btn-link rounded-circle increamenter-add">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="row h-100 justify-content-center align-items-center position-relative z-index-1">
+                                <div class="col-10 col-md-6 col-lg-4 col-xl-3">
+                                    <h1 class="fw-bold text-theme-1 text-center mb-1">What you want to achieve by being here?</h1>
+                                    <h2 class="text-theme-accent-1 text-center mb-4">Provide your goal to be completed with us</h2>
+
+                                    <!-- gender -->
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-6 mb-3">
+                                            <div class="card h-100 selectable anyone">
+                                                <div class="card-body">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="text-theme-1">Fit body</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <p class="text-secondary"><i class="bi bi-check-circle"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-6 mb-3">
+                                            <div class="card h-100 selectable anyone">
+                                                <div class="card-body">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="text-theme-1">Lose Weight</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <p class="text-secondary"><i class="bi bi-check-circle"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-6 mb-3">
+                                            <div class="card h-100 selectable anyone">
+                                                <div class="card-body">
+                                                    <div class="row gx-3 align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="text-theme-1">Gain Weight</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <p class="text-secondary"><i class="bi bi-check-circle"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- action buttons  -->
+                <div class="container-fluid z-index-9 mt-auto pb-ios">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-sm-auto mb-4">
+                            <a href="fitness-login.html" class="btn btn-lg btn-link w-100 swiper-button-prev-theme" style="display: none;">Previous</a>
+                        </div>
+                        <div class="col-6 col-sm-auto mb-4">
+                            <a href="fitness-signup.html" class="btn btn-lg btn-theme w-100 swiper-button-next-theme">Next</a>
+                            <a href="fitness-dashboard.html" class="btn btn-lg btn-accent w-100 finish-btn" style="display: none;">Finish</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- page level script -->
+            <script src="assets/js/fitness/fitness-onboarding.js"></script>
+    </body>
+
+</html>

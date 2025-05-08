@@ -1,0 +1,34 @@
+<!-- standard header -->
+<header class="adminuiux-header">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- main sidebar toggle -->
+            <!-- back -->
+            <button class="btn btn-square btn-link" onclick="goBack()">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+            <!-- logo -->
+            <!-- <a class="navbar-brand" href="#">
+                <img data-bs-img="light" src="assets/img/logo-light.svg" alt="">
+                <img data-bs-img="dark" src="assets/img/logo.svg" alt="">
+                <div class="d-block mx-2">
+                    <span class="h4">Fitness<span class="fw-bold">UI</span><span>UX</span></span>
+                    <p class="company-tagline">Mobile HTML template</p>
+                </div>
+            </a> -->
+            <!-- right area -->
+            <div class="ms-auto">
+                <a href="fitness-login.html" class="btn btn-link">Sign in</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- title copy-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if ($('#title').length > 0) {
+            $('.title').html($('#title').html());
+        };
+    });
+</script>

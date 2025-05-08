@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+  <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+      <%= require('../partials/header/fitness-header-back.html').default %>
+        <div id="title" class="d-none">
+          <%= htmlWebpackPlugin.options.title %>
+        </div>
+        <div class="adminuiux-wrap">
+          <main class="adminuiux-content" onclick="contentClick()">
+            <!-- content -->
+            <div class="container mt-3" id="main-content">
+
+              <!-- profile-->
+              <div class="card adminuiux-card border-0 overflow-hidden mb-3">
+                <figure class="h-100 w-100 coverimg blur-overlay position-absolute start-0 top-0 z-index-0 opacity-50">
+                  <img src="assets/img/fitness/image-1.jpg" alt="">
+                </figure>
+                <div class="card-body text-center z-index-1">
+                  <div class="avatar avatar-110 border rounded-circle mx-auto border-theme-1 mb-3">
+                    <figure class="avatar avatar-100 coverimg rounded-circle">
+                      <img src="assets/img/fitness/image-6.jpg" alt="">
+                    </figure>
+                  </div>
+                  <h5 class="mb-0">FiPro DiCaprio</h5>
+                  <p class="small opacity-75">happy@adminuiuxi.com</p>
+                </div>
+              </div>
+
+              <!-- profile summary -->
+              <div class="row gx-3">
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-blue mb-3">
+                    <div class="card-body">
+                      <h6>Steps</h6>
+                      <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 85%; --h-dynamic:4px"></div>
+                      </div>
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p class="small opacity-75">85%</p>
+                        </div>
+                        <div class="col-auto">6251</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-yellow mb-3">
+                    <div class="card-body">
+                      <h6>Calories</h6>
+                      <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 75%; --h-dynamic:4px"></div>
+                      </div>
+                      <p class="small opacity-75">65%</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-green mb-3">
+                    <div class="card-body">
+                      <h6>Carbs</h6>
+                      <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 65%; --h-dynamic:4px"></div>
+                      </div>
+                      <p class="small opacity-75">65%</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card adminuiux-card border-0 bg-theme-1-subtle theme-orange mb-3">
+                    <div class="card-body">
+                      <h6>Protien</h6>
+                      <div class="progress height-dynamic bg-theme-1-subtle mb-1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar height-dynamic rounded m-1 bg-theme-1" style="width: 50%; --h-dynamic:4px"></div>
+                      </div>
+                      <p class="small opacity-75">50%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- menu items -->
+              <div class="list-group adminuiux-list-group">
+                <a class="list-group-item list-group-item-action" href="fitness-dashboard.html">
+                  <div class="row gx-0">
+                    <div class="col align-self-center"><i data-feather="layout" class="avatar avatar-18 me-1"></i> My Dashboard </div>
+                    <div class="col-auto avatar-group">
+                      <figure class="avatar avatar-20 coverimg rounded-circle">
+                        <img src="assets/img/modern-ai-image/user-1.jpg" alt="">
+                      </figure>
+                      <figure class="avatar avatar-20 coverimg rounded-circle">
+                        <img src="assets/img/modern-ai-image/user-2.jpg" alt="">
+                      </figure>
+                      <figure class="avatar avatar-20 coverimg rounded-circle">
+                        <img src="assets/img/modern-ai-image/user-4.jpg" alt="">
+                      </figure>
+                      <div class="avatar avatar-20 bg-theme-1 rounded-circle text-center align-middle">
+                        <small class="fs-10 align-middle">9+</small>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" href="fitness-earning.html"><i data-feather="dollar-sign" class="avatar avatar-18 me-1"></i> Earning </a>
+                <a class="list-group-item list-group-item-action" href="fitness-subscription.html">
+                  <div class="row">
+                    <div class="col"><i data-feather="gift" class="avatar avatar-18 me-1"></i> Subscription</div>
+                    <div class="col-auto">
+                      <p class="small text-success">Upgrade</p>
+                    </div>
+                    <div class="col-auto"><span class="arrow bi bi-chevron-right"></span></div>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" href="fitness-settings.html"><i data-feather="settings" class="avatar avatar-18 me-1"></i> Account Setting </a>
+                <a class="list-group-item list-group-item-action theme-red" href="fitness-login.html"><i data-feather="power" class="avatar avatar-18 me-1"></i> Logout </a>
+              </div>
+
+
+            </div>
+          </main>
+        </div>
+
+        <!-- mobile footer -->
+        <%= require('../partials/footer/mobile-footer.html').default %>
+
+          <!-- footer -->
+          <%= require('../partials/offcanvas/theming.html').default %>
+
+            <!-- Page Level js -->
+  </body>
+
+</html>

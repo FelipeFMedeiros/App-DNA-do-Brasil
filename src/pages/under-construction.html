@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+            <%= require('../partials/header/fitness-header-back.html').default %>
+                <div id="title" class="d-none">
+                    <%= htmlWebpackPlugin.options.title %>
+                </div>
+                <div class="adminuiux-wrap">
+                    <main class="adminuiux-content" onclick="contentClick()">
+                        <!-- content -->
+                        <div class="container-fluid mt-2" id="main-content">
+                            <div class="card adminuiux-card border-0 bg-theme-1 height-dynamic position-relative overflow-hidden theme-yellow" style="--h-dynamic: calc(100vh - 130px)">
+                                <figure class="m-0 position-absolute top-0 start-0 h-100 w-100 coverimg opacity-50">
+                                    <img src="assets/img/fitness/image-1.jpg" alt="" />
+                                </figure>
+                                <div class="card-body z-index-1">
+                                    <div class="row align-items-center justify-content-center text-center h-100">
+                                        <div class="col-auto">
+                                            <h1 class="fw-bold" style="font-size: 100px;"><i class="bi bi-cone-striped mx-2"></i></h1>
+                                            <h1>Under <b>Construction</b></h1>
+                                            <p class="mb-3">This page is still under construction,<br> subscribe us and get in touch with us</p>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control border-warning" placeholder="Your email address">
+                                                <button class="btn btn-warning" type="button">Subscribe</button>
+                                            </div>
+                                            <br>
+                                            <a href="fitness-dashboard.html" class="btn btn-light">Back to home <i class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <!-- page footer -->
+                <%= require('../partials/footer/fitness-footer.html').default %>
+                    <%= require('../partials/offcanvas/theming.html').default %> <!-- Page Level js -->
+    </body>
+
+</html>

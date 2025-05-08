@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+<%= require('../partials/head/head.html').default %>
+
+  <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <%= require('../partials/pageloader/fitness-pageloader.html').default %>
+      <!-- back button header with title -->
+      <%= require('../partials/header/fitness-header-back.html').default %>
+        <div id="title" class="d-none">
+          <%= htmlWebpackPlugin.options.title %>
+        </div>
+        <div class="adminuiux-wrap">
+          <!-- Standard sidebar -->
+          <main class="adminuiux-content" onclick="contentClick()">
+            <!-- content -->
+            <div class="container mt-3" id="main-content">
+              <div class="row gx-3">
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-aboutus.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>About Us</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-blog.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Blogs</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-blog-details.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Blog Details</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-calendar.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Calendar</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-change-password.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Change Password </p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-chat.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Chat</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-chat-and-call.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Chat and Call</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-club-all.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Fitness Club <span class="badge badge-light badge-sm text-bg-danger mx-1">New</span></p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-club.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Club</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-club-trainers.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Club Trainers</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-club-trainer-details.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Club Trainer Details</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-contactus.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Contact us</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-dashboard.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Dashboard</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-diet.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Diet</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-diet-all.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Diet List</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-diet-details.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Diet Details</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-diet-add-meal.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Diet Add Meal</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-earning.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Earning</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-forgot-password.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Forgot Password <span class="badge badge-light badge-sm text-bg-danger mx-1">New</span></p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-login.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Login</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-onboarding.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Onboarding</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-personalization.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Personalize</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-privacy-policy.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Privacy Policy</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-profile-kyc-start.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Profile KYC Start</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-profile-kyc.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Profile KYC 1</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-profile-kyc-2.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Profile KYC 2</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-profile.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Profile</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-referral.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Referral</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-report.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Report</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-settings.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Settings</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-signup.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Signup</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-signup-success.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Signup Success</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-splash.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Splash</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-subscription.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Subscription</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-subscription-upgrade.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Subscription Upgrade</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-subscription-pay.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Subscription Pay</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-terms-of-use.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Terms of Use</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-workout.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Workout</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="fitness-workout-details.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Workout Details</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="page-not-found.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Page not found 1</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="page-not-found-2.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Page not found 2</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="page-not-found-3.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Page not found 3</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="under-construction.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Under Construction</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <a href="coming-soon.html" class="card adminuiux-card  style-none">
+                    <div class="card-body">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <p>Coming soon</p>
+                        </div>
+                        <div class="col-auto">
+                          <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </main>
+        </div>
+        <%= require('../partials/offcanvas/theming.html').default %>
+          <%= require('../partials/footer/fitness-footer.html').default %> <!-- Page Level js -->
+  </body>
+
+</html>
