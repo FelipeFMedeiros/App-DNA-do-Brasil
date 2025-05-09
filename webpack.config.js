@@ -70,7 +70,7 @@ module.exports = {
     new HtmlWebpackPlugin({ filename: "fitness-splash.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-splash.html", inject: true, minify: false, hash: true, title: "Splash" }),
 
     //fitness
-    new HtmlWebpackPlugin({ filename: "fitness-dashboard.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-dashboard.html", inject: true, minify: false, hash: true, title: "fitness Dashboard" }),
+    new HtmlWebpackPlugin({ filename: "fitness-dashboard-aluno.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-dashboard-aluno.html", inject: true, minify: false, hash: true, title: "fitness Dashboard Aluno" }),
     new HtmlWebpackPlugin({ filename: "fitness-chat-and-call.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-chat-and-call.html", inject: true, minify: false, hash: true, title: "Chat & Call" }),
     new HtmlWebpackPlugin({ filename: "fitness-chat.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-chat.html", inject: true, minify: false, hash: true, title: "Chat" }),
     new HtmlWebpackPlugin({ filename: "fitness-referral.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-referral.html", inject: true, minify: false, hash: true, title: "Referral" }),
@@ -240,6 +240,7 @@ module.exports = {
     static: {
       directory: Path.join(__dirname, "dist")
     },
+    host: "192.168.1.128",
     port: 8080,
     open: true,
   }
