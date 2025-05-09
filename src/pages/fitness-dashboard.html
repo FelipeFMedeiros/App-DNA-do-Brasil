@@ -3,7 +3,7 @@
 <!-- dir="rtl"-->
 <%= require('../partials/head/head.html').default %>
 
-    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
+    <body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-blue adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
         <%= require('../partials/pageloader/fitness-pageloader.html').default %>
             <%= require('../partials/header/fitness-header.html').default %>
                 <div class="adminuiux-wrap">
@@ -16,13 +16,13 @@
                                     <!-- userphoto  -->
                                     <div class="col-auto mb-4">
                                         <figure class="avatar avatar-60 rounded-circle coverimg align-middle">
-                                            <img src="assets/img/fitness/image-6.jpg" alt="">
+                                            <img src="assets/img/fitness/image-1.jpg" alt="">
                                         </figure>
                                     </div>
                                     <!-- Welcome section -->
                                     <div class="col-9 col-sm-8 col-md-9 col-xl mb-4">
-                                        <h1 class="fw-bold text-theme-accent-1 mb-0">Hi, <span>FiPro DiCaprio</span></h1>
-                                        <h4 class="text-theme-1">You have a fantastic day</h4>
+                                        <h1 class="fw-bold text-theme-accent-1 mb-0">Olá, <span>Levi Fernando</span></h1>
+                                        <h4 class="text-theme-1">Tenha um ótimo dia!</h4>
                                     </div>
                                     <!-- activity summary -->
                                     <div class="col-6 col-lg-4 col-xl-auto ms-xl-auto">
@@ -31,8 +31,8 @@
                                                 <div class="avatar avatar-50 mx-auto mb-3">
                                                     <div id="circleprogressblue1"></div>
                                                 </div>
-                                                <h6 class="mb-0">Daily Activity</h6>
-                                                <p class="small text-secondary">Progress</p>
+                                                <h6 class="mb-0">Laudo</h6>
+                                                <p class="small text-secondary">Progresso</p>
                                             </div>
                                         </div>
                                     </div>
@@ -43,157 +43,186 @@
                                                 <div class="avatar avatar-50 mx-auto mb-3">
                                                     <div id="circleprogressgreen1"></div>
                                                 </div>
-                                                <h6 class="mb-0">Weekly Training</h6>
-                                                <p class="small text-secondary">Progress</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- workout progress-->
-                                    <div class="col-12 col-lg-4 col-xl-3">
-                                        <div class="card adminuiux-card border-0 bg-theme-r-gradient mb-3">
-                                            <div class="card-body">
-                                                <div class="row gx-3 align-items-center">
-                                                    <div class="col mb-0 mb-lg-2">
-                                                        <h6>Hand moving rounded</h6>
-                                                        <div class="progress bg-white-opacity height-dynamic mb-1" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--h-dynamic:5px">
-                                                            <div class="progress-bar bg-white" style="width: 75%"></div>
-                                                        </div>
-                                                        <p class="small opacity-75">75% Completed</p>
-                                                    </div>
-                                                    <div class="col-auto col-lg-12">
-                                                        <button class="btn btn-accent btn-square"><i class="bi bi-play"></i></button>
-                                                    </div>
-                                                </div>
+                                                <h6 class="mb-0">Frequência Semanal</h6>
+                                                <p class="small text-secondary">Presenças</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- health summary -->
-                                <div class="swiper swipernav mb-3">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide width-140">
-                                            <div class="card adminuiux-card theme-green">
-                                                <div class="card-header">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h6>Walk</h6>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <i class="bi bi-person-walking text-theme-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body text-center pt-0">
-                                                    <div class="avatar avatar-100 mx-auto position-relative">
-                                                        <div id="circleprogressgreen2"></div>
-                                                        <div class="position-absolute top-0 start-0 w-100 h-100">
-                                                            <div class="row align-items-center justify-content-center h-100">
-                                                                <div class="col-auto lh-20">
-                                                                    <h4 class="h4 mb-0">7532</h4>
-                                                                    <p class="small opacity-75">Steps</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide width-140">
-                                            <div class="card adminuiux-card theme-red">
-                                                <div class="card-header">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h6>Heart</h6>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <i class="bi bi-heart text-theme-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body pt-0 px-0">
-                                                    <div class="height-100 w-100 mx-auto position-relative">
-                                                        <canvas id="lineheart"></canvas>
-                                                        <div class="position-absolute bottom-0 start-0 w-100 px-3">
-                                                            <div class="row align-items-center justify-content-center h-100">
-                                                                <div class="col-12 lh-20">
-                                                                    <h4 class="h4 mb-0">80</h4>
-                                                                    <p class="small opacity-75">bpm</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide width-140">
-                                            <div class="card adminuiux-card theme-purple">
-                                                <div class="card-header">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h6>Sleep</h6>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <i class="bi bi-moon-stars text-theme-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body text-center pt-0">
-                                                    <div class="avatar avatar-60 mx-auto position-relative mb-3">
-                                                        <div id="circleprogresspurple1"></div>
-                                                    </div>
-                                                    <h4 class="h4 mb-0">7.4 <span class="fw-normal fs-14 opacity-75">Hours</span></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide width-140">
-                                            <div class="card adminuiux-card theme-cyan">
-                                                <div class="card-header">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h6>Exercise</h6>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <i class="bi bi-bicycle text-theme-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body text-center pt-0">
-                                                    <div class="height-100">
-                                                        <canvas id="areachartblue1"></canvas>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide width-140">
-                                            <div class="card adminuiux-card theme-orange">
-                                                <div class="card-header">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h6>Calories</h6>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <i class="bi bi-speedometer text-theme-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body text-center pt-0">
-                                                    <div class="avatar avatar-100 mx-auto position-relative">
-                                                        <div id="circleprogressorange1"></div>
-                                                        <div class="position-absolute top-0 start-0 w-100 h-100">
-                                                            <div class="row align-items-center justify-content-center h-100">
-                                                                <div class="col-auto lh-20">
-                                                                    <h4 class="h4 mb-0">365</h4>
-                                                                    <p class="small opacity-75">kcal</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                
+<!-- health summary -->
+<div class="swiper swipernav mb-3">
+    <div class="swiper-wrapper">
+        <!-- Saúde -->
+        <div class="swiper-slide width-140">
+            <div class="card adminuiux-card h-100" style="--bs-card-bg: #D2322D;">
+                <div class="card-header" style="height: 60px;">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-white text-truncate mb-0">Saúde</h6>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-heart-fill text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pt-0">
+                    <div class="avatar avatar-100 mx-auto position-relative">
+                        <div id="circleprogressred1"></div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100">
+                            <div class="row align-items-center justify-content-center h-100">
+                                <div class="col-auto lh-20">
+                                    <h4 class="h4 mb-0 text-white">85</h4>
+                                    <p class="small text-white">Pontos</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Talento Esportivo -->
+        <div class="swiper-slide width-180">
+            <div class="card adminuiux-card h-100" style="--bs-card-bg: #ED9C28;">
+                <div class="card-header" style="height: 60px;">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-white text-truncate mb-0">Talento Esportivo</h6>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-trophy text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pt-0">
+                    <div class="avatar avatar-100 mx-auto position-relative">
+                        <div id="circleprogressorange2"></div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100">
+                            <div class="row align-items-center justify-content-center h-100">
+                                <div class="col-auto lh-20">
+                                    <h4 class="h4 mb-0 text-white">76</h4>
+                                    <p class="small text-white">Pontos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Consumo Alimentar -->
+        <div class="swiper-slide width-180">
+            <div class="card adminuiux-card h-100" style="--bs-card-bg: #47A447;">
+                <div class="card-header" style="height: 60px;">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-white text-truncate mb-0">Consumo Alimentar</h6>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-cup-hot text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pt-0">
+                    <div class="avatar avatar-100 mx-auto position-relative">
+                        <div id="circleprogressgreen3"></div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100">
+                            <div class="row align-items-center justify-content-center h-100">
+                                <div class="col-auto lh-20">
+                                    <h4 class="h4 mb-0 text-white">92</h4>
+                                    <p class="small text-white">Pontos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Saúde Bucal -->
+        <div class="swiper-slide width-140">
+            <div class="card adminuiux-card h-100" style="--bs-card-bg: #5BC0DE;">
+                <div class="card-header" style="height: 60px;">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-white text-truncate mb-0">Saúde Bucal</h6>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-bandaid text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pt-0">
+                    <div class="avatar avatar-100 mx-auto position-relative">
+                        <div id="circleprogressblue2"></div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100">
+                            <div class="row align-items-center justify-content-center h-100">
+                                <div class="col-auto lh-20">
+                                    <h4 class="h4 mb-0 text-white">65</h4>
+                                    <p class="small text-white">Pontos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Qualidade de Vida -->
+        <div class="swiper-slide width-170">
+            <div class="card adminuiux-card h-100" style="--bs-card-bg: #00A4A9;">
+                <div class="card-header" style="height: 60px;">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-white text-truncate mb-0">Qualidade de Vida</h6>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-hand-thumbs-up text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pt-0">
+                    <div class="avatar avatar-100 mx-auto position-relative">
+                        <div id="circleprogressteal1"></div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100">
+                            <div class="row align-items-center justify-content-center h-100">
+                                <div class="col-auto lh-20">
+                                    <h4 class="h4 mb-0 text-white">78</h4>
+                                    <p class="small text-white">Pontos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vocacional -->
+        <div class="swiper-slide width-140">
+            <div class="card adminuiux-card h-100" style="--bs-card-bg: #9C27B0;">
+                <div class="card-header" style="height: 60px;">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-white text-truncate mb-0">Vocacional</h6>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-star text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pt-0">
+                    <div class="avatar avatar-100 mx-auto position-relative">
+                        <div id="circleprogresspurple2"></div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100">
+                            <div class="row align-items-center justify-content-center h-100">
+                                <div class="col-auto lh-20">
+                                    <h4 class="h4 mb-0 text-white">88</h4>
+                                    <p class="small text-white">Pontos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                                 <!-- popular exercise -->
                                 <div class="row gx-3 align-items-center mb-3">
@@ -368,7 +397,7 @@
                                                         <h6>FiPro Report</h6>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <span class="badge badge-light text-bg-theme-1 theme-orange"><span class="bi bi-award text-theme-1"></span> Level 9</span>
+                                                        <span class="badge badge-light text-bg-theme-1 theme-blue"><span class="bi bi-award text-theme-1"></span> Level 9</span>
                                                     </div>
                                                 </div>
                                             </div>
