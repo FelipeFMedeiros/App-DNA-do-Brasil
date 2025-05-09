@@ -86,122 +86,146 @@ document.addEventListener('DOMContentLoaded', function () {
         gradient2.addColorStop(0, 'rgba(252, 122, 30, 0.85)');
         gradient2.addColorStop(1, 'rgba(252, 122, 30, 0)');
 
-        var myareachartCofig2 = {
+        // Dados para os diferentes períodos
+        const chartData = {
+            daily: {
+                labels: ['06:00', '09:00', '12:00', '15:00', '18:00', '21:00'],
+                data: [6.5, 7.2, 8.4, 7.8, 8.9, 8.5],
+                media: '7.88',
+                modalidades: '3',
+            },
+            weekly: {
+                labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+                data: [6.8, 7.5, 8.1, 7.4, 8.5, 9.2, 8.7],
+                media: '8.03',
+                modalidades: '5',
+            },
+            monthly: {
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                data: [7.2, 8.0, 8.5, 9.1],
+                media: '8.20',
+                modalidades: '7',
+            },
+        };
+
+        // Configuração inicial do gráfico (usando dados diários por padrão)
+        var myareachartConfig2 = {
             type: 'line',
             data: {
-                labels: ['10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30'],
+                labels: chartData.daily.labels,
                 datasets: [
                     {
-                        label: '# of hours',
-                        data: [
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                            randomScalingFactor(),
-                        ],
-                        radius: 0,
+                        label: 'Desempenho',
+                        data: chartData.daily.data,
+                        radius: 3,
                         backgroundColor: gradient2,
-                        borderColor: '#5840ef',
-                        borderWidth: 0,
+                        borderColor: '#FC7A1E',
+                        borderWidth: 2,
                         fill: true,
-                        tension: 0.5,
+                        tension: 0.4,
+                        pointBackgroundColor: '#FC7A1E',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
                     },
                 ],
             },
             options: {
-                animation: true,
+                responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
                         display: false,
                     },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        titleFont: {
+                            size: 13,
+                        },
+                        bodyFont: {
+                            size: 13,
+                        },
+                        padding: 10,
+                        displayColors: false,
+                    },
                 },
                 scales: {
                     y: {
-                        display: false,
-                        beginAtZero: true,
+                        display: true,
+                        beginAtZero: false,
+                        min: 5,
+                        max: 10,
+                        grid: {
+                            color: 'rgba(0,0,0,0.05)',
+                        },
+                        ticks: {
+                            font: {
+                                size: 11,
+                            },
+                        },
                     },
                     x: {
                         grid: {
                             display: false,
                         },
                         display: true,
-                        beginAtZero: true,
+                        ticks: {
+                            font: {
+                                size: 11,
+                            },
+                        },
+                    },
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                elements: {
+                    point: {
+                        radius: 3,
+                        hoverRadius: 6,
                     },
                 },
             },
         };
-        var myAreaChart2 = new Chart(areachart2, myareachartCofig2);
-        /* my area chart randomize */
-        setInterval(function () {
-            myareachartCofig2.data.datasets.forEach(function (dataset) {
-                dataset.data = dataset.data.map(function () {
-                    return randomScalingFactor();
+
+        // Cria o gráfico inicial
+        var myAreaChart2 = new Chart(areachart2, myareachartConfig2);
+
+        // Adiciona event listeners aos botões
+        document.querySelectorAll('[data-period]').forEach((button) => {
+            button.addEventListener('click', function () {
+                // Remove a classe active de todos os botões
+                document.querySelectorAll('[data-period]').forEach((btn) => {
+                    btn.classList.remove('active');
                 });
+
+                // Adiciona a classe active ao botão clicado
+                this.classList.add('active');
+
+                // Obtém o período selecionado
+                const period = this.getAttribute('data-period');
+
+                // Atualiza o gráfico com os dados do período selecionado
+                updateChart(period);
             });
+        });
+
+        // Função para atualizar o gráfico
+        function updateChart(period) {
+            // Atualiza os dados do gráfico
+            myAreaChart2.data.labels = chartData[period].labels;
+            myAreaChart2.data.datasets[0].data = chartData[period].data;
+
+            // Atualiza as estatísticas
+            document.getElementById('media-nota').textContent = chartData[period].media;
+            document.getElementById('modalidades').textContent = chartData[period].modalidades;
+
+            // Redesenha o gráfico
             myAreaChart2.update();
-        }, 3000);
-
-        /* summary chart */
-        if (document.getElementById('summarychart2')) {
-            var lineheartchart = document.getElementById('lineheart').getContext('2d');
-            var gradient2 = lineheartchart.createLinearGradient(0, 0, 0, 100);
-            gradient2.addColorStop(0, 'rgba(200, 0, 54, 0.25)');
-            gradient2.addColorStop(1, 'rgba(200, 0, 54, 0)');
-
-            var lineheartConfig = {
-                type: 'line',
-                data: {
-                    labels: ['10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30'],
-                    datasets: [
-                        {
-                            label: '# of hours',
-                            data: [
-                                randomScalingFactor(),
-                                randomScalingFactor(),
-                                randomScalingFactor(),
-                                randomScalingFactor(),
-                                randomScalingFactor(),
-                                randomScalingFactor(),
-                                randomScalingFactor(),
-                                randomScalingFactor(),
-                            ],
-                            radius: 0,
-                            backgroundColor: gradient2,
-                            borderColor: '#c80036',
-                            borderWidth: 1,
-                            fill: true,
-                            tension: 0.0,
-                        },
-                    ],
-                },
-                options: {
-                    animation: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false,
-                        },
-                    },
-                    scales: {
-                        y: {
-                            display: false,
-                            beginAtZero: true,
-                        },
-                        x: {
-                            grid: {
-                                display: false,
-                            },
-                            display: false,
-                            beginAtZero: true,
-                        },
-                    },
-                },
-            };
         }
     }
 
@@ -219,26 +243,51 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     }
 
-    /* doughnut chart js */
+    /* doughnut chart js - Score DNA */
     if (document.getElementById('doughnutchart')) {
+        // Obtém os pontos das categorias do laudo
+        const scoreSaude = 85;
+        const scoreTalento = 76;
+        const scoreConsumo = 92;
+        const scoreBucal = 65;
+        const scoreQualidade = 78;
+        const scoreVocacional = 88;
+
+        // Calcula o score total
+        const scoreTotal = scoreSaude + scoreTalento + scoreConsumo + scoreBucal + scoreQualidade + scoreVocacional;
+
+        // Atualiza o valor total no HTML
+        if (document.getElementById('score-dna-total')) {
+            document.getElementById('score-dna-total').textContent = scoreTotal;
+        }
+
+        // Prepara os dados para o gráfico
         var doughnutchart = document.getElementById('doughnutchart').getContext('2d');
         var doughnutdata = {
-            labels: ['Exercise', 'Diet', 'Medicine', 'Other'],
+            labels: [
+                'Saúde',
+                'Talento Esportivo',
+                'Consumo Alimentar',
+                'Saúde Bucal',
+                'Qualidade de Vida',
+                'Vocacional',
+            ],
             datasets: [
                 {
-                    label: 'fitness Categories',
-                    data: [45, 30, 25, 10],
-                    backgroundColor: ['#08a046', '#fc7a1e', '#03aed2', '#ffffff'],
+                    label: 'Pontos',
+                    data: [scoreSaude, scoreTalento, scoreConsumo, scoreBucal, scoreQualidade, scoreVocacional],
+                    backgroundColor: ['#d2322d', '#ed9c28', '#47a447', '#5bc0de', '#00a4a9', '#9c27b0'],
                     borderWidth: 0,
                 },
             ],
         };
+
         var mydoughnutchartCofig = {
             type: 'doughnut',
             data: doughnutdata,
             options: {
                 responsive: true,
-                cutout: 60,
+                cutout: 75,
                 tooltips: {
                     position: 'nearest',
                     yAlign: 'bottom',
@@ -246,18 +295,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 plugins: {
                     legend: {
                         display: false,
-                        position: 'top',
                     },
-                    title: {
-                        display: false,
-                        text: 'Chart.js Doughnut Chart',
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const label = context.label || '';
+                                const value = context.raw || 0;
+                                const percentage = Math.round((value / scoreTotal) * 100);
+                                return `${label}: ${value} pontos (${percentage}%)`;
+                            },
+                        },
                     },
                 },
-                layout: {
-                    padding: 0,
+                animation: {
+                    animateScale: true,
+                    animateRotate: true,
                 },
             },
         };
+
         var mydoughnutchart = new Chart(doughnutchart, mydoughnutchartCofig);
     }
 
