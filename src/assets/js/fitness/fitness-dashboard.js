@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
         // progressCirclesblue1.text.style.fontSize = '20px';
-        progressCirclesblue1.animate(0.85); // Number from 0.0 to 1.0
+        progressCirclesblue1.animate(1); // Number from 0.0 to 1.0
     }
 
     /* circular progress */

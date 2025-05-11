@@ -1,545 +1,755 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- dir="rtl"--> <%= require('../partials/head/head.html').default %>
+    <!-- dir="rtl"-->
+    <%= require('../partials/head/head.html').default %>
 
-<body class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-orange adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup" data-theme="theme-orange" data-sidebarfill="adminuiux-sidebar-fill-theme" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0" data-sidebarlayout="adminuiux-sidebar-standard" data-headerlayout="adminuiux-header-standard" data-headerfill="adminuiux-header-transparent">
-    <%= require('../partials/pageloader/fitness-pageloader.html').default %> <%= require('../partials/header/fitness-header.html').default %>
-    <div class="adminuiux-wrap">
-        <!-- Standard sidebar -->
-        <%= require('../partials/navigation/fitness-sidebar.html').default %>
-        <main class="adminuiux-content has-sidebar" onclick="contentClick()">
-            <!-- content -->
-            <div class="container mt-3" id="main-content">
-
-                <div class=" row gx-3 align-items-center">
-                    <!-- activity summary -->
-                    <div class="col-6 col-md-6 col-lg-4">
-                        <div class="card adminuiux-card mb-3">
-                            <div class="card-body">
-                                <div class="row gx-3 align-items-center">
-                                    <div class="col-auto">
-                                        <div class="avatar avatar-50 mx-auto">
-                                            <div id="circleprogressblue1"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <h6 class="mb-0">Daily</h6>
-                                        <p class="small text-secondary">Progress</p>
-                                    </div>
-                                </div>
-                            </div>
+    <body
+        class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-blue adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup"
+        data-theme="theme-blue"
+        data-sidebarfill="adminuiux-sidebar-fill-theme"
+        data-bs-spy="scroll"
+        data-bs-target="#list-example"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+        data-sidebarlayout="adminuiux-sidebar-standard"
+        data-headerlayout="adminuiux-header-standard"
+        data-headerfill="adminuiux-header-transparent"
+    >
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %> <%=
+        require('../partials/header/fitness-header.html').default %>
+        <div class="adminuiux-wrap">
+            <!-- Standard sidebar -->
+            <%= require('../partials/navigation/fitness-sidebar.html').default %>
+            <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                <!-- content -->
+                <div class="container mt-3" id="main-content">
+                    <!-- Header com botão de download -->
+                    <div class="row gx-3 align-items-center mb-4">
+                        <div class="col">
+                            <h4 class="fw-bold text-theme-accent-1">Laudo DNA Completo</h4>
+                            <p class="text-secondary">Relatório detalhado com todas as suas avaliações</p>
                         </div>
-                    </div>
-                    <!-- training progress -->
-                    <div class="col-6 col-md-6 col-lg-4">
-                        <div class="card adminuiux-card mb-3">
-                            <div class="card-body">
-                                <div class="row gx-3 align-items-center">
-                                    <div class="col-auto">
-                                        <div class="avatar avatar-50 mx-auto">
-                                            <div id="circleprogressgreen1"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <h6 class="mb-0">Weekly</h6>
-                                        <p class="small text-secondary">Progress</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- workout progress-->
-                    <div class="col-12 col-lg-4">
-                        <div class="card adminuiux-card border-0 bg-theme-r-gradient mb-3">
-                            <div class="card-body">
-                                <div class="row gx-3 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-60 rounded coverimg">
-                                            <img src="assets/img/fitness/image-6.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <h6>Hand moving rounded</h6>
-                                        <div class="progress bg-white-opacity height-dynamic mb-1" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--h-dynamic:5px">
-                                            <div class="progress-bar bg-white" style="width: 75%"></div>
-                                        </div>
-                                        <p class="small opacity-75">75% Completed</p>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn btn-accent btn-square"><i class="bi bi-play"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- popular workouts -->
-                <div class="row gx-3 align-items-center mb-3">
-                    <div class="col">
-                        <h6>Popular Workout</h6>
-                    </div>
-                    <div class="col-auto">
-                        <a href="fitness-laudos.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="row gx-3">
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-1.jpg" alt="">
+                        <div class="col-auto">
+                            <a href="#" class="btn btn-primary" download>
+                                <i class="bi bi-file-earmark-arrow-down me-2"></i>Baixar Laudo Completo
                             </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Total Fitness of body</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-2.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Chinsuk Wang</p>
-                                        <p class="fs-12 text-secondary">Beginner
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-7.jpg" alt="">
-                            </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Freeup Legs</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-5.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Meena T.</p>
-                                        <p class="fs-12 text-secondary theme-green">Expert
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-2.jpg" alt="">
-                            </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Shiny Day Exercise</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-6.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Tanya K.</p>
-                                        <p class="fs-12 text-secondary">Beginner
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-8.jpg" alt="">
-                            </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Weist moves in house excercise</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-7.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Selena G.</p>
-                                        <p class="fs-12 text-secondary theme-yellow">Average
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Streched workouts -->
-                <div class="row gx-3 align-items-center mb-3">
-                    <div class="col">
-                        <h6>Streched Workout</h6>
-                    </div>
-                    <div class="col-auto">
-                        <a href="fitness-laudos.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-3.jpg" alt="">
-                            </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Total Fitness of body</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-2.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Chinsuk Wang</p>
-                                        <p class="fs-12 text-secondary">Beginner
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-4.jpg" alt="">
-                            </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Freeup Legs</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-5.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Meena T.</p>
-                                        <p class="fs-12 text-secondary theme-green">Expert
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-5.jpg" alt="">
-                            </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Shiny Day Exercise</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-6.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Tanya K.</p>
-                                        <p class="fs-12 text-secondary">Beginner
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-25"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card adminuiux-card">
-                            <a href="fitness-laudos-details.html" class="rounded coverimg height-150 mb-2 m-1">
-                                <img src="assets/img/fitness/image-6.jpg" alt="">
-                            </a>
-                            <div class="card-body pt-1">
-                                <a href="fitness-laudos-details.html" class="style-none">
-                                    <h6 class="text-theme-1 text-truncated mb-2">Imporve hearth and stay focused</h6>
-                                </a>
-                                <div class="row gx-2 align-items-center">
-                                    <div class="col-auto">
-                                        <figure class="avatar avatar-30 rounded coverimg"><img src="assets/img/modern-ai-image/user-7.jpg" alt=""></figure>
-                                    </div>
-                                    <div class="col">
-                                        <p class="small mb-0">Selena G.</p>
-                                        <p class="fs-12 text-secondary theme-yellow">Average
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-75"></span>
-                                            <span class="rounded-circle p-1 bg-theme-1 d-inline-block opacity-50"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- track your progress -->
-                <div class="row gx-3 align-items-center mb-3">
-                    <div class="col text-center py-3">
-                        <h4>Track your progress<br>with <span class="text-theme-1">DigiTracker</span> feature</h4>
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <!-- fitness progress -->
-                    <div class="col-12 col-md-6 col-xl-8 col-xxl-9">
-                        <div class="card adminuiux-card mb-3">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                        <h6>Fitness progress</h6>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select form-select-sm">
-                                            <option>Day</option>
-                                            <option>Week</option>
-                                            <option>Month</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body p-0">
-                                <div class="height-170">
-                                    <canvas id="summarychart"></canvas>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <h5 class="mb-0">2 hrs</h5>
-                                        <p class="text-secondary small">Workout</p>
-                                    </div>
-                                    <div class="col-auto">
-                                        <h5 class="mb-0">389 kcal</h5>
-                                        <p class="text-secondary small">Burned</p>
-                                    </div>
-                                    <div class="col-auto">
-                                        <h5 class="mb-0">3.2 km</h5>
-                                        <p class="text-secondary small">Running</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
-                    <!-- highlights -->
-                    <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                        <div class="row gx-3">
-                            <div class="col-6">
-                                <div class="card adminuiux-card border-0 height-150 bg-theme-l-gradient mb-3 hover-action">
-                                    <div class="card-body position-relative">
-                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
-                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
-                                        </div>
-                                        <h4 class="mb-0">26</h4>
-                                        <p class="opacity-75 mb-4">Monday</p>
-                                        <p class="text-truncated mb-0">Excercise Events</p>
-                                        <p class="text-truncated opacity-75 fs-12 mb-0">125 Bookmarked</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="card adminuiux-card border-0 height-150 mb-3 overflow-hidden hover-action">
-                                    <figure class="position-absolute start-0 top-0 w-100 h-100 coverimg z-index-0">
-                                        <img src="assets/img/fitness/image-10.jpg" alt="">
-                                    </figure>
-                                    <div class="card-body position-relative z-index-1">
-                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
-                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer text-white z-index-1 position-relative">
-                                        <h4 class="mb-0">27</h4>
-                                        <p class="opacity-75">Today's Recipe</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="card adminuiux-card border-0 height-150 mb-3 overflow-hidden hover-action">
-                                    <figure class="position-absolute start-0 top-0 w-100 h-100 coverimg blur-overlay z-index-0">
-                                        <img src="assets/img/fitness/image-9.jpg" alt="">
-                                    </figure>
-                                    <div class="card-body position-relative z-index-1">
-                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
-                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
-                                        </div>
-                                        <h4 class="mb-0">28</h4>
-                                        <p class="opacity-75 mb-3">Wednesday</p>
-
-                                        <figure class="avatar avatar-40 rounded overflow-hidden coverimg">
-                                            <img src="assets/img/fitness/image-11.jpg" alt="">
-                                        </figure>
-                                        <figure class="avatar avatar-40 rounded overflow-hidden coverimg mx-1">
-                                            <img src="assets/img/fitness/image-10.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="card adminuiux-card border-0 height-150 bg-theme-accent-1 mb-3 hover-action">
-                                    <div class="card-body position-relative">
-                                        <div class="hover-action-visible position-absolute top-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#addreminder" title="Add Reminder">
-                                            <button class="btn btn-sm btn-square btn-theme theme-blue rounded-circle"><i class="bi bi-plus"></i></button>
-                                        </div>
-                                        <h4 class="mb-0">29</h4>
-                                        <p class="opacity-75 mb-4">Thursday</p>
-                                        <p class="text-truncated small mb-0">Diet Plan 2</p>
-                                        <p class="text-truncated opacity-75 fs-12 mb-0">Session 3</p>
-                                        <div class="avatar avatar-20 position-absolute bottom-0 end-0 rounded-circle bg-white-opacity text-white text-center m-2" data-bs-toggle="tooltip" title="Diet Plan 2: Session 4">
-                                            <span class="fs-12">+1</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- popular exercise -->
-                <div class="row gx-3 align-items-center mb-3">
-                    <div class="col">
-                        <h6>Popular Exercise</h6>
-                    </div>
-                    <div class="col-auto">
-                        <a href="fitness-laudos.html" class="btn btn-sm btn-link">View All<i class="bi bi-chevron-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="swiper swipernav mb-3">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide width-300">
-                            <div class="card adminuiux-card border-0 bg-gradient-7">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <h6 class="text-truncated">Complete Morning Yoga Session</h6>
-                                            <p class="text-secondary fs-14 mb-2">
-                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 20 min</span>
-                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 250 kcal</span>
-                                            </p>
-                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
-                                        </div>
-                                        <div class="col-4">
-                                            <figure class="height-90 w-100 rounded coverimg mb-0">
-                                                <img src="assets/img/fitness/image-7.jpg" alt="">
+                    <!-- Score total -->
+                    <div class="card adminuiux-card mb-4">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="mb-3">Score DNA</h5>
+                                    <div class="height-170 text-center position-relative">
+                                        <div
+                                            class="position-absolute top-50 start-50 translate-middle z-index-1 bg-white rounded-circle p-1"
+                                        >
+                                            <figure class="avatar avatar-120 rounded-circle shadow-sm">
+                                                <div
+                                                    class="d-flex flex-column align-items-center justify-content-center h-100"
+                                                    style="color: #000!important;"
+                                                >
+                                                    <h2 class="mb-0 fw-bold" id="score-dna-total">484</h2>
+                                                    <p class="mb-0 small lh-1">Score</p>
+                                                </div>
                                             </figure>
                                         </div>
+                                        <canvas
+                                            id="scoreDonutChart"
+                                            class="position-relative z-index-2 mx-auto"
+                                            width="170"
+                                            height="170"
+                                        ></canvas>
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="badge bg-success"
+                                            ><i class="bi bi-trophy me-1"></i>Desempenho bom</span
+                                        >
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide width-300">
-                            <div class="card adminuiux-card border-0 bg-gradient-3">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <h6 class="text-truncated">Workout for belly fat reduce</h6>
-                                            <p class="text-secondary fs-14 mb-2">
-                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 22 min</span>
-                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 185 kcal</span>
-                                            </p>
-                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+                    </div>
+
+                    <!-- Talento Esportivo -->
+                    <div class="accordion mb-3" id="laudoAccordion">
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#talento"
+                                    aria-expanded="true"
+                                    aria-controls="talento"
+                                    style="background-color: #ed9c28; color: white"
+                                >
+                                    <i class="bi bi-trophy text-white fs-4 me-2"></i>
+                                    <div class="d-flex justify-content-between w-100 align-items-center">
+                                        <h6 class="mb-0 text-white">Talento Esportivo</h6>
+                                        <div class="avatar avatar-40 position-relative me-2">
+                                            <div id="circleprogressorange2"></div>
+                                            <div
+                                                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            >
+                                                <div class="text-center">
+                                                    <h5 class="mb-0 text-white">76</h5>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-4">
-                                            <figure class="height-90 w-100 rounded coverimg mb-0">
-                                                <img src="assets/img/fitness/image-8.jpg" alt="">
-                                            </figure>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="talento" class="accordion-collapse collapse show" data-bs-parent="#laudoAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <i class="bi bi-rulers me-2 text-primary"></i>
+                                                        <h6 class="mb-0">IMC (índice de massa corporal)</h6>
+                                                    </div>
+                                                    <h5 class="mb-1">24.7 kg/m²</h5>
+                                                    <div class="progress" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-success"
+                                                            role="progressbar"
+                                                            style="width: 85%"
+                                                            aria-valuenow="85"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                    <p class="small text-secondary mt-1">Faixa adequada</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <i class="bi bi-hand-index-thumb me-2 text-warning"></i>
+                                                        <h6 class="mb-0">Preensão manual</h6>
+                                                    </div>
+                                                    <h5 class="mb-1">42.3 kg</h5>
+                                                    <div class="progress" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-warning"
+                                                            role="progressbar"
+                                                            style="width: 70%"
+                                                            aria-valuenow="70"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                    <p class="small text-secondary mt-1">Força mediana</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <i class="bi bi-arrow-up-circle me-2 text-success"></i>
+                                                        <h6 class="mb-0">Impulsão Horizontal</h6>
+                                                    </div>
+                                                    <h5 class="mb-1">185 cm</h5>
+                                                    <div class="progress" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-success"
+                                                            role="progressbar"
+                                                            style="width: 82%"
+                                                            aria-valuenow="82"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                    <p class="small text-secondary mt-1">Acima da média</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <i class="bi bi-lungs me-2 text-info"></i>
+                                                        <h6 class="mb-0">Aptidão Física</h6>
+                                                    </div>
+                                                    <h5 class="mb-1">37.8 mLO2/min</h5>
+                                                    <div class="progress" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-info"
+                                                            role="progressbar"
+                                                            style="width: 75%"
+                                                            aria-valuenow="75"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                    <p class="small text-secondary mt-1">Bom condicionamento</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <i class="bi bi-arrow-down-up me-2 text-primary"></i>
+                                                        <h6 class="mb-0">Flexibilidade</h6>
+                                                    </div>
+                                                    <h5 class="mb-1">28 cm</h5>
+                                                    <div class="progress" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-primary"
+                                                            role="progressbar"
+                                                            style="width: 68%"
+                                                            aria-valuenow="68"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                    <p class="small text-secondary mt-1">Média flexibilidade</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <i class="bi bi-speedometer2 me-2 text-danger"></i>
+                                                        <h6 class="mb-0">Teste de Velocidade 20m</h6>
+                                                    </div>
+                                                    <h5 class="mb-1">3.8 segundos</h5>
+                                                    <div class="progress" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-danger"
+                                                            role="progressbar"
+                                                            style="width: 88%"
+                                                            aria-valuenow="88"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                    <p class="small text-secondary mt-1">Velocidade excelente</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <i class="bi bi-lightning-charge me-2 text-warning"></i>
+                                                        <h6 class="mb-0">Agilidade</h6>
+                                                    </div>
+                                                    <h5 class="mb-1">9.2 segundos</h5>
+                                                    <div class="progress" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-warning"
+                                                            role="progressbar"
+                                                            style="width: 78%"
+                                                            aria-valuenow="78"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                    <p class="small text-secondary mt-1">Boa agilidade</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide width-300">
-                            <div class="card adminuiux-card border-0 bg-r-gradient">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <h6 class="text-truncated">The great evening Yoga Session</h6>
-                                            <p class="text-secondary fs-14 mb-2">
-                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 18 min</span>
-                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 120 kcal</span>
-                                            </p>
-                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+
+                        <!-- Saúde -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#saude"
+                                    aria-expanded="false"
+                                    aria-controls="saude"
+                                    style="background-color: #d2322d; color: white"
+                                >
+                                    <i class="bi bi-heart-fill text-white fs-4 me-2"></i>
+                                    <div class="d-flex justify-content-between w-100 align-items-center">
+                                        <h6 class="mb-0 text-white">Saúde</h6>
+                                        <div class="avatar avatar-40 position-relative me-2">
+                                            <div id="circleprogressred1"></div>
+                                            <div
+                                                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            >
+                                                <div class="text-center">
+                                                    <h5 class="mb-0 text-white">85</h5>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-4">
-                                            <figure class="height-90 w-100 rounded coverimg mb-0">
-                                                <img src="assets/img/fitness/image-3.jpg" alt="">
-                                            </figure>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="saude" class="accordion-collapse collapse" data-bs-parent="#laudoAccordion">
+                                <div class="accordion-body">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-rulers me-2 text-primary"></i>
+                                                <h6 class="mb-0">IMC (índice de massa corporal)</h6>
+                                            </div>
+                                            <h5 class="mb-1">24.7 kg/m²</h5>
+                                            <div class="progress mb-3" style="height: 8px">
+                                                <div
+                                                    class="progress-bar bg-success"
+                                                    role="progressbar"
+                                                    style="width: 85%"
+                                                    aria-valuenow="85"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                ></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="small">Abaixo do peso</span>
+                                                <span class="small">Peso normal</span>
+                                                <span class="small">Sobrepeso</span>
+                                                <span class="small">Obesidade</span>
+                                            </div>
+                                            <div class="alert alert-success mt-3">
+                                                <i class="bi bi-check-circle me-2"></i>
+                                                <span
+                                                    >Seu IMC está dentro da faixa considerada saudável (18.5 -
+                                                    24.9)</span
+                                                >
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide width-300">
-                            <div class="card adminuiux-card border-0 bg-gradient-10">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <h6 class="text-truncated">Routine Exercise for Legs</h6>
-                                            <p class="text-secondary fs-14 mb-2">
-                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 30 min</span>
-                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 300 kcal</span>
-                                            </p>
-                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+
+                        <!-- Consumo Alimentar -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#consumo"
+                                    aria-expanded="false"
+                                    aria-controls="consumo"
+                                    style="background-color: #47a447; color: white"
+                                >
+                                    <i class="bi bi-cup-hot text-white fs-4 me-2"></i>
+                                    <div class="d-flex justify-content-between w-100 align-items-center">
+                                        <h6 class="mb-0 text-white">Consumo Alimentar</h6>
+                                        <div class="avatar avatar-40 position-relative me-2">
+                                            <div id="circleprogressgreen3"></div>
+                                            <div
+                                                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            >
+                                                <div class="text-center">
+                                                    <h5 class="mb-0 text-white">92</h5>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-4">
-                                            <figure class="height-90 w-100 rounded coverimg mb-0">
-                                                <img src="assets/img/fitness/image-4.jpg" alt="">
-                                            </figure>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="consumo" class="accordion-collapse collapse" data-bs-parent="#laudoAccordion">
+                                <div class="accordion-body">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>
+                                                <h5 class="mb-0">Hábitos não saudáveis</h5>
+                                            </div>
+                                            <div class="alert alert-warning">
+                                                <p>
+                                                    Cuidado! Esse comportamento de forma contínua, a longo prazo pode
+                                                    ser prejudicial à sua saúde, levando ao desenvolvimento de doenças
+                                                    como obesidade e carências nutricionais. Reveja sua opções
+                                                    alimentares ao longo do dia. Se possível, dê preferência ao consumo
+                                                    de frutas, verduras e legumes, e diminua os produtos
+                                                    industrializados. Caso ache necessário, procure um profissional
+                                                    especializado para melhor orienta-lo.
+                                                </p>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                        <h6 class="mb-0">Pontos Positivos</h6>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item d-flex align-items-center">
+                                                            <i class="bi bi-check2 text-success me-2"></i>
+                                                            Consumo regular de água
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-center">
+                                                            <i class="bi bi-check2 text-success me-2"></i>
+                                                            Bom consumo de proteínas
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-x-circle-fill text-danger me-2"></i>
+                                                        <h6 class="mb-0">Pontos a Melhorar</h6>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item d-flex align-items-center">
+                                                            <i class="bi bi-x text-danger me-2"></i>
+                                                            Excesso de alimentos ultraprocessados
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-center">
+                                                            <i class="bi bi-x text-danger me-2"></i>
+                                                            Baixo consumo de fibras
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide width-300">
-                            <div class="card adminuiux-card border-0 bg-gradient-6">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <h6 class="text-truncated">Complete Morning Yoga Session</h6>
-                                            <p class="text-secondary fs-14 mb-2">
-                                                <span class="me-1"><i class="bi bi-clock me-1"></i> 35 min</span>
-                                                <span class="me-1"><i class="bi bi-fire me-1"></i> 220 kcal</span>
-                                            </p>
-                                            <button class="btn btn-sm btn-link bg-white-opacity"><i class="bi bi-play me-1"></i> Start</button>
+
+                        <!-- Saúde Bucal -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bucal"
+                                    aria-expanded="false"
+                                    aria-controls="bucal"
+                                    style="background-color: #5bc0de; color: white"
+                                >
+                                    <i class="bi bi-bandaid text-white fs-4 me-2"></i>
+                                    <div class="d-flex justify-content-between w-100 align-items-center">
+                                        <h6 class="mb-0 text-white">Saúde Bucal</h6>
+                                        <div class="avatar avatar-40 position-relative me-2">
+                                            <div id="circleprogressblue2"></div>
+                                            <div
+                                                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            >
+                                                <div class="text-center">
+                                                    <h5 class="mb-0 text-white">65</h5>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-4">
-                                            <figure class="height-90 w-100 rounded coverimg mb-0">
-                                                <img src="assets/img/fitness/image-5.jpg" alt="">
-                                            </figure>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="bucal" class="accordion-collapse collapse" data-bs-parent="#laudoAccordion">
+                                <div class="accordion-body">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>
+                                                <h5 class="mb-0">Cuidado</h5>
+                                            </div>
+                                            <div class="alert alert-warning">
+                                                <p>
+                                                    A sua saúde oral pode estar muito aquém do que é considerado ideal.
+                                                    Você deve procurar, um profissional especializado para a realização
+                                                    de uma orientação bucal mais detalhada. Dessa forma, o profissional
+                                                    poderá te direcionar como deve ser realizado a prevenção ideal e se
+                                                    é necessário intervir, por meio de um tratamento dentário.
+                                                </p>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex align-items-center mb-2">
+                                                                <i class="bi bi-brush me-2 text-info"></i>
+                                                                <h6 class="mb-0">Escovação</h6>
+                                                            </div>
+                                                            <div class="progress" style="height: 8px">
+                                                                <div
+                                                                    class="progress-bar bg-warning"
+                                                                    role="progressbar"
+                                                                    style="width: 65%"
+                                                                    aria-valuenow="65"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                ></div>
+                                                            </div>
+                                                            <p class="small text-secondary mt-2">
+                                                                2 vezes ao dia (recomendado: 3x)
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex align-items-center mb-2">
+                                                                <i class="bi bi-clock-history me-2 text-primary"></i>
+                                                                <h6 class="mb-0">Última visita ao dentista</h6>
+                                                            </div>
+                                                            <p class="mb-0 text-danger">Mais de 12 meses</p>
+                                                            <p class="small text-secondary">
+                                                                Recomendado: a cada 6 meses
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Qualidade de Vida -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#qualidade"
+                                    aria-expanded="false"
+                                    aria-controls="qualidade"
+                                    style="background-color: #00a4a9; color: white"
+                                >
+                                    <i class="bi bi-hand-thumbs-up text-white fs-4 me-2"></i>
+                                    <div class="d-flex justify-content-between w-100 align-items-center">
+                                        <h6 class="mb-0 text-white">Qualidade de Vida</h6>
+                                        <div class="avatar avatar-40 position-relative me-2">
+                                            <div id="circleprogressteal1"></div>
+                                            <div
+                                                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            >
+                                                <div class="text-center">
+                                                    <h5 class="mb-0 text-white">78</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="qualidade" class="accordion-collapse collapse" data-bs-parent="#laudoAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-emoji-frown text-warning me-2 fs-4"></i>
+                                                        <h6 class="mb-0">Mal Estar Físico</h6>
+                                                    </div>
+                                                    <div class="alert alert-warning">
+                                                        <strong>Necessita melhorar</strong>
+                                                        <p class="mb-0 small">
+                                                            Seu corpo está demonstrando sinais de mal-estar que precisam
+                                                            ser atendidos
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-heart-crack text-warning me-2 fs-4"></i>
+                                                        <h6 class="mb-0">Baixa Auto Estima</h6>
+                                                    </div>
+                                                    <div class="alert alert-warning">
+                                                        <strong>Necessita melhorar</strong>
+                                                        <p class="mb-0 small">
+                                                            Sua percepção sobre si mesmo pode estar afetando sua
+                                                            qualidade de vida
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-people text-warning me-2 fs-4"></i>
+                                                        <h6 class="mb-0">Conflitos no contexto familiar</h6>
+                                                    </div>
+                                                    <div class="alert alert-warning">
+                                                        <strong>Necessita melhorar</strong>
+                                                        <p class="mb-0 small">
+                                                            Existem tensões no ambiente familiar que precisam de atenção
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-geo-alt text-warning me-2 fs-4"></i>
+                                                        <h6 class="mb-0">Contextos Não Favorecedores</h6>
+                                                    </div>
+                                                    <div class="alert alert-warning">
+                                                        <strong>Necessita melhorar</strong>
+                                                        <p class="mb-0 small">
+                                                            O ambiente ao seu redor apresenta elementos não favoráveis
+                                                            ao seu desenvolvimento
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vocacional -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#vocacional"
+                                    aria-expanded="false"
+                                    aria-controls="vocacional"
+                                    style="background-color: #9c27b0; color: white"
+                                >
+                                    <i class="bi bi-star text-white fs-4 me-2"></i>
+                                    <div class="d-flex justify-content-between w-100 align-items-center">
+                                        <h6 class="mb-0 text-white">Vocacional</h6>
+                                        <div class="avatar avatar-40 position-relative me-2">
+                                            <div id="circleprogresspurple2"></div>
+                                            <div
+                                                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            >
+                                                <div class="text-center">
+                                                    <h5 class="mb-0 text-white">88</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="vocacional" class="accordion-collapse collapse" data-bs-parent="#laudoAccordion">
+                                <div class="accordion-body">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-palette fs-4 me-2 text-primary"></i>
+                                                <h5 class="mb-0">Interesse artístico</h5>
+                                            </div>
+                                            <p>
+                                                Pessoas nessa área apresentam situações estruturadas que envolvem a
+                                                autoexpressão de ideias e conceitos através de diferentes meios
+                                                artísticos. É aberto a estímulos emocionais, capaz de perceber as
+                                                reações das pessoas.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h6 class="mb-3">Áreas de interesse</h6>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-brush me-2 text-primary"></i>
+                                                        <h6 class="mb-0">Artes Visuais</h6>
+                                                    </div>
+                                                    <div class="progress mt-2" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-primary"
+                                                            role="progressbar"
+                                                            style="width: 90%"
+                                                            aria-valuenow="90"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-music-note-beamed me-2 text-primary"></i>
+                                                        <h6 class="mb-0">Música</h6>
+                                                    </div>
+                                                    <div class="progress mt-2" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-primary"
+                                                            role="progressbar"
+                                                            style="width: 85%"
+                                                            aria-valuenow="85"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-camera-reels me-2 text-primary"></i>
+                                                        <h6 class="mb-0">Cinema</h6>
+                                                    </div>
+                                                    <div class="progress mt-2" style="height: 8px">
+                                                        <div
+                                                            class="progress-bar bg-primary"
+                                                            role="progressbar"
+                                                            style="width: 78%"
+                                                            aria-valuenow="78"
+                                                            aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h6 class="mb-3 mt-4">Profissões recomendadas</h6>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-easel me-2 text-purple"></i>
+                                                        <span>Designer Gráfico</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-film me-2 text-purple"></i>
+                                                        <span>Diretor de Cinema</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-music-player me-2 text-purple"></i>
+                                                        <span>Produtor Musical</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -547,47 +757,13 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </main>
-    </div>
-
-    <!-- mobile footer -->
-    <%= require('../partials/footer/mobile-footer.html').default %>
-
-    <!-- footer -->
-    <%= require('../partials/offcanvas/theming.html').default %>
-    <%= require('../partials/footer/fitness-footer.html').default %>
-
-    <!-- add reminder Modal -->
-    <div class="modal adminuiux-modal fade" id="addreminder" tabindex="-1" aria-labelledby="addremindermodalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <p class="modal-title h5" id="addremindermodalLabel">Add Reminder</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="subject" placeholder="Enter Subject">
-                        <label for="subject">Subject</label>
-                    </div>
-                    <div class="form-floating">
-                        <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
-                        <label for="description">Description</label>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-theme">Add</button>
-                    <button type="button" class="btn btn-link theme-red" data-bs-dismiss="modal">Cancel</button>
-                </div>
-            </div>
+            </main>
         </div>
-    </div>
 
-    <!-- Page Level js -->
-    <script src="assets/js/fitness/fitness-laudos.js"></script>
+        <!-- mobile footer -->
+        <%= require('../partials/footer/mobile-footer.html').default %>
 
-</body>
-
+        <!-- Page Level js -->
+        <script src="assets/js/fitness/fitness-laudos.js"></script>
+    </body>
 </html>

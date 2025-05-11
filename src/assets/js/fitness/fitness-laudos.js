@@ -1,141 +1,188 @@
 /*! Fitness dashboard.js | Adminuiux 2023-2024 */
 
-"use strict";
+'use strict';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
     /* chart js */
     window.randomScalingFactor = function () {
         return Math.round(Math.random() * 20);
-    }
-    /* summary chart */
-    var areachart2 = document.getElementById('summarychart').getContext('2d');
-    var gradient2 = areachart2.createLinearGradient(0, 0, 0, 180);
-    gradient2.addColorStop(0, 'rgba(252, 122, 30, 0.85)');
-    gradient2.addColorStop(1, 'rgba(252, 122, 30, 0)');
+    };
 
-    var myareachartCofig2 = {
-        type: 'line',
-        data: {
-            labels: ['10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30'],
-            datasets: [{
-                label: '# of hours',
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
+    /* Score DNA donut chart */
+    if (document.getElementById('scoreDonutChart')) {
+        // Pontuações das categorias
+        const scoreSaude = 85;
+        const scoreTalento = 76;
+        const scoreConsumo = 92;
+        const scoreBucal = 65;
+        const scoreQualidade = 78;
+        const scoreVocacional = 88;
+
+        // Score total
+        const scoreTotal = scoreSaude + scoreTalento + scoreConsumo + scoreBucal + scoreQualidade + scoreVocacional;
+
+        // Atualizar o valor no HTML
+        if (document.getElementById('score-dna-total')) {
+            document.getElementById('score-dna-total').textContent = scoreTotal;
+        }
+
+        // Configuração do gráfico
+        const ctx = document.getElementById('scoreDonutChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Saúde',
+                    'Talento Esportivo',
+                    'Consumo Alimentar',
+                    'Saúde Bucal',
+                    'Qualidade de Vida',
+                    'Vocacional',
                 ],
-                radius: 0,
-                backgroundColor: gradient2,
-                borderColor: '#5840ef',
-                borderWidth: 0,
-                fill: true,
-                tension: 0.5,
-            }]
-        },
-        options: {
-            animation: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false,
+                datasets: [
+                    {
+                        data: [scoreSaude, scoreTalento, scoreConsumo, scoreBucal, scoreQualidade, scoreVocacional],
+                        backgroundColor: ['#d2322d', '#ed9c28', '#47a447', '#5bc0de', '#00a4a9', '#9c27b0'],
+                        borderWidth: 0,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        z: 10, // Higher z-index than the white circle
+                        position: 'nearest',
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        titleColor: '#ffffff',
+                        bodyColor: '#ffffff',
+                        borderWidth: 0,
+                    },
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true,
                 },
             },
-            scales: {
-                y: {
-                    display: false,
-                    beginAtZero: true,
-                },
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    display: true,
-                    beginAtZero: true,
-                }
-            }
-        }
-    }
-    var myAreaChart2 = new Chart(areachart2, myareachartCofig2);
-    /* my area chart randomize */
-    setInterval(function () {
-        myareachartCofig2.data.datasets.forEach(function (dataset) {
-            dataset.data = dataset.data.map(function () {
-                return randomScalingFactor();
-            });
         });
-        myAreaChart2.update();
-    }, 3000);
+    }
 
+    // Talento Esportivo - Orange circular progress
+    if (document.getElementById('circleprogressorange2')) {
+        var progressCirclesOrange2 = new ProgressBar.Circle(circleprogressorange2, {
+            color: 'rgba(255, 255, 255, 0.8)',
+            strokeWidth: 5,
+            trailWidth: 10,
+            easing: 'easeInOut',
+            trailColor: 'rgba(255, 255, 255, 0.2)',
+            duration: 1400,
+            from: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            to: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                circle.path.setAttribute('stroke-width', state.width);
+            },
+        });
+        progressCirclesOrange2.animate(0.76); // 76%
+    }
 
-    /* circular progress */
-    var progressCirclesblue1 = new ProgressBar.Circle(circleprogressblue1, {
-        color: 'rgba(8, 160, 70, 1)',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 10,
-        trailWidth: 10,
-        easing: 'easeInOut',
-        trailColor: 'rgba(8, 160, 70, 0.15)',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: { color: 'rgba(8, 160, 70, 1)', width: 10 },
-        to: { color: 'rgba(8, 160, 70, 1)', width: 10 },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
+    // Saúde - Red circular progress
+    if (document.getElementById('circleprogressred1')) {
+        var progressCirclesRed1 = new ProgressBar.Circle(circleprogressred1, {
+            color: 'rgba(255, 255, 255, 0.8)',
+            strokeWidth: 5,
+            trailWidth: 10,
+            easing: 'easeInOut',
+            trailColor: 'rgba(255, 255, 255, 0.2)',
+            duration: 1400,
+            from: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            to: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                circle.path.setAttribute('stroke-width', state.width);
+            },
+        });
+        progressCirclesRed1.animate(0.85); // 85%
+    }
 
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value + "<small>%<small>");
-            }
+    // Consumo Alimentar - Green circular progress
+    if (document.getElementById('circleprogressgreen3')) {
+        var progressCirclesGreen3 = new ProgressBar.Circle(circleprogressgreen3, {
+            color: 'rgba(255, 255, 255, 0.8)',
+            strokeWidth: 5,
+            trailWidth: 10,
+            easing: 'easeInOut',
+            trailColor: 'rgba(255, 255, 255, 0.2)',
+            duration: 1400,
+            from: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            to: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                circle.path.setAttribute('stroke-width', state.width);
+            },
+        });
+        progressCirclesGreen3.animate(0.92); // 92%
+    }
 
-        }
-    });
-    // progressCirclesblue1.text.style.fontSize = '20px';
-    progressCirclesblue1.animate(0.85);  // Number from 0.0 to 1.0
+    // Saúde Bucal - Blue circular progress
+    if (document.getElementById('circleprogressblue2')) {
+        var progressCirclesBlue2 = new ProgressBar.Circle(circleprogressblue2, {
+            color: 'rgba(255, 255, 255, 0.8)',
+            strokeWidth: 5,
+            trailWidth: 10,
+            easing: 'easeInOut',
+            trailColor: 'rgba(255, 255, 255, 0.2)',
+            duration: 1400,
+            from: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            to: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                circle.path.setAttribute('stroke-width', state.width);
+            },
+        });
+        progressCirclesBlue2.animate(0.65); // 65%
+    }
 
-    /* circular progress */
-    var progressCirclesgreen1 = new ProgressBar.Circle(circleprogressgreen1, {
-        color: 'rgba(252, 122, 30, 1)',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 10,
-        trailWidth: 10,
-        easing: 'easeInOut',
-        trailColor: 'rgba(252, 122, 30, 0.15)',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: { color: 'rgba(252, 122, 30, 1)', width: 10 },
-        to: { color: 'rgba(252, 122, 30, 1)', width: 10 },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
+    // Qualidade de Vida - Teal circular progress
+    if (document.getElementById('circleprogressteal1')) {
+        var progressCirclesTeal1 = new ProgressBar.Circle(circleprogressteal1, {
+            color: 'rgba(255, 255, 255, 0.8)',
+            strokeWidth: 5,
+            trailWidth: 10,
+            easing: 'easeInOut',
+            trailColor: 'rgba(255, 255, 255, 0.2)',
+            duration: 1400,
+            from: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            to: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                circle.path.setAttribute('stroke-width', state.width);
+            },
+        });
+        progressCirclesTeal1.animate(0.78); // 78%
+    }
 
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value + "<small>%<small>");
-            }
-
-        }
-    });
-    // progressCirclesgreen1.text.style.fontSize = '20px';
-    progressCirclesgreen1.animate(0.65);  // Number from 0.0 to 1.0
-
-
-
-})
+    // Vocacional - Purple circular progress
+    if (document.getElementById('circleprogresspurple2')) {
+        var progressCirclesPurple2 = new ProgressBar.Circle(circleprogresspurple2, {
+            color: 'rgba(255, 255, 255, 0.8)',
+            strokeWidth: 5,
+            trailWidth: 10,
+            easing: 'easeInOut',
+            trailColor: 'rgba(255, 255, 255, 0.2)',
+            duration: 1400,
+            from: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            to: { color: 'rgba(255, 255, 255, 0.8)', width: 5 },
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                circle.path.setAttribute('stroke-width', state.width);
+            },
+        });
+        progressCirclesPurple2.animate(0.88); // 88%
+    }
+});
