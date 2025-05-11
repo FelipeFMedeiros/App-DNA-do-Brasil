@@ -80,7 +80,7 @@ module.exports = {
     new HtmlWebpackPlugin({ filename: "fitness-club.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-club.html", inject: true, minify: false, hash: true, title: "Fitness Club" }),
     new HtmlWebpackPlugin({ filename: "fitness-club-trainers.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-club-trainers.html", inject: true, minify: false, hash: true, title: "Club Trainers" }),
     new HtmlWebpackPlugin({ filename: "fitness-club-trainer-details.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-club-trainer-details.html", inject: true, minify: false, hash: true, title: "Trainer Details" }),
-    new HtmlWebpackPlugin({ filename: "fitness-diet.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-diet.html", inject: true, minify: false, hash: true, title: "fitness Diet" }),
+    new HtmlWebpackPlugin({ filename: "fitness-profissional.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-profissional.html", inject: true, minify: false, hash: true, title: "fitness Diet" }),
     new HtmlWebpackPlugin({ filename: "fitness-diet-all.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-diet-all.html", inject: true, minify: false, hash: true, title: "All Diet Plans" }),
     new HtmlWebpackPlugin({ filename: "fitness-diet-details.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-diet-details.html", inject: true, minify: false, hash: true, title: "Diet details" }),
     new HtmlWebpackPlugin({ filename: "fitness-diet-add-meal.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-diet-add-meal.html", inject: true, minify: false, hash: true, title: "Add Meal" }),

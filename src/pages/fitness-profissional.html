@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- dir="rtl"-->
+    <%= require('../partials/head/head.html').default %>
+
+    <body
+        class="main-bg main-bg-opac roundedui adminuiux-header-standard adminuiux-sidebar-standard theme-blue adminuiux-header-transparent adminuiux-sidebar-fill-theme bg-white scrollup"
+        data-theme="theme-blue"
+        data-sidebarfill="adminuiux-sidebar-fill-theme"
+        data-bs-spy="scroll"
+        data-bs-target="#list-example"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+        data-sidebarlayout="adminuiux-sidebar-standard"
+        data-headerlayout="adminuiux-header-standard"
+        data-headerfill="adminuiux-header-transparent"
+    >
+        <%= require('../partials/pageloader/fitness-pageloader.html').default %> <%=
+        require('../partials/header/fitness-header.html').default %>
+        <div class="adminuiux-wrap">
+            <!-- Standard sidebar -->
+            <%= require('../partials/navigation/fitness-sidebar.html').default %>
+            <main class="adminuiux-content has-sidebar" onclick="contentClick()">
+                <!-- content -->
+                <div class="container mt-3" id="main-content">
+                    <!-- Título da página -->
+                    <div class="row gx-3 align-items-center mb-4">
+                        <div class="col">
+                            <h4 class="fw-bold text-theme-accent-1">Busca de Especialistas</h4>
+                            <p class="text-secondary">
+                                Encontre médicos, nutricionistas, psicólogos e outros profissionais que podem te ajudar
+                                a cuidar do corpo e da mente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Filtro e busca -->
+                    <div class="card adminuiux-card mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-theme-1-subtle border-0"
+                                            ><i class="bi bi-search"></i
+                                        ></span>
+                                        <input
+                                            type="text"
+                                            class="form-control border-0 bg-theme-1-subtle"
+                                            id="searchInput"
+                                            placeholder="Busque por nome ou especialidade"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <select class="form-select bg-theme-1-subtle border-0" id="specialtyFilter">
+                                        <option value="">Todas Especialidades</option>
+                                        <option value="medico">Médicos</option>
+                                        <option value="nutricionista">Nutricionistas</option>
+                                        <option value="psicologo">Psicólogos</option>
+                                        <option value="fisioterapeuta">Fisioterapeutas</option>
+                                        <option value="personal">Personal Trainers</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-2">
+                                        <div class="col-auto">
+                                            <button
+                                                class="btn btn-sm btn-outline-secondary rounded-pill filter-chip active"
+                                                data-filter="todos"
+                                            >
+                                                Todos
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button
+                                                class="btn btn-sm btn-outline-secondary rounded-pill filter-chip"
+                                                data-filter="medico"
+                                            >
+                                                Médicos
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button
+                                                class="btn btn-sm btn-outline-secondary rounded-pill filter-chip"
+                                                data-filter="nutricionista"
+                                            >
+                                                Nutricionistas
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button
+                                                class="btn btn-sm btn-outline-secondary rounded-pill filter-chip"
+                                                data-filter="psicologo"
+                                            >
+                                                Psicólogos
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button
+                                                class="btn btn-sm btn-outline-secondary rounded-pill filter-chip"
+                                                data-filter="fisioterapeuta"
+                                            >
+                                                Fisioterapeutas
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button
+                                                class="btn btn-sm btn-outline-secondary rounded-pill filter-chip"
+                                                data-filter="personal"
+                                            >
+                                                Personal Trainers
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resultados -->
+                    <h6 class="mb-3">
+                        Disponíveis para Atendimento <span class="badge bg-success ms-1" id="resultCount">12</span>
+                    </h6>
+
+                    <div class="row g-3" id="specialistsResults">
+                        <!-- Profissional 1 -->
+                        <div class="col-12 col-md-6 col-lg-4 specialist-card" data-specialty="medico" data-rating="5">
+                            <div class="card adminuiux-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <img
+                                                src="assets/img/modern-ai-image/user-2.jpg"
+                                                alt="Dr. Carlos Silva"
+                                                class="avatar avatar-60 rounded-circle"
+                                            />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">Dr. Carlos Silva</h6>
+                                            <span class="badge bg-primary-subtle text-primary">Cardiologista</span>
+                                        </div>
+                                    </div>
+                                    <p class="small mb-3">
+                                        Especialista em cardiologia com mais de 15 anos de experiência. Atendimento
+                                        humanizado e personalizado.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-geo-alt text-theme-accent-1 me-1"></i>São Paulo, SP
+                                            </p>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-calendar-check text-theme-accent-1 me-1"></i>Disponível
+                                                hoje
+                                            </p>
+                                        </div>
+                                        <button
+                                            class="btn btn-sm btn-theme"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#bookModal"
+                                        >
+                                            Agendar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profissional 2 -->
+                        <div
+                            class="col-12 col-md-6 col-lg-4 specialist-card"
+                            data-specialty="nutricionista"
+                            data-rating="4"
+                        >
+                            <div class="card adminuiux-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <img
+                                                src="assets/img/modern-ai-image/user-2.jpg"
+                                                alt="Dra. Ana Martins"
+                                                class="avatar avatar-60 rounded-circle"
+                                            />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">Dra. Ana Martins</h6>
+                                            <span class="badge bg-success-subtle text-success">Nutricionista</span>
+                                        </div>
+                                    </div>
+                                    <p class="small mb-3">
+                                        Nutricionista especializada em reeducação alimentar e nutrição esportiva.
+                                        Atendimento online e presencial.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-geo-alt text-theme-accent-1 me-1"></i>Rio de Janeiro, RJ
+                                            </p>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-calendar-check text-theme-accent-1 me-1"></i>Próx.
+                                                disponível: Amanhã
+                                            </p>
+                                        </div>
+                                        <button
+                                            class="btn btn-sm btn-theme"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#bookModal"
+                                        >
+                                            Agendar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profissional 3 -->
+                        <div
+                            class="col-12 col-md-6 col-lg-4 specialist-card"
+                            data-specialty="psicologo"
+                            data-rating="5"
+                        >
+                            <div class="card adminuiux-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <img
+                                                src="assets/img/modern-ai-image/user-2.jpg"
+                                                alt="Dr. Marco Santos"
+                                                class="avatar avatar-60 rounded-circle"
+                                            />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">Dr. Marco Santos</h6>
+                                            <span class="badge bg-warning-subtle text-warning">Psicólogo</span>
+                                        </div>
+                                    </div>
+                                    <p class="small mb-3">
+                                        Psicólogo clínico com abordagem cognitivo-comportamental. Especialista em
+                                        ansiedade e depressão.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-geo-alt text-theme-accent-1 me-1"></i>Belo Horizonte, MG
+                                            </p>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-calendar-check text-theme-accent-1 me-1"></i>Disponível
+                                                hoje
+                                            </p>
+                                        </div>
+                                        <button
+                                            class="btn btn-sm btn-theme"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#bookModal"
+                                        >
+                                            Agendar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profissional 4 -->
+                        <div
+                            class="col-12 col-md-6 col-lg-4 specialist-card"
+                            data-specialty="fisioterapeuta"
+                            data-rating="4"
+                        >
+                            <div class="card adminuiux-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <img
+                                                src="assets/img/modern-ai-image/user-2.jpg"
+                                                alt="Dra. Juliana Costa"
+                                                class="avatar avatar-60 rounded-circle"
+                                            />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">Dra. Juliana Costa</h6>
+                                            <span class="badge bg-info-subtle text-info">Fisioterapeuta</span>
+                                        </div>
+                                    </div>
+                                    <p class="small mb-3">
+                                        Fisioterapeuta especializada em reabilitação esportiva e ortopédica. Atendimento
+                                        personalizado.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-geo-alt text-theme-accent-1 me-1"></i>Brasília, DF
+                                            </p>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-calendar-check text-theme-accent-1 me-1"></i>Próx.
+                                                disponível: Quinta
+                                            </p>
+                                        </div>
+                                        <button
+                                            class="btn btn-sm btn-theme"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#bookModal"
+                                        >
+                                            Agendar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profissional 5 -->
+                        <div class="col-12 col-md-6 col-lg-4 specialist-card" data-specialty="personal" data-rating="4">
+                            <div class="card adminuiux-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <img
+                                                src="assets/img/modern-ai-image/user-2.jpg"
+                                                alt="Ricardo Oliveira"
+                                                class="avatar avatar-60 rounded-circle"
+                                            />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">Ricardo Oliveira</h6>
+                                            <span class="badge bg-danger-subtle text-danger">Personal Trainer</span>
+                                        </div>
+                                    </div>
+                                    <p class="small mb-3">
+                                        Personal trainer especializado em hipertrofia e perda de gordura. Treinamentos
+                                        personalizados.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-geo-alt text-theme-accent-1 me-1"></i>Recife, PE
+                                            </p>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-calendar-check text-theme-accent-1 me-1"></i>Disponível
+                                                hoje
+                                            </p>
+                                        </div>
+                                        <button
+                                            class="btn btn-sm btn-theme"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#bookModal"
+                                        >
+                                            Agendar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profissional 6 -->
+                        <div class="col-12 col-md-6 col-lg-4 specialist-card" data-specialty="medico" data-rating="5">
+                            <div class="card adminuiux-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-shrink-0">
+                                            <img
+                                                src="assets/img/modern-ai-image/user-2.jpg"
+                                                alt="Dra. Mariana Lima"
+                                                class="avatar avatar-60 rounded-circle"
+                                            />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">Dra. Mariana Lima</h6>
+                                            <span class="badge bg-primary-subtle text-primary">Endocrinologista</span>
+                                        </div>
+                                    </div>
+                                    <p class="small mb-3">
+                                        Endocrinologista com foco em metabolismo e saúde hormonal. Tratamento integrado
+                                        e personalizado.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-geo-alt text-theme-accent-1 me-1"></i>Curitiba, PR
+                                            </p>
+                                            <p class="small mb-0">
+                                                <i class="bi bi-calendar-check text-theme-accent-1 me-1"></i>Próx.
+                                                disponível: Sexta
+                                            </p>
+                                        </div>
+                                        <button
+                                            class="btn btn-sm btn-theme"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#bookModal"
+                                        >
+                                            Agendar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profissionais adicionais podem ser incluídos aqui -->
+                    </div>
+
+                    <!-- Paginação -->
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+        </div>
+
+        <!-- Modal de Agendamento -->
+        <div class="modal adminuiux-modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Agendar Consulta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0">
+                                <div id="selectedSpecialistImg" class="avatar avatar-60 rounded-circle">
+                                    <img src="assets/img/modern-ai-image/user-2.jpg" alt="Profissional" />
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 id="selectedSpecialistName" class="mb-0">Dr. Carlos Silva</h6>
+                                <p id="selectedSpecialistSpecialty" class="small mb-0">Cardiologista</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="appointmentDate" class="form-label">Data da Consulta</label>
+                            <input type="date" class="form-control" id="appointmentDate" min="2023-05-11" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="appointmentTime" class="form-label">Horário</label>
+                            <select class="form-select" id="appointmentTime">
+                                <option value="">Selecione um horário</option>
+                                <option value="9:00">9:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="appointmentType" class="form-label">Tipo de Consulta</label>
+                            <select class="form-select" id="appointmentType">
+                                <option value="presencial">Presencial</option>
+                                <option value="online">Online</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="appointmentNotes" class="form-label">Motivo da consulta (opcional)</label>
+                            <textarea
+                                class="form-control"
+                                id="appointmentNotes"
+                                rows="3"
+                                placeholder="Descreva brevemente o motivo da consulta"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+                        <button type="button" class="btn btn-theme" id="confirmBooking">Confirmar Agendamento</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Confirmação -->
+        <div class="modal adminuiux-modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center py-4">
+                        <i class="bi bi-check-circle text-success display-1 mb-3"></i>
+                        <h5>Agendamento Confirmado!</h5>
+                        <p class="mb-0">
+                            Sua consulta foi agendada com sucesso. Você receberá uma confirmação por e-mail.
+                        </p>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-theme" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile footer -->
+        <%= require('../partials/footer/mobile-footer.html').default %>
+
+        <!-- Page Level js -->
+        <script src="assets/js/fitness/fitness-profissional.js"></script>
+    </body>
+</html>
