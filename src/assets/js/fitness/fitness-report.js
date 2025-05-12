@@ -1,45 +1,106 @@
-/*! Fitness dashboard.js | Adminuiux 2023-2024 */
+/*! Histórico de Avaliações | DNA do Brasil 2024-2025 */
 
-"use strict";
+'use strict';
 
-document.addEventListener("DOMContentLoaded", function () {
-    /* chart js areachart summary  */
-    window.randomScalingFactor = function () {
-        return Math.round(Math.random() * 20);
-    }
-    var areachartblue = document.getElementById('areachartblue1').getContext('2d');
-    var gradientblue = areachartblue.createLinearGradient(0, 0, 0, 100);
-    gradientblue.addColorStop(0, 'rgba(3, 174, 210, 1)');
-    gradientblue.addColorStop(1, 'rgba(3, 174, 210, 0)');
-    var myareachartblue = {
-        type: 'bar',
+document.addEventListener('DOMContentLoaded', function () {
+    // Dados de avaliação
+    const dadosAtuais = {
+        imc: 24.7,
+        preensao: 42.3,
+        impulsao: 185,
+        aptidao: 37.8,
+        flexibilidade: 28,
+        velocidade: 3.8,
+        agilidade: 9.2,
+    };
+
+    const dadosAnteriores = {
+        imc: 12.35,
+        preensao: 21.15,
+        impulsao: 92.5,
+        aptidao: 18.9,
+        flexibilidade: 14,
+        velocidade: 7.6,
+        agilidade: 18.4,
+    };
+
+    // Calcula porcentagem de melhoria
+    const melhoriaPorcentagem = {};
+    Object.keys(dadosAtuais).forEach((key) => {
+        // Para velocidade e agilidade, menor é melhor (tempo)
+        if (key === 'velocidade' || key === 'agilidade') {
+            const reducao = dadosAnteriores[key] - dadosAtuais[key];
+            const porcentagem = (reducao / dadosAnteriores[key]) * 100;
+            melhoriaPorcentagem[key] = Math.round(porcentagem);
+        } else {
+            const aumento = dadosAtuais[key] - dadosAnteriores[key];
+            const porcentagem = (aumento / dadosAnteriores[key]) * 100;
+            melhoriaPorcentagem[key] = Math.round(porcentagem);
+        }
+    });
+
+    /* Círculo de progresso do talento */
+    var talentoCircle = new ProgressBar.Circle(talentoProgressCircle, {
+        color: 'rgba(255, 255, 255, 1)',
+        strokeWidth: 5,
+        trailWidth: 5,
+        easing: 'easeInOut',
+        trailColor: 'rgba(255, 255, 255, 0.3)',
+        duration: 1400,
+        from: { color: 'rgba(255, 255, 255, 1)', width: 5 },
+        to: { color: 'rgba(255, 255, 255, 1)', width: 5 },
+        step: function (state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+        },
+    });
+    talentoCircle.animate(0.76); // 76% de talento
+
+    /* Círculo de progresso para talento detalhado */
+    var circleOrange = new ProgressBar.Circle(circleprogressorange2, {
+        color: '#ed9c28',
+        strokeWidth: 8,
+        trailWidth: 8,
+        easing: 'easeInOut',
+        trailColor: 'rgba(237, 156, 40, 0.2)',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false,
+        },
+        from: { color: '#ed9c28', width: 8 },
+        to: { color: '#ed9c28', width: 8 },
+        step: function (state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+        },
+    });
+    circleOrange.animate(0.76); // 76% de talento
+
+    /* Gráfico de evolução */
+    var evolucaoCtx = document.getElementById('evolucaoChart').getContext('2d');
+    var evolucaoGradient = evolucaoCtx.createLinearGradient(0, 0, 0, 180);
+    evolucaoGradient.addColorStop(0, 'rgba(40, 167, 69, 0.8)');
+    evolucaoGradient.addColorStop(1, 'rgba(40, 167, 69, 0.2)');
+
+    var evolucaoChart = new Chart(evolucaoCtx, {
+        type: 'line',
         data: {
-            labels: ['1', '2', '3', '4', '5', '7', '8', '9', '10', '11', '12'],
-            datasets: [{
-                label: '# of Votes',
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                ],
-                radius: 0,
-                backgroundColor: gradientblue,
-                borderColor: '#015EC2',
-                borderWidth: 0,
-                borderRadius: 4,
-                fill: true,
-                tension: 0.5,
-            }]
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [
+                {
+                    label: 'Pontuação de Talento',
+                    data: [30, 35, 45, 60, 68, 76],
+                    backgroundColor: evolucaoGradient,
+                    borderColor: '#28a745',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#28a745',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                },
+            ],
         },
         options: {
             maintainAspectRatio: false,
@@ -48,319 +109,152 @@ document.addEventListener("DOMContentLoaded", function () {
                     display: false,
                 },
                 tooltip: {
-                    enabled: true
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    borderColor: '#28a745',
+                    borderWidth: 1,
+                    callbacks: {
+                        label: function (context) {
+                            return `Pontuação: ${context.parsed.y} (${
+                                context.dataIndex > 0
+                                    ? '+' + (context.parsed.y - context.dataset.data[context.dataIndex - 1])
+                                    : '0'
+                            })`;
+                        },
+                    },
                 },
             },
             scales: {
                 y: {
-                    display: false,
                     beginAtZero: true,
-                },
-                x: {
-                    display: false,
-                }
-            }
-        }
-    }
-    var myAreaChartblue1 = new Chart(areachartblue, myareachartblue);
-    /* my area chart randomize */
-    setInterval(function () {
-        myareachartblue.data.datasets.forEach(function (dataset) {
-            dataset.data = dataset.data.map(function () {
-                return randomScalingFactor();
-            });
-        });
-        myAreaChartblue1.update();
-    }, 3000);
-
-
-    /* summary chart */
-    var areachart2 = document.getElementById('summarychart').getContext('2d');
-    var gradient2 = areachart2.createLinearGradient(0, 0, 0, 180);
-    gradient2.addColorStop(0, 'rgba(252, 122, 30, 0.85)');
-    gradient2.addColorStop(1, 'rgba(252, 122, 30, 0)');
-
-    var myareachartCofig2 = {
-        type: 'line',
-        data: {
-            labels: ['10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30'],
-            datasets: [{
-                label: '# of hours',
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                ],
-                radius: 0,
-                backgroundColor: gradient2,
-                borderColor: '#5840ef',
-                borderWidth: 0,
-                fill: true,
-                tension: 0.5,
-            }]
-        },
-        options: {
-            animation: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false,
-                },
-            },
-            scales: {
-                y: {
-                    display: false,
-                    beginAtZero: true,
+                    max: 100,
+                    grid: {
+                        display: true,
+                        color: 'rgba(0, 0, 0, 0.05)',
+                    },
                 },
                 x: {
                     grid: {
-                        display: false
+                        display: false,
                     },
-                    display: true,
-                    beginAtZero: true,
-                }
-            }
-        }
-    }
-    var myAreaChart2 = new Chart(areachart2, myareachartCofig2);
-    /* my area chart randomize */
-    setInterval(function () {
-        myareachartCofig2.data.datasets.forEach(function (dataset) {
-            dataset.data = dataset.data.map(function () {
-                return randomScalingFactor();
-            });
-        });
-        myAreaChart2.update();
-    }, 3000);
-
-
-    /* summary chart */
-    var lineheartchart = document.getElementById('lineheart').getContext('2d');
-    var gradient2 = lineheartchart.createLinearGradient(0, 0, 0, 100);
-    gradient2.addColorStop(0, 'rgba(200, 0, 54, 0.25)');
-    gradient2.addColorStop(1, 'rgba(200, 0, 54, 0)');
-
-    var lineheartConfig = {
-        type: 'line',
-        data: {
-            labels: ['10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30'],
-            datasets: [{
-                label: '# of hours',
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                ],
-                radius: 0,
-                backgroundColor: gradient2,
-                borderColor: '#c80036',
-                borderWidth: 1,
-                fill: true,
-                tension: 0.0,
-            }]
-        },
-        options: {
-            animation: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false,
                 },
             },
-            scales: {
-                y: {
-                    display: false,
-                    beginAtZero: true,
-                },
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    display: false,
-                    beginAtZero: true,
-                }
-            }
-        }
-    }
-    var lineheart = new Chart(lineheartchart, lineheartConfig);
-    /* my area chart randomize */
-    setInterval(function () {
-        lineheartConfig.data.datasets.forEach(function (dataset) {
-            dataset.data = dataset.data.map(function () {
-                return randomScalingFactor();
-            });
-        });
-        lineheart.update();
-    }, 3000);
+        },
+    });
 
-    /* doughnut chart js */
-    var doughnutchart = document.getElementById('doughnutchart').getContext('2d');
-    var doughnutdata = {
-        labels: ['Exercise', 'Diet', 'Medicine', 'Other'],
-        datasets: [
-            {
-                label: 'fitness Categories',
-                data: [45, 30, 25, 10],
-                backgroundColor: ['#08a046', '#fc7a1e', '#03aed2', '#ffffff'],
-                borderWidth: 0,
-            }
-        ]
-    };
-    var mydoughnutchartCofig = {
-        type: 'doughnut',
-        data: doughnutdata,
+    /* Gráfico de radar de talento */
+    var radarCtx = document.getElementById('radarTalentoChart').getContext('2d');
+    var radarChart = new Chart(radarCtx, {
+        type: 'radar',
+        data: {
+            labels: [
+                'IMC',
+                'Preensão Manual',
+                'Impulsão Horizontal',
+                'Aptidão Física',
+                'Flexibilidade',
+                'Velocidade',
+                'Agilidade',
+            ],
+            datasets: [
+                {
+                    label: 'Avaliação Atual',
+                    data: [85, 70, 82, 75, 68, 88, 78],
+                    backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                    borderColor: '#28a745',
+                    pointBackgroundColor: '#28a745',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#28a745',
+                },
+                {
+                    label: 'Avaliação Anterior',
+                    data: [42, 35, 41, 37, 34, 44, 39],
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                    borderColor: '#007bff',
+                    pointBackgroundColor: '#007bff',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#007bff',
+                },
+            ],
+        },
         options: {
             responsive: true,
-            cutout: 60,
-            tooltips: {
-                position: 'nearest',
-                yAlign: 'bottom'
+            maintainAspectRatio: false,
+            elements: {
+                line: {
+                    borderWidth: 2,
+                },
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        display: true,
+                        color: 'rgba(0, 0, 0, 0.1)',
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 100,
+                    pointLabels: {
+                        font: {
+                            size: 11,
+                        },
+                    },
+                },
             },
             plugins: {
                 legend: {
-                    display: false,
-                    position: 'top',
+                    position: 'bottom',
                 },
-                title: {
-                    display: false,
-                    text: 'Chart.js Doughnut Chart'
-                }
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            const datasetLabel = context.dataset.label;
+                            const value = context.raw;
+                            const index = context.dataIndex;
+
+                            if (context.datasetIndex === 0) {
+                                // Avaliação atual
+                                const melhoria = value - context.chart.data.datasets[1].data[index];
+                                const porcentagemMelhoria = Math.round(
+                                    (melhoria / context.chart.data.datasets[1].data[index]) * 100,
+                                );
+                                return `${datasetLabel}: ${value}% (↑${porcentagemMelhoria}%)`;
+                            }
+                            return `${datasetLabel}: ${value}%`;
+                        },
+                    },
+                },
             },
-            layout: {
-                padding: 0,
-            },
         },
-    };
-    var mydoughnutchart = new Chart(doughnutchart, mydoughnutchartCofig);
+    });
 
-    /* circular progress */
-    var progressCirclesblue1 = new ProgressBar.Circle(circleprogressblue1, {
-        color: 'rgba(8, 160, 70, 1)',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
-        trailWidth: 10,
-        easing: 'easeInOut',
-        trailColor: 'rgba(8, 160, 70, 0.15)',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: { color: 'rgba(8, 160, 70, 1)', width: 4 },
-        to: { color: 'rgba(8, 160, 70, 1)', width: 4 },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
+    // Event listener para o seletor de avaliação
+    document.getElementById('avaliacaoSelect').addEventListener('change', function (e) {
+        const selecionado = e.target.value;
 
-            // var value = Math.round(circle.value() * 100);
-            // if (value === 0) {
-            //     circle.setText('');
-            // } else {
-            //     circle.setText(value + "<small>%<small>");
-            // }
+        // Aqui você pode implementar a lógica para mudar os dados mostrados
+        // com base na avaliação selecionada
+        if (selecionado === 'anterior') {
+            // Lógica para mostrar apenas a avaliação anterior
+        } else if (selecionado === 'completo') {
+            // Lógica para mostrar o histórico completo
+        } else {
+            // Avaliação atual (padrão)
         }
     });
-    // progressCirclesblue1.text.style.fontSize = '20px';
-    progressCirclesblue1.animate(0.85);  // Number from 0.0 to 1.0
 
-    /* circular progress */
-    var progressCirclesgreen1 = new ProgressBar.Circle(circleprogressgreen1, {
-        color: 'rgba(252, 122, 30, 1)',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 10,
-        trailWidth: 10,
-        easing: 'easeInOut',
-        trailColor: 'rgba(252, 122, 30, 0.15)',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: { color: 'rgba(252, 122, 30, 1)', width: 10 },
-        to: { color: 'rgba(252, 122, 30, 1)', width: 10 },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
+    // Função para atualizar os badges com as porcentagens de melhoria
+    function atualizarBadgesMelhoria() {
+        const badges = document.querySelectorAll('.badge.bg-success');
+        badges.forEach((badge) => {
+            badge.textContent = '+100%';
+        });
+    }
 
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value + "<small>%<small>");
-            }
-
-        }
-    });
-    // progressCirclesgreen1.text.style.fontSize = '20px';
-    progressCirclesgreen1.animate(0.65);  // Number from 0.0 to 1.0
-
-
-    // /* purple circular progress */
-    var progressCirclespurple1 = new ProgressBar.Circle(circleprogresspurple1, {
-        color: 'rgba(71, 28, 168, 1)',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 10,
-        trailWidth: 10,
-        easing: 'easeInOut',
-        trailColor: 'rgba(71, 28, 168, 0.15)',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: { color: 'rgba(71, 28, 168, 1)', width: 10 },
-        to: { color: 'rgba(71, 28, 168, 1)', width: 10 },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value + "<small>%<small>");
-            }
-        }
-    });
-    progressCirclespurple1.text.style.fontSize = '16px';
-    progressCirclespurple1.animate(0.50);  // Number from 0.0 to 1.0
-
-
-    /* orange progress */
-    var progressCirclesorange1 = new ProgressBar.Circle(circleprogressorange1, {
-        color: 'rgba(252, 122, 30, 1)',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 8,
-        trailWidth: 2,
-        easing: 'easeInOut',
-        trailColor: 'rgba(252, 122, 30, 0.15)',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: { color: 'rgba(252, 122, 30, 0)', width: 8 },
-        to: { color: 'rgba(252, 122, 30, 1)', width: 8 },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-        }
-    });
-    // progressCirclesgreen1.text.style.fontSize = '20px';
-    progressCirclesorange1.animate(0.65);  // Number from 0.0 to 1.0
-
-})
+    // Inicializa os badges
+    atualizarBadgesMelhoria();
+});
