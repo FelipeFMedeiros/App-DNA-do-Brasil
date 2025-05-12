@@ -71,6 +71,7 @@ module.exports = {
 
     //fitness
     new HtmlWebpackPlugin({ filename: "fitness-dashboard-aluno.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-dashboard-aluno.html", inject: true, minify: false, hash: true, title: "fitness Dashboard Aluno" }),
+    new HtmlWebpackPlugin({ filename: "fitness-carteirinha-aluno.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-carteirinha-aluno.html", inject: true, minify: false, hash: true, title: "Carteirinha do Aluno" }),
     new HtmlWebpackPlugin({ filename: "fitness-chat-and-call.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-chat-and-call.html", inject: true, minify: false, hash: true, title: "Chat & Call" }),
     new HtmlWebpackPlugin({ filename: "fitness-chat.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-chat.html", inject: true, minify: false, hash: true, title: "Chat" }),
     new HtmlWebpackPlugin({ filename: "fitness-referral.html", template: "!!html-webpack-plugin/lib/loader.js!./src/pages/fitness-referral.html", inject: true, minify: false, hash: true, title: "Referral" }),

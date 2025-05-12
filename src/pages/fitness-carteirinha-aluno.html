@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- dir="rtl"-->
+    <%= require('../partials/head/head.html').default %>
+
+    <body
+        class="main-bg main-bg-opac roundedui bg-white scrollup"
+        data-theme="theme-blue"
+        data-bs-spy="scroll"
+        data-bs-target="#list-example"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+    >
+        <!-- back button header -->
+        <%= require('../partials/header/fitness-header-carteirinha-back.html').default %>
+
+        <!-- content -->
+        <div class="container-fluid p-0">
+            <!-- Carteirinha do aluno -->
+            <div class="card border-0 rounded-0 h-100">
+                <div class="card-body p-0">
+                    <!-- Fundo com gradiente -->
+                    <div
+                        class="position-relative"
+                        style="
+                            background: linear-gradient(to bottom, #2e3192 0%, #00b6de 100%);
+                            min-height: 100vh;
+                            padding: 20px;
+                        "
+                    >
+                        <!-- Cabeçalho com Logo -->
+                        <div class="text-center mb-4 pt-5">
+                            <img
+                                src="assets/img/logo_white.webp"
+                                alt="DNA do Brasil"
+                                class="img-fluid"
+                                style="max-width: 180px"
+                            />
+                            <p class="text-white mb-0 small">A T L E T A</p>
+                        </div>
+
+                        <!-- Informações do Aluno -->
+                        <div class="text-white mb-3">
+                            <h4 class="text-center fw-bold mb-4">LEVI FERNANDO MELO</h4>
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="flex-grow-1">
+                                    <p class="small mb-0 fw-bold text-uppercase">E-mail</p>
+                                    <p class="small mb-0 text-light">levimail@exemplo.com</p>
+                                </div>
+                                <!-- Foto do aluno - Aumentada -->
+                                <div class="ms-3">
+                                    <img
+                                        src="assets/img/fotolevi.png"
+                                        alt="Foto do Aluno"
+                                        class="rounded-circle border border-3 border-white"
+                                        style="width: 100px; height: 100px; object-fit: cover"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <p class="small mb-0 fw-bold text-uppercase">Data de Nascimento</p>
+                                    <p class="small mb-2 text-light">07/04/2007</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="small mb-0 fw-bold text-uppercase">Sexo</p>
+                                    <p class="small mb-2 text-light">Masculino</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="small mb-0 fw-bold text-uppercase">Tel. Celular</p>
+                                    <p class="small mb-2 text-light">(68) 99218-0972</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="small mb-0 fw-bold text-uppercase">CPF</p>
+                                    <p class="small mb-2 text-light">982.745.352-19</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="small mb-0 fw-bold text-uppercase">Matrícula</p>
+                                    <p class="small mb-2 text-light">51227</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="small mb-0 fw-bold text-uppercase">Modalidade</p>
+                                    <p class="small mb-2 text-light">Futebol</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="small mb-0 fw-bold text-uppercase">Município/Estado</p>
+                                    <p class="small mb-2 text-light">Rio Branco / AC</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="small mb-0 fw-bold text-uppercase">Unidade Escolar</p>
+                                    <p class="small mb-2 text-light">ESC BOA UNIAO ENSINO JOVEM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- QR Code -->
+                        <div class="text-center mt-4">
+                            <img
+                                src="assets/img/qrcode.jpg"
+                                alt="QR Code"
+                                class="img-fluid"
+                                style="max-width: 200px; background-color: white; padding: 5px; border-radius: 10px"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Level js -->
+    </body>
+</html>
