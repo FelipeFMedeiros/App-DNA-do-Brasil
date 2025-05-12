@@ -23,15 +23,13 @@
             <main class="adminuiux-content has-sidebar" onclick="contentClick()">
                 <!-- content -->
                 <div class="container mt-3" id="main-content">
-                    <div class="row gx-3 align-items-center mb-4">
-                        <div class="col">
+                    <div class="row gx-3 mb-3">
+                        <div class="col-12">
                             <h5 class="mb-1">Histórico de Avaliações</h5>
-                            <p class="text-secondary small mb-0">
+                            <p class="text-secondary small mb-2">
                                 Consulte relatórios sobre suas avaliações anteriores e veja onde você pode melhorar.
                             </p>
-                        </div>
-                        <div class="col-auto">
-                            <div class="custom-select-container">
+                            <div class="custom-select-container d-inline-block">
                                 <div class="input-group input-group-sm">
                                     <span class="input-group-text bg-primary text-white">
                                         <i class="bi bi-calendar-event"></i>
@@ -130,7 +128,7 @@
                         <!-- IMC -->
                         <div class="col-6 col-md-4 mb-3">
                             <div class="card adminuiux-card h-100">
-                                <div class="card-body">
+                                <div class="card-body position-relative pb-4">
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="bi bi-rulers me-2 text-primary fs-4"></i>
                                         <h6 class="mb-0">IMC</h6>
@@ -146,10 +144,8 @@
                                             aria-valuemax="100"
                                         ></div>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="small text-secondary mb-0">Faixa adequada</p>
-                                        <span class="badge bg-success">+100%</span>
-                                    </div>
+                                    <p class="small text-secondary mb-0">Faixa adequada</p>
+                                    <span class="badge bg-success improvement-badge">+100%</span>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +153,7 @@
                         <!-- Preensão manual -->
                         <div class="col-6 col-md-4 mb-3">
                             <div class="card adminuiux-card h-100">
-                                <div class="card-body">
+                                <div class="card-body position-relative pb-4">
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="bi bi-hand-index-thumb me-2 text-warning fs-4"></i>
                                         <h6 class="mb-0">Preensão manual</h6>
@@ -173,10 +169,8 @@
                                             aria-valuemax="100"
                                         ></div>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="small text-secondary mb-0">Força mediana</p>
-                                        <span class="badge bg-success">+100%</span>
-                                    </div>
+                                    <p class="small text-secondary mb-0">Força mediana</p>
+                                    <span class="badge bg-success improvement-badge">+100%</span>
                                 </div>
                             </div>
                         </div>
@@ -184,7 +178,7 @@
                         <!-- Impulsão Horizontal -->
                         <div class="col-6 col-md-4 mb-3">
                             <div class="card adminuiux-card h-100">
-                                <div class="card-body">
+                                <div class="card-body position-relative pb-4">
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="bi bi-arrow-up-circle me-2 text-success fs-4"></i>
                                         <h6 class="mb-0">Impulsão Horizontal</h6>
@@ -200,10 +194,8 @@
                                             aria-valuemax="100"
                                         ></div>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="small text-secondary mb-0">Acima da média</p>
-                                        <span class="badge bg-success">+100%</span>
-                                    </div>
+                                    <p class="small text-secondary mb-0">Acima da média</p>
+                                    <span class="badge bg-success improvement-badge">+100%</span>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +203,7 @@
                         <!-- Aptidão Física -->
                         <div class="col-6 col-md-4 mb-3">
                             <div class="card adminuiux-card h-100">
-                                <div class="card-body">
+                                <div class="card-body position-relative pb-4">
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="bi bi-lungs me-2 text-info fs-4"></i>
                                         <h6 class="mb-0">Aptidão Física</h6>
@@ -227,10 +219,8 @@
                                             aria-valuemax="100"
                                         ></div>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="small text-secondary mb-0">Bom condicionamento</p>
-                                        <span class="badge bg-success">+100%</span>
-                                    </div>
+                                    <p class="small text-secondary mb-0">Bom condicionamento</p>
+                                    <span class="badge bg-success improvement-badge">+100%</span>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +228,7 @@
                         <!-- Flexibilidade -->
                         <div class="col-6 col-md-4 mb-3">
                             <div class="card adminuiux-card h-100">
-                                <div class="card-body">
+                                <div class="card-body position-relative pb-4">
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="bi bi-arrow-down-up me-2 text-primary fs-4"></i>
                                         <h6 class="mb-0">Flexibilidade</h6>
@@ -254,10 +244,8 @@
                                             aria-valuemax="100"
                                         ></div>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="small text-secondary mb-0">Média flexibilidade</p>
-                                        <span class="badge bg-success">+100%</span>
-                                    </div>
+                                    <p class="small text-secondary mb-0">Média flexibilidade</p>
+                                    <span class="badge bg-success improvement-badge">+100%</span>
                                 </div>
                             </div>
                         </div>
@@ -265,7 +253,7 @@
                         <!-- Teste de Velocidade -->
                         <div class="col-6 col-md-4 mb-3">
                             <div class="card adminuiux-card h-100">
-                                <div class="card-body">
+                                <div class="card-body position-relative pb-4">
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="bi bi-speedometer2 me-2 text-danger fs-4"></i>
                                         <h6 class="mb-0">Velocidade 20m</h6>
@@ -281,10 +269,8 @@
                                             aria-valuemax="100"
                                         ></div>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="small text-secondary mb-0">Velocidade excelente</p>
-                                        <span class="badge bg-success">+100%</span>
-                                    </div>
+                                    <p class="small text-secondary mb-0">Velocidade excelente</p>
+                                    <span class="badge bg-success improvement-badge">+100%</span>
                                 </div>
                             </div>
                         </div>
